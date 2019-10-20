@@ -15,6 +15,7 @@
 \newcommand{\kepler}[1]{\emph{Kepler}#1}
 \newcommand{\ktwo}[1]{\emph{K2}#1}
 \newcommand{\tess}[1]{\emph{TESS}#1}
+\newcommand{\plato}[1]{\emph{PLATO}#1}
 \newcommand{\teff}[1]{$T_{\text{eff}}$#1}
 \newcommand{\logg}[1]{$\log{g}$#1}
 
@@ -72,7 +73,7 @@
 \shorttitle{Evolution of the radius valley with stellar mass}
 
 \begin{document}
-\title{Evolution of the Occurrence Rate of small close-in planets around low mass dwarf stars from \emph{KEPLER} and \emph{K2}}
+\title{Evolution of the occurrence rate of small close-in planets around low mass stars from \emph{KEPLER} and \emph{K2}}
 \author{Ryan Cloutier\altaffilmark{1,2} et al.}
 
 \email{cloutier@cfa.harvard.edu}
@@ -106,8 +107,8 @@ of Toronto, 50 St. George Street, Toronto, ON, M5S 3H4, Canada}
   planet sizes with decreasing stellar mass in agreement with physical models of photoevaporation,
   gas-poor formation, and core-powered mass loss. Although current measurements are
   insufficient to robustly identify any physical model as the dominant formation pathway of the radius valley,
-  we argue that robust inferences may be obtained by \tess{} with $\mathcal{O}(\mathbf{?})$
-  mid-M dwarfs observed with 2-minute cadence.
+  we argue that robust inferences may be obtained by \tess{} with $\mathcal{O}(\mathbf{85,000})$
+  mid-to-late M dwarfs observed with 2 minute cadence.
 \end{abstract}
 
 
@@ -878,7 +879,7 @@ M$_{\odot}$ (i.e. $\sim 62$\% of our confirmed planet sample).
 
 \begin{figure*}
   \centering
-  %\includegraphics[width=.98\hsize]{figures/rphist_compMs.png}
+  \includegraphics[width=.98\hsize]{figures/rphist_compMs.png}
   \caption{2D and 1D planet occurrence rates in various stellar mass bins. \emph{Top panels}: planet occurrence
     rate maps as a function of orbital period and planet radius. \emph{Bottom panels}: distributions of the relative
     planet occurrence rate as a function of planet size. Note the differing occurrence rate scales.
@@ -1017,55 +1018,56 @@ the detection sensitivity to planets spanning the radius valley.
 \subsection{Improving constraints on the occurrence rate of small close-in planets orbiting mid-M dwarfs}
 The issue of having insufficient information to distinguish between photoevaporation, core-powered mass loss, and gas-poor
 formation around low mass stars can be addressed with two steps. Firstly, by expanding the low mass stellar sample in 
-searches for transiting small close-in planets and secondly, by quantifying the detection sensitivity in those searches. 
-NASA's Transiting Exoplanet Survey Satellite \citep[\tess{;}][]{ricker15} will provide hundreds of new transiting planet
-discoveries in the vicinity of the radius valley \citep{barclay18}. \tess{} is particularly well-suited to the discovery of
+transiting planet searches and secondly, by quantifying the detection sensitivity in those searches. 
+NASA's Transiting Exoplanet Survey Satellite \citep[\tess{;}][]{ricker15} is expected to provide hundreds of new transiting
+planet discoveries in the vicinity of the radius valley \citep{barclay18}. \tess{} is particularly well-suited to the discovery of
 close-in planets around low mass stars down to M5V ($M_s\sim 0.16$ M$_{\odot}$) due to its red bandpass (600-1000 nm)
-and its high cadence (2 minute) observations of 200,000-400,000 stars over $\sim 94$\% of the sky following its recently
-approved extended mission.
+and its high cadence (2 minute) observations of 200,000-400,000 stars over $\sim 94$\% of the sky by the completion of its
+recently approved extended mission.
 
 The \tess{} primary mission, lasting one year, has been ongoing since July 2018. 
 Based on the photometric performance of the mission and consequently on the success of planet searches by the
 Science Processing Operations Center \citep[SPOC;][]{jenkins16,twicken18,li18} at the time of writing,
 we can estimate the number of low mass stars required to be observed
-by \tess{} to enable robust conclusions regarding the nature of the radius valley formation. These calculations
-proceed by noting that based on binomial statistics, the measurement uncertainty on the feature locations scales as
-$\sqrt{N_sP(1-P)}$ where $N_s$ is the number of observed stars and $P$ is the probability of detecting a small close-in planet
+by \tess{} to enable robust conclusions regarding the nature of the radius valley's formation. These calculations
+proceed by noting that the measurement uncertainty on the feature locations from binomial statistics scales as
+$\sqrt{N_sP(1-P)}$ where $N_s$ is the number of observed stars and $P$ is the probability of detecting a planet close to
+the radius valley 
 given the detection sensitvity, the transit proability, and their inherent rate of occurrence (see Eq.~\ref{eq:prob}).
 Through sectors 1-14, \tess{} has observed $N_{s,\text{TESS}} = 23051$ stars less massive than 0.4 M$_{\odot}$
-from its Candidate Target List \citep[CTL;][]{stassun19} with 2 minute cadence.
-Among these stars the SPOC has reported three objects of interest close to the terrestrial to gaseous planet transition
+with 2 minute cadence from its Candidate Target List \citep[CTL;][]{stassun19}.
+Among these stars, the SPOC has reported three objects of interest close to the radius valley
 between $1.4-1.6$ R$_{\oplus}$. Assuming a 0\% false positive rate
-among these planet candidates and the same MAP occurrence rate as measured with \kepler{}
+among these planet candidates, and the same MAP occurrence rate measured with \kepler{}
 ($f_{\text{valley}}\approx 0.19$ planets per star), we find the probability of \tess{} to detect a transiting planet
 spanning the radius valley around a star with $M_s<0.4$ M$_{\odot}$ to be 
 $P_{\text{valley,TESS}}=1.30 \times 10^{-4}$. We can compare these to the \kepler{} values of $N_{s,\text{Kep}}=33$ and
-$P_{\text{valley,Kep}}=8.56\times 10^{-3}$ to scale the uncertainty on $f_{\text{valley}}$, and hence on the valley radius, 
-as an increasing number of low mass stars are observed with 2 minute cadence with \tess{.}
+$P_{\text{valley,Kep}}=8.56\times 10^{-3}$ to scale the uncertainty on $f_{\text{valley}}$, and hence on the radius
+valley location, as an increasing number of mid-to-late M dwarfs are observed with 2 minute cadence with \tess{.}
 
-The resulting improvement in the measurement precision of the radius valley with observations of additional low mass
-stars is shown in Fig.~\ref{fig:improve}.
+The resulting improvement in the measurement precision of the radius valley with observations of additional mis-to-late
+M dwarfs is shown in Fig.~\ref{fig:improve}.
 The \tess{} curve reveals how precisely the location of the radius valley can be measured given \tess{'s} approximate 
 detection sensivity to planets spanning the radius valley and as the number of low mass stars observed with 2 minute
-cadence is increased. Note that the improvement allotted by \tess{} should onluy be interpretted as an
-approximation given that the detection sensitivity has not been adequately characterized. In our calculations the
-detection sensitivity is estimated as a constant value as described in the preceding paragraph. 
+cadence is increased. Note that the improvement allotted by \tess{} should only be interpretted as an
+approximation given that its detection sensitivity has not been adequately characterized. In our calculations, the
+\tess{} detection sensitivity is estimated as a constant value as described in the preceding paragraph. 
 
 We define a target measurement precision as that which is required to distinguish between predictions from photoevaporation
 and core-powered mass loss (assuming an empirical mass-luminosity relation) at $3\sigma$ around low mass stars with a median
 stellar mass of 0.35 M$_{\odot}$. Based on the model curves in Fig.~\ref{fig:rpvMs},
-the required precision corresponds to a radius vally uncertainty of $\sim 0.12$ R$_{\oplus}$. A very similar level
+this required precision corresponds to a radius vally uncertainty of $\sim 0.12$ R$_{\oplus}$. A very similar level
 of precision would be required to distinguish between photoevaporation and gas-poor formation as well.
-With the approximate \tess{} detection sensitivity, \tess{} will be required to observe $\sim 85,000$ mid-to-late M dwarfs
+The approximate \tess{} detection sensitivity implies that \tess{} will be required to observe $\sim 85,000$ mid-to-late M dwarfs
 to distinguish between model predictions of photoevaporation and core-powered mass low or gas-poor formation at $3\sigma$.
-At the time of writing only 23051 such stars have been targeted with 2 minute cadence. Extrapolating to end of \tess{'s}
-primary mission we expect a total of $\sim 42,000$ such stars to be observed with 2 minute cadence. If the \tess{} detection
-sensitivity is characterized by then and is roughly consistently with the approximate value assumed here then \tess{}
-could achieve a radius valley uncertainty of $\sim 0.17$ R$_{\oplus}$. This would still be useful for constraining radius
-valley formation models as predictions from photoevaporation and
-core-powered mass low, or gas-poor formation, could be distingiushed at $\sim 2.1\sigma$ with this level of precision.
+At the time of writing, only 23051 such stars have been targeted with 2 minute cadence. Extrapolating to end of \tess{'s}
+primary mission, we expect a total of $\sim 42,000$ such stars to be observed with 2 minute cadence. If the \tess{} detection
+sensitivity is well-characterized by that time and is roughly consistent with the approximate value assumed here then \tess{}
+could achieve a radius valley uncertainty of $\sim 0.17$ R$_{\oplus}$ by the end of its prime mission.
+This would still be useful for constraining radius valley formation models as predictions from photoevaporation and
+core-powered mass loss, or gas-poor formation, could be distingiushed at $\sim 2.1\sigma$ with this level of precision.
 Note that these calculations do not include non-CTL stars that may be targeted in the 30 minute \tess{} Full Frame Images
-and could also contribute to occurrence rate measurements albeit with a reduced detection sensitivity. 
+and could also contribute to occurrence rate measurements. Albeit with a reduced detection sensitivity.
 
 \begin{figure*}
   \centering
@@ -1073,39 +1075,70 @@ and could also contribute to occurrence rate measurements albeit with a reduced 
   \caption{Expected improvement in the measurement precision of the radius valley location with the number of observed
     low mass stars. Measurement precision curves of the upper and lower uncertainties on the location of the radius valley 
     are derived from binomial statistics. These calculations use approximate and expected detection sensitivity
-    values for the \tess{} (\emph{yellow}) and \emph{PLATO} (\emph{orange}) missions. The curve for a hypothetical continuation
+    values for the \tess{} (\emph{yellow}) and \plato{} (\emph{orange}) missions. The curve representing a hypothetical continuation
     of the primary \kepler{} mission is depicted in \emph{red}. The target precision of 0.12 R$_{\oplus}$ (\emph{shaded region})
-    would enable models of photoevaporation to be distinguished from core-powered mass loss and gas-poor formation at $3\sigma$
-    at $M_s=0.35$ M$_{\odot}$. Measurement precision curves are compared to samples of mid-to-late M dwarfs from the \tess{}
+    would enable models of photoevaporation to be distinguished from core-powered mass loss or gas-poor formation at $3\sigma$
+    at $M_s=0.35$ M$_{\odot}$. Measurement precision curves are compared to the sample sizes of mid-to-late M dwarfs from the \tess{}
     Candidate Target List for sectors 1-14 (i.e. to the time of writing) and 1-26 (i.e. to the end of the \tess{} primary
     mission). Also included is the approximate number of mid-to-late M dwarfs included in the P4 sample of the
     PLATO Input Catalog.}
   \label{fig:improve}
 \end{figure*}
 
-Also included in Fig.~\ref{fig:improve} are curves for a hypothetical \kepler{} mission and the up-coming \emph{PLATO}
-mission. The hypothetical \kepler{} curve reveals that had \kepler{} been able to continue its prime mission and have
+Also included in Fig.~\ref{fig:improve} is the curve for a hypothetical continuation of the primary \kepler{} mission.
+The calculation reveals that had \kepler{} been able to continue its prime mission and had
 access to thousands of additional mid-M dwarfs than were targeted in the primary \kepler{} field, then the location
-of the radius valley could have been precisely measured with $\sim 1200$ stars observed. 
+of the radius valley could have been precisely measured with $\sim 1200$ stars observed.
 
+The stellar input catalog for the up-coming ESA \plato{} mission \citep{rauer14} has yet to be defined. The primary goal
+of \plato{} is to detect and characterize transiting habitable zone planets around bright FGK stars. Despite this,
+according to the mission's Defintion Study
+Report\footnote{\url{https://sci.esa.int/web/plato/-/59252-plato-definition-study-report-red-book}}, a subset of 
+the PLATO Input Catalog (PIC) known as sample P4 will target $\geq 5000$ M dwarfs brighter than $V=16$ as part of
+the mission's Long-Duration Observing Phase (LOP) lasting a minimum of two years. Furthermore, the expected random
+noise in P4 is 800 ppm on one hour timescales. To compute the probability of
+detecting a radius valley planet around a mid-to-late M dwarf targeted by \plato{,} we first assume that for a given
+transit S/N, \plato{'s} detection sensivity will be equivalent to that of \kepler{.} We fix the transit S/N
+(Eq.~\ref{eq:snr}) of a radius valley planet orbiting a mid-M dwarf using the values $r_p=1.5$ R$_{\oplus}$, $R_s=0.35$
+R$_{\odot}$, $M_s=0.35$ M$_{\odot}$, CDPP$_{1\text{ hr}}=800$ ppm, and $n_{\text{transits}}=73$ for stars in the LOP observing
+phase. We note the inexact nature of this calculation which
+neglects the observing cadence and variations in the transit depth and photometric precision with each P4 star.
+Nevertheless, assuming the \kepler{} occurrence rate we estimate that $P_{\text{valley,PLATO}}=2.35 \times 10^{-3}$. This
+probability is $\sim 18$ times the estimated value for \tess{} but is about one quarter that of \kepler{.} The expected
+radius valley measurement precision with \plato{} is also depicted in Fig.~\ref{fig:improve}. 
+
+Although the exact P4 M dwarf sample is not yet defined, recent developments
+at the September 2019 PIC Workshop in Italy\footnote{\url{https://indico.ict.inaf.it/event/806/}} concluded that the
+properties of the sample will be consistent with M dwarf stars in the solar vicinity. Although this statement
+if very rough and not binding to the final definition of the PIC, we combine this expectation with knowledge of M dwarfs
+in the solar neightbourhood to estimate the number of mid-to-late M dwarfs in the P4 sample. We do so by retrieving
+the M dwarf sample within 25 pc from \cite{winters19}. Noting that this volume-limited sample is $\sim 33$\% complete
+(J. Winters private communication), we identify $\sim 2829$ M dwarfs within 25 pc and with $V<16$.
+We then scale up the M dwarf population beyond 25 pc until 5000 stars with $V<16$ are included assuming a homogenous M
+dwarf population beyond 25 pc. Of those stars which represent probable targets within the P4 sample, 3358 have masses
+$<0.4$ M$_{\odot}$. With this many mid-to-late M dwarfs targeted by \plato{,} we expect the radius valley uncertainty
+to reach $\sim 0.14$ R$_{\oplus}$ which would enable models of photoevaporation is be distrignshed from models of
+core-powered mass low or gas-poor formation at $\sim 2.6\sigma$.
 
 
 \subsection{Implications for RV planet searches around low mass stars}
 Many existing and up-coming RV spectrographs
 will be partially focused on characterizing the masses of planets spanning the radius valley in order to
-improve our physical understanding of the nature of those planets. The subset of those spectrographs operating
-in the near-IR, in particular, will focus heavily on M dwarf planetary systems
+improve our physical understanding of the nature of those planets. In particular, a subset of those spectrographs
+operating in the near-IR will focus heavily on M dwarf planetary systems
 (e.g. CARMENES; \citealt{quirrenbach14}, HPF; \citealt{mahadevan12}, IRD; \citealt{kotani14},
 NIRPS; \citealt{bouchy17}, SPIRou; \citealt{donati18}). In defining target samples
-that are equally complete on either side of the radius valley, it is critically important that the transition
-location between terrestrial and gaseous planets is known. In our full stellar sample which includes mid to
-late K dwarfs, the measured radius valley location is $1.54\pm 0.16$ R$_{\oplus}$ although we remind the reader
-that the exact value is dependent on the planet's separation (see Fig.~\ref{fig:fmapF}). A consistent value of
+that are equally complete on either side of the radius valley, it is critically important that the location
+of the transition between terrestrial and gaseous planets is known. In our full stellar sample which includes
+mid-to-late K dwarfs, the measured radius valley location is $1.54\pm 0.16$ R$_{\oplus}$. Although we remind the
+reader that the exact value is dependent on the planet's separation (see Fig.~\ref{fig:fmapF}). A consistent value of
 $1.55^{+0.52}_{-0.50}$ is also recovered, albeit with reduced signficance, around stars later than about M2.5V.
-This value is slightly lower than the valley locations measured around Sun-like stars with $M_s \sim 1.2$
-M$_{\odot}$ of $\sim 1.9$ R$_{\oplus}$ and $M_s \sim 0.85$ M$_{\odot}$ of $\sim 1.7$ R$_{\oplus}$ \citep{fulton18}.
+This value is slightly lower than the valley locations measured around Sun-like stars of
+$\sim 1.9$ R$_{\oplus}$ for $M_s \sim 1.2$ M$_{\odot}$ and $\sim 1.7$ R$_{\oplus}$ for $M_s \sim 0.85$ M$_{\odot}$
+\citep{fulton18}.
 
 \subsection{Imperfect clearing of the radius valley} \label{sect:void}
+\textbf{should I even talk about this? not sure what to say other than the gap is not fully cleared.}
 As evidenced in Fig.~\ref{fig:fmap}, the radius valley around low mass stars is partially filled by planets.
 This feature 
 
@@ -1141,7 +1174,8 @@ gap by photoevaporation.
 
 \acknowledgements
 We thank Martin Paegert for his efforts in contributing relevent data to and for his assistance in querying the \tess{}
-CTL database.
+CTL database. We also thank Jennifer Winters and Jonathan Irwin for discussions regarding the population of nearby
+M dwarfs.
 
 
 \bibliographystyle{apj}
