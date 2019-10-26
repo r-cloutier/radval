@@ -74,7 +74,7 @@
 
 \begin{document}
 \title{Evolution of the radius valley around low mass stars from \emph{KEPLER} and \emph{K2}}
-\title{The radius valley around low mass stars from Kepler and K2: } 
+%\title{The radius valley around low mass stars from Kepler and K2: } 
 \author{Ryan Cloutier\altaffilmark{1,2}}
 \author{Kristen Menou\altaffilmark{3,2} et al.}
 
@@ -99,14 +99,14 @@ of Toronto, 50 St. George Street, Toronto, ON, M5S 3H4, Canada}
   exploiting the \gaia{} DR2 data to refine the stellar parameters. 
   The application of appropriate completeness corrections %to the empirical planet population
   clearly reveals the radius valley in the maximum a-posteriori occurrence rates as a
-  function of orbital separation and planet radius. \textbf{The slope of the valley %with orbital separation
-  is shown to differ in sign from that measured around Sun-like stars which suggests that
-  thermally driven mass loss may not dominate the
-  formation and evolution of planets in the low stellar mass regime.}
-  The prominence and location of the radius valley features are also shown to evolve with stellar mass as
-  the relative occurrence of terrestrial to gaseous planets increases by an order of magnitude from mid-K to
-  mid-M dwarfs and each valley feature is shifted to smaller
-  planet sizes with decreasing stellar mass in agreement with physical models of photoevaporation,
+  function of orbital separation and planet radius. The slope of the valley %with orbital separation
+  is shown to differ in sign from that measured around Sun-like stars suggesting that
+  thermally driven atmospheric mass loss may not dominate the evolution of planets in the low stellar mass
+  regime or that we are witnessing the emergence of a separate channel of planet formation around  
+  low mass stars. This notion is supported by the relative occurrence of terrestrial to gaseous planets
+  which increases by an order-of-magnitude from mid-K to mid-M dwarfs.
+  We also show that the location of the radius valley features shift to smaller sizes with
+  decreasing stellar mass in agreement with physical models of photoevaporation,
   core-powered mass loss, and gas-poor formation. Although current measurements are
   insufficient to robustly identify the dominant formation pathway of the radius valley,
   we argue that such inferences may be obtained by \tess{} with $\mathcal{O}(85,000)$
@@ -136,13 +136,17 @@ apparent bimodality. One such proposed mechanism is
 that of photoevaporation wherein the gaseous envelopes of small close-in planets may be stripped by
 X-ray and extreme ultraviolet (XUV) radiation from their host stars during the first $\sim 100$ Myrs
 of the planet's lifetime
-\citep{jackson12,owen13,jin14,lopez14,chen16,owen17,jin18,lopez18}. Another possible explanation
-invokes gas-poor formation wherein gas accretion is delayed by dynamical friction whilst the
-planetary core is still embedded within the protoplanetary disk until a point at which the gaseous disk
-has almost completely dissipated after just a few Myrs \citep{lee14,lee16,lopez18}. More recently,
-the radius valley may also be explained by core-powered mass loss wherein the
+\citep{jackson12,owen13,jin14,lopez14,chen16,owen17,jin18,lopez18}.
+The radius valley may also be explained by core-powered mass loss wherein the
 luminosity from a planetary core's primordial energy reservoir from formation drives atmospheric escape
 over Gyr timescales \citep{ginzburg18,gupta19a,gupta19b}.
+Impact erosion by planetesimals may also drive the emergence of the radius valley either by atmospheric
+stripping or by the growth of a volatile-rich secondary atmosphere \citep{shuvalov09,schlichting15,wyatt19}. 
+Alternatively to the reprocessing of primorial atmospheres is the formation of distinct gaseous and
+terrestrial planets with the latter invoking gas-poor formation wherein gas accretion is delayed by
+dynamical friction whilst the
+planetary core is still embedded within the protoplanetary disk until a point at which the gaseous disk
+has almost completely dissipated after just a few Myrs \citep{lee14,lee16,lopez18}.
 
 Observational tests of the aforementioned theoretical frameworks have become feasible in recent years due to 
 the precise refinement of measured planet radii following improved stellar host characterization via  
@@ -192,8 +196,9 @@ In Sects.~\ref{sect:stars} and ~\ref{sect:planets} we define our stellar sample 
 and compile our sample of confirmed planets from each mission.
 In Sect.~\ref{sect:completeness} we derive the transiting planet detection completeness and use those results
 to calculate the occurrence rate of small close-in planets in which the structure of the radius valley around
-low mass stars is resolved (Sect.~\ref{sect:occurrence}). Our results as a function of stellar mass are compared to
-model predictions in Sect.~\ref{sect:models}. Sect.~\ref{sect:discussion} presents a discussion of our results
+low mass stars is resolved (Sect.~\ref{sect:occurrence}). In Sect.~\ref{sect:models} we compare our results to
+model predictions and to results from planet population studies around Sun-like stars. 
+Sect.~\ref{sect:discussion} presents a discussion of our results
 and its implications with a summary of our main findings being presented in Sect.~\ref{sect:conclusions}.
 
 
@@ -609,7 +614,7 @@ shown in Fig.~\ref{fig:compmap}.
 
 
 \section{The Occurrence Rate of Small Close-in Planets around Low Mass Dwarf Stars} \label{sect:occurrence}
-\subsection{Occurrence rates versus orbital period and planet radius}
+\subsection{Occurrence rates versus orbital period and planet radius} \label{sect:fmap}
 The detection and validation of planets from the \kepler{} and \ktwo{} missions enables the measurement of the
 occurrence rate of planets given the completeness corrections derived in Sect.~\ref{sect:completeness}.
 For the index $i$ representing a planet's orbital period and $j$ representing the planetary
@@ -729,7 +734,7 @@ completeness levels of 10, 50, or 90\% complete as a function of $P$ and $r_p$ f
 \input{densitytable}
 
 Lastly, we note that the radius valley as a function of $P$ is not completely void of planets.
-This may present evidence of the efficiency of the gap clearing mechanism around low mass stars and is
+This may allude to the efficiency of any gap clearing mechanism around low mass stars and is
 discussed further in Sect.~\ref{sect:void}.
 
 \subsection{Occurrence rates versus planet radius}
@@ -859,10 +864,9 @@ population, we measure an average slope and standard deviation of
 $\text{d}r_p / \text{d}\log{F} = -0.123\pm 0.054$. Similarly, repeating this exercise in the $P-r_p$
 space yields $\text{d}r_p / \text{d}\log{P} = 0.085\pm 0.074$.
 
-
 \begin{figure*}
   \centering %.48
-  \includegraphics[width=.8\hsize]{figures/fmapF_Msgt0d0_xbin39_ybin26_insolation.png}
+  \includegraphics[width=.8\hsize]{figures_tmp/fmapF_Msgt0d0_xbin39_ybin26_insolation.png}
   \includegraphics[width=.85\hsize]{figures_tmp/fmapF_martinez/fmapF_martinez001.png}
   \caption{Planet occurrence rates versus insolation and planet radius around low mass and Sun-like stars.
     \emph{Upper panel}: the maximum a-posteriori occurrence
@@ -876,9 +880,9 @@ space yields $\text{d}r_p / \text{d}\log{P} = 0.085\pm 0.074$.
     with $\geq 3\sigma$ bulk density measurements from the literature that are classified as having either
     a terrestrial (\emph{circles}), a gaseous (\emph{triangles}), or an ambiguous (\emph{squares}) bulk
     composition. \emph{Lower panel}: the occurrence rate map of close-in
-    \kepler{} planets around Sun-like stars \citep{martinez19}. The measured slopes for the planet populations
-    around Sun-like and low mass stars have opposing signs. Note the unique $F$ and $r_p$ scales compared
-    to the top panel.}
+    \kepler{} planets around Sun-like stars \citep[$\text{d}\log{r_p}/\text{d}\log{F} = 0.12\pm 0.02$][]{martinez19}.
+    %The measured slopes for the planet populations around Sun-like and low mass stars have opposing signs.
+    Note the unique $F$ and $r_p$ scales compared to the top panel.}
   \label{fig:fmapF}
 \end{figure*}
 
@@ -1196,39 +1200,40 @@ $\sim 1.9$ R$_{\oplus}$ for $M_s \sim 1.2$ M$_{\odot}$ and $\sim 1.7$ R$_{\oplus
 \citep{fulton18}.
 
 \subsection{Imperfect clearing of the radius valley} \label{sect:void}
-\textbf{should I even talk about this? not sure what to say other than the gap is not fully cleared.}
-As evidenced in Fig.~\ref{fig:fmap}, the radius valley around low mass stars is partially filled by planets.
-This feature 
+As noted in Sect.~\ref{sect:fmap} and evidenced in Fig.~\ref{fig:fmap}, the radius valley is not completely
+void of confirmed planets. If the radius valley around low mass stars is produced solely from the late formation
+of terrestrial planets in a gas-poor envirnoment---as the measured slope of the radius valley suggests
+(Fig.~\ref{fig:fmapF})---then the partial filling of the valley may point to a contiuum of formed planet sizes
+rather than two distinct populations of terrestrial and gaseous planets. However if the radius valley is instead
+sculpted by atmospheric post processing---as the radius valley around Sun-like stars seems to be
+\citep{fulton17,fulton18,vaneylen18,martinez19}---then the partial filling of the valley would imply that post
+processing from photoevaporation or core-powered mass loss is less efficient around lower mass stars.
+This seems plausible in the photoevaporation scenario wherein the atmospheric mass loss rate is proportional to
+the XUV luminosity of the host star. X-rays in particular are the dominant driver of atmospheric mass loss by
+photoevaporation and observations have revealed that Sun-like stars have higher absolute X-ray luminosities than
+their low mass star counterparts \citep{mcdonald19} despite the latter exhibiting a few to ten times larger
+$L_X/L_{\text{bol}}$ ratios \citep{jackson12,shkolnik14}. 
 
-This work elucidates the location of
-the radius valley around M dwarf host stars and guides observers to the planetary radii from transit surveys
-that are of interest for fully characterizing the radius valley in terms of planetary bulk densities.
+Visual
+investigation of the occurrence rates of small close-in planets in the stellar mass bins considered by
+\cite{fulton18} (i.e. $M_s<0.97$ M$_{\odot}$, $0.97 \leq M_s/\text{M}_{\odot} \leq 1.11$, $M_s>1.11$ M$_{\odot}$)
+suggests that the trend of increased filling of the valley with decreasing stellar mass may hold true   
+\citep[c.f. Fig. 9;][]{fulton18}. However we emphasize that this hypothesis has not been tested rigorously.   
+We also note that classical models of photoevaporation do not explicitly consider the effects of
+planetary magnetic fields on the efficiency of atmospheric mass loss and indeed the presence of such magnetic
+fields can partially stall atmospheric escape by varying amounts depending on the core composition of the
+planet \citep{owen19}.
 
-mass dependence of the gap: 
+The simplest explanation for the imperfect clearing of the radius valley instead does not invoke that either
+gas-poor formation or atmospheric post processing is solely responsible for the valley's formation.
+In comparing the slope of the radius valley around low mass and Sun-like stars (Fig.~\ref{fig:fmapF}), it is
+clear that the dominant process affecting the slope of the valley evolves (i.e. $\text{d}r_p/\text{d}\log{F}$)
+from a positive slope to negative slope from Sun-like to low mass stars. However,
+the threshold $M_s$ dividing each regime is unresolved such that the planet population considered herein
+likely features the superposition of processes such as gas-poor formation and thermally driven mass loss. The
+result of competing processes on the observed planet population could naturally explain the apparent
+partial filling of the gap.
 
-The weighted feature radii are also effected by planetary magnetic fields which directly impact the 
-efficiency of atmospheric stripping in the photoevaporation scenario \citep{owen19}. The persistence 
-of a planetary magnetic field acts to shield the planet's atmosphere from XUV stellar photons thus 
-enhancing the retention of the atmosphere and shifting the location of the radius valley to larger 
-radii.
-
-valley filling increases with deacreasing stellar mass  
-
-In the photoevaporation scenario, the
-partial filling of the gap around low mass stars may be explained by their lower XUV luminosities relative to 
-Sun-like such as those included in the CKS stellar sample \citep{}.
-
-This explanation seems to be supported by the stellar mass dependent gap measurements from \cite{fulton18}. 
-
-summary of McDonald+2019 (https://ui-adsabs-harvard-edu.ezp-prod1.hul.harvard.edu/abs/2019ApJ...876...22M/abstract):
-X-rays only since XUV observations are difficult for non-Sun-like stars and X-rays are the dominant driver of 
-atmospheric loss by photoevaporation. 
-Jackson+12 \& Shkolnik+14 derived scalings from data for the LX/Lbol evolution over time for 0.3 - 1.3 solar mass stars
-on the MS, low mass stars ($\lesssim 0.8$ M$_{\odot}$) exhibit a LX/Lbol that is typically a few to ten times greater 
-than around Sun-like stars ($0.8-1.12$ M$_{\odot}$) (fig 1 in McDonald+2019).
-scaling these values by the typical bolometric luminosities of stars in the various mass bins reveals that 
-Sun-like stars having higher absolute X-ray luminosities which contributes to more efficient clearing of the 
-gap by photoevaporation.
 
 \section{Summary of main findings} \label{sect:conclusions}
 This study presented calculations of the occurrence rate of small close-in planets orbiting low mass stars
