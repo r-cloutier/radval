@@ -210,7 +210,7 @@ considered in the California Kepler Survey \citep[CKS;][]{fulton17}.
 This adopted temperature threshold approximately corresponds to spectral types later than
 K3.5V \citep{pecaut13}. In the following subsections we define our stellar samples from each of \kepler{} or \ktwo{.}
 
-\vspace{16pt}
+%\vspace{16pt}
 
 \subsection{Kepler Stellar Sample} \label{sect:kep}
 Following the release of \gaia{} DR2 \citep{lindegren18}, \cite{berger18} cross-matched \kepler{} target stars
@@ -857,7 +857,7 @@ for the remainder of this study.
 Fig.~\ref{fig:fmapF} shows the two-dimensional occurrence rate of planets in the $F-r_p$ space for
 our planet sample as well as for the close-in \kepler{} planets around Sun-like stars
 from \cite{martinez19}.
-In this parameter space, we calculate the slope of the radius valley with $F$ and compare the measured
+In this parameter space we calculate the slope of the radius valley with $F$ and compare the measured
 value to model predictions of the transition from terrestrial to gaseous planets
 versus insolation. We measure the slope by resampling $10^3$ planet populations from the inverse
 occurrence rates (and their fractional uncertainties at each point $ij$) over the domains
@@ -865,13 +865,13 @@ $F\in [1,30]$ F$_{\oplus}$ and $r_p\in [1,2.5]$ R$_{\oplus}$.
 Each domain is defined to neglect regions far from the radius valley which would otherwise dominate the
 inverse occurrence rates. The number of sampled planets in the $\log{F}-r_p$ space is then fit with a
 linear function as depicted in Fig.~\ref{fig:fmapF}. Over the $10^3$ realizations of the resampled planet
-population, we measure an average slope and standard deviation of
+population we measure an average slope and standard deviation of
 $\text{d}r_p / \text{d}\log{F} = -0.123\pm 0.054$. Similarly, repeating this exercise in the $P-r_p$
 space yields $\text{d}r_p / \text{d}\log{P} = 0.085\pm 0.074$.
 
 \begin{figure*}
   \centering %.48
-  \includegraphics[width=.8\hsize]{figures_tmp/fmapF_Msgt0d0_xbin39_ybin26_insolation.png}
+  \includegraphics[width=.8\hsize]{figures/fmapF_Msgt0d0_xbin39_ybin26_insolation.png}
   \includegraphics[width=.85\hsize]{figures_tmp/fmapF_martinez/fmapF_martinez001.png}
   \caption{Planet occurrence rates versus insolation and planet radius around low mass and Sun-like stars.
     \emph{Upper panel}: the maximum a-posteriori occurrence
@@ -892,10 +892,11 @@ space yields $\text{d}r_p / \text{d}\log{P} = 0.085\pm 0.074$.
 \end{figure*}
 
 The negative slope of $\text{d}r_p / \text{d}\log{F} = -0.123$ indicates that the location of the radius valley
-drops to smaller planet radii with increasing insolation (i.e. at smaller orbital separations). \textbf{This behavior
+drops to smaller planet radii with increasing insolation (i.e. towards smaller orbital separations).
+\textbf{This behavior
 is broadly consistent with models of the formation small terrestrial planets in a gas-poor environment
 \citep{lee14,lee16,lopez18} leading to the transition from terrestrial to gaseous planets emerging due to the
-superposition of the two planet populations whose formation timescales differ. In this scenario, the
+superposition of terrestrial and gaseous planet populations whose formation timescales differ. In this scenario, the
   transition radius as a function of orbital separation is set by the maximum mass of a bare rocky core which
   itself is set by the amount of available solid material for the proto-planet to form out of via collisional
   growth. According to the
@@ -905,28 +906,34 @@ superposition of the two planet populations whose formation timescales differ. I
   is proportional to its Hill radius $r_H = a(m_p/3M_s)^{1/3}$ such that integrating over the disk surface results
   in the maximum mass of a bare rocky core $m_{p,\text{max}} \propto a^{0.6} M_s^{-0.5}$, or
   $r_{p,\text{valley}} \propto a^{0.16} M_s^{-0.14}$ after applying the rocky planet mass-radius relation
-  \citep{zeng16}. Thus the transition radius is predicted to occur at larger planet radii with increasing $a$
-  for a given host spectral type \citep{lopez18}. The theoretical scaling of the transition
+  \citep{zeng16}. Hence, the transition radius is predicted to occur at larger planet radii with increasing $a$
+  for a given host spectral type \citep{lopez18}. The corresponding theoretical scaling of the transition
   radius with insolation for a given spectral type is $r_{p,\text{valley}} \propto F^{-0.08}$
-  \citep{lopez18}} which is 
-consistent with our measured scaling between $r_{p,\text{valley}}$ and $\log{F}$ of $-0.123\pm 0.054$.
-\textbf{Furthermore, our slope measurements are inconsistent with models of thermally-driven atmospheric
+  \citep{lopez18} which is 
+  consistent with our measured scaling between $r_{p,\text{valley}}$ and $\log{F}$ of $-0.123\pm 0.054$.}
+
+\textbf{In addition to being consistent with predictions from gas-poor terrestrial planet formation models,
+  our slope measurements are inconsistent with models of thermally driven atmospheric
   escape from photoevaporation or core-powered mass loss that predict
 an increasing transition radius with increasing insolation ($r_{p,\text{valley}} \propto F^{0.11}$; \citealt{lopez18},  
 $r_{p,valley} \propto F^{0.10}$; \citealt{gupta19b} respectively).}
-The negative slope in the radius valley around low mass stars differs from the trend seen around
-Sun-like stars \citep{fulton17,vaneylen18,martinez19}.
-We interpret these differing observational signatures as an elucidation to possible changes in the dominant
-physical mechanisms that sculpt the radius valley around different host spectral types.
+The negative slope of the radius valley around low mass stars differs in sign from the trend seen around
+Sun-like stars \citep{martinez19}.
+The differing observational findings in each stellar mass regime may either be interpretted as
+a signature of distinct planet formation processes, wherein gas-poor planet formation is more prominent
+around low mass stars, or that the efficiency of atmospheric post processing weakens around lower mass stars.
+
 
 \textbf{The inclusion of planets with $\geq 3\sigma$ bulk density measurements (see Table~\ref{table:rhop}) in
   Fig.~\ref{fig:fmapF} reveals that all planets that are inconsistent with having bulk terrestrial
-  compositions lie above the transition radius predictions from all physical models considered. However, the
+  compositions lie above the transition radius predictions from all physical models considered
+  (i.e. gas-poor formation, photoevaporation, core-powered mass loss, and impact erosion). However, the
   temperate terrestrial planet LHS 1140b ($F=0.5$ F$_{\oplus}$, $r_p=1.7$ R$_{\oplus}$) sits in the $F-r_p$ parameter
-  space above the predicted transition radius from photoevaporation and core-powered mass loss but below the
-  predicted transition from gas-poor formation. Although LHS 1140b is the only instance of a planet
-  existing between the radius valley predictions from gas-poor formation and thermally-driven mass loss in
-  Fig.~\ref{fig:fmapF}, its location and composition provide supporting evidence for the applicability of
+  space below the predicted transition radius from gas-poor formation but above the predicted transition from all
+  other models considered. Although LHS 1140b is the only instance of a planet
+  existing between the radius valley predictions from gas-poor formation and thermally driven or impact driven
+  mass loss in Fig.~\ref{fig:fmapF}, the location and composition of LHS 1140b
+  provides supporting evidence for the applicability of models of 
   gas-poor terrestrial planet formation to the emergence of the radius valley around low mass stars.}
 
 \subsection{Planet populations versus stellar mass} \label{sect:Msbin}
@@ -1025,7 +1032,7 @@ terrestrial to gaseous planets despite the latter being inherently rare around t
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.85\hsize]{figures/rpvMsFULL_KepK2.png}
+  \includegraphics[width=0.9\hsize]{figures/rpvMsFULL_KepK2.png}
   \caption{Evolution of the radius valley features with stellar mass. \emph{Solid markers}:
     the occurrence rate-weighted locations of the terrestrial planet peak (\emph{red markers}), the
     radius valley (\emph{black markers}) and the gaseous planet peak (\emph{blue markers})
