@@ -1,6 +1,8 @@
 \documentclass[twocolumn]{emulateapj}
-\usepackage[bookmarks,bookmarksopen,colorlinks,linkcolor={blue},
+\usepackage[backref,breaklinks,bookmarks,bookmarksopen,colorlinks,linkcolor={blue},
   citecolor={blue},urlcolor={blue}]{hyperref}
+\usepackage[all]{hypcap}
+\renewcommand*{\backref}[1]{[#1]}
 \usepackage{amsmath}
 \usepackage{natbib}
 \usepackage{color}
@@ -169,7 +171,7 @@ The empirical population of known planets in this stellar mass regime features n
 fewer planets than around Sun-like stars thus making the detection of the radius valley more
 difficult and at a lower signal-to-noise. This fact is clearly evidenced in the empirical \kepler{} planet population
 for which the radius valley around Sun-like stars (\teff{} $\in [4700,6500]$ K) is clearly exhibited whereas a similar
-feature around low mass stars (\teff{} $< 4700$ K) is not easily discernible by-eye (Fig.~\ref{fig:berger} based on
+feature around low mass stars (\teff{} $< 4700$ K) is not easily discernible by-eye (\autoref{fig:berger} based on
 the data from \citealt{berger18}). This study leverages the precise stellar parallaxes from the \gaia{} DR2
 for low mass stars observed by \kepler{} and \ktwo{} to refine the stellar parameters and compute precise
 occurrence rates of close-in planets with the goal of resolving the radius valley and accurately measuring the
@@ -254,7 +256,7 @@ We define our final \kepler{} stellar sample by focusing on stars that satisfy t
 
 \noindent We also only consider \kepler{} stars for which reliable completeness products from DR25
 are available (see Sect.~\ref{sect:kepsens}). Based on these criteria, we retrieve 3965 low mass \kepler{}
-stars whose stellar parameters are depicted in Fig.~\ref{fig:stars}.
+stars whose stellar parameters are depicted in \autoref{fig:stars}.
 In our \kepler{} sample, the \kepler{} magnitudes span $K_p \in [10.35, 16.00]$ with a median value of 15.16,
 effective temperatures span \teff{} $\in [3154, 4870]$ K with a median value of 4394 K,
 stellar radii span $R_s \in [0.17, 0.87]$ R$_{\odot}$ with a median value of 0.68 R$_{\odot}$, and
@@ -335,7 +337,7 @@ from \cite{fulton17} that aims to reject evolved stars:
 \end{equation}
 
 \noindent Based on these criteria, we retrieve 13428 low mass \ktwo{} stars whose
-stellar parameters are also depicted in Fig.~\ref{fig:stars}.
+stellar parameters are also depicted in \autoref{fig:stars}.
 In our \ktwo{} sample, the \kepler{} magnitudes span $K_p \in [8.47, 14.68]$ with a median value of 14.04,
 effective temperatures span \teff{} $\in [3246, 4856]$ K with a median value of 4017 K,
 stellar radii span $R_s \in [0.14, 0.94]$ R$_{\odot}$ with a median value of 0.70 R$_{\odot}$, and
@@ -385,8 +387,8 @@ semimajor axes $a$ and insolations $F$ via
 Our final sample of confirmed small close-in planets 
 contains 275 \kepler{} and 53 \ktwo{} planets respectively. Their respective median fractional
 radius uncertainties are 7.1\% and 9.0\%. Properties of the 328 confirmed planets in our sample
-are reported in Tables~\ref{table:planetsKep} and~\ref{table:planetsK2}. Our planet sample is
-depicted in Fig.~\ref{fig:Ndet} as two-dimensional maps of the number of planet detections in
+are reported in \autoref{table:planetsKep} and \autoref{table:planetsK2}. Our planet sample is
+depicted in \autoref{fig:Ndet} as two-dimensional maps of the number of planet detections in
 the $P-r_p$ and $F-r_p$ spaces. The two-dimensional histogram maps are computed by
 Monte-Carlo sampling planets from their $F$ and $r_p$
 measurement uncertainties and with a fractional precision on $P$ inflated to 20\%.
@@ -408,7 +410,7 @@ measurement uncertainties and with a fractional precision on $P$ inflated to 20\
 \input{K2planettable}
 
 
-The empirical planet popluation in Fig.~\ref{fig:Ndet} exhibits many recognizable features in the distribution of
+The empirical planet popluation in \autoref{fig:Ndet} exhibits many recognizable features in the distribution of
 planets orbiting low mass stars \citep[e.g.][]{morton14,dressing15a,gaidos16}. Namely, the dearth of planets with
 $r_p\gtrsim 2$ R$_{\oplus}$ at short orbital periods known as the Neptunian desert \citep{lundkvist16,mazeh16},
 the prominence of super-Earth and sub-Neptune-sized planets with orbital periods of a few to tens of days,
@@ -462,7 +464,7 @@ derive the mapping between the MES and the transit S/N using the data from \cite
 derived the detection sensitivity of the \kepler{} pipeline from one year of data. 
 The parameters of the injected planets are provided along with their corresponding MES and CDPP at each value of
 $D$ considered. For each injected planet we interpolate its MES and CDPP values to $D$ and calculate
-the transit S/N using Eq.~\ref{eq:snr}. The mapping between MES and S/N is shown in Fig.~\ref{fig:messnr}
+the transit S/N using Eq.~\ref{eq:snr}. The mapping between MES and S/N is shown in \autoref{fig:messnr}
 for the full set of injected planets whose transit S/N values span 2.7-4843. Given the large number of injected planetary
 signals ($>10^4$), we fit the number-weighted S/N to MES mapping using the \texttt{scipy.curve\_fit} non-linear least
 squares algorithm with a powerlaw function of the form $\text{MES} = A\cdot \text{S/N}^{\alpha}$. We find a best-fit
@@ -470,7 +472,7 @@ amplitude and powerlaw index of $A=0.977$ and $\alpha=0.967$ respectively with n
 This relation is used to map the transit S/N to MES
 which is then mapped to the detection sensitivity. The average \kepler{} detection sensitivity curve as a function of
 transit S/N, along with the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles for the stars in our \kepler{} sample
-are shown in Fig.~\ref{fig:senscurves}.
+are shown in \autoref{fig:senscurves}.
 
 
 \begin{figure}
@@ -548,7 +550,7 @@ Transit signals are then injected into the cleaned \ktwo{} light curves and fed 
 The detection sensitivity as a function of S/N for each \ktwo{} star is computed by considering
 $10^2$ injected planetary systems per star and computing the recovery fraction of injected planets with
 $P \leq 100$ days. The average \ktwo{} detection sensitivity curve, along with the
-$16^{\text{th}}$ and $84^{\text{th}}$ percentiles, are also included in Fig.~\ref{fig:senscurves}. The quality
+$16^{\text{th}}$ and $84^{\text{th}}$ percentiles, are also included in \autoref{fig:senscurves}. The quality
 of the pointing corrections within the \texttt{EVEREST} light curves can vary widely within our sample such
 that there is considerably more variance in the \ktwo{} detection sensitivity relative to \kepler{.} Furthermore,
 the average detection sensitivity is significantly reduced compared to \kepler{.} %The effect of the reduced
@@ -565,7 +567,7 @@ as being independent and planetary.
 
 
 \subsection{Two-dimensional sensitivity maps}
-The sensitivity curves depicted in Fig.~\ref{fig:senscurves} enable us to extend the visualization of the
+The sensitivity curves depicted in \autoref{fig:senscurves} enable us to extend the visualization of the
 detection sensitivity to two dimensions. Explicitly, we consider the detection sensitivity
 $s_{nij}$ for each star (indexed by $n$) and as a function of $P$ and $r_p$ which are indexed by $i$ and
 $j$ respectively. Consideration of the sensitivity in $P-r_p$ space is needed to evaluate the
@@ -575,8 +577,8 @@ both planet size and separation, regardless of the physical mechanism involved.
 
 We consider orbital periods $P \in [0.5,100]$ days and planet radii $r_p \in [0.5,4]$ R$_{\oplus}$. At
 each grid cell $nij$ we compute the average S/N within the cell and map that value to the detection sensitivity
-using the data in Fig.~\ref{fig:senscurves}. The detection sensitivity maps for \kepler{} and \ktwo{,}
-averaged over the index $n$, are shown in Fig.~\ref{fig:sensmap}.
+using the data in \autoref{fig:senscurves}. The detection sensitivity maps for \kepler{} and \ktwo{,}
+averaged over the index $n$, are shown in \autoref{fig:sensmap}.
 
  
 
@@ -605,7 +607,7 @@ constant scalar modifications to $p_{t,nij}$ from effects such as grazing transi
 
 The product of each star's detection sensitivity with its geometric transit probability yield completeness
 maps as a function of $P$ and $r_p$. The average completeness maps for our \kepler{} and \ktwo{} stars are
-shown in Fig.~\ref{fig:compmap}.
+shown in \autoref{fig:compmap}.
 
 \begin{figure*}
   \centering
@@ -641,8 +643,8 @@ $N_s$ stars is given by the binomial likelihood function
 This quantity is dependent on the detection sensitivity $s_{nij}$, the transit probability $p_{t,nij}$, and the 
 intrinsic occurrence rate of planets in the grid cell $ij$ $f_{ij}$ which is assumed to be common to all
 of the $N_s$ stars in the sample.
-Recall that the number of planet detections $k_{ij}$ was depicted in Fig.~\ref{fig:Ndet} and
-calculations of $s_{nij}$ and $p_{t,nij}$ produced the completeness maps shown in Fig.~\ref{fig:compmap}. 
+Recall that the number of planet detections $k_{ij}$ was depicted in \autoref{fig:Ndet} and
+calculations of $s_{nij}$ and $p_{t,nij}$ produced the completeness maps shown in \autoref{fig:compmap}. 
 Taken together, and noting from Bayes theorem that the posterior probability of $f_{ij}$ is 
 
 \begin{equation}
@@ -655,10 +657,10 @@ the maximum a-posteriori (MAP) occurrence rate and uncertainty maps according to
 
 Before proceeding, first recall that our planet sample contains $\sim 5$ times more confirmed planets
 from \kepler{} than from \ktwo{} 
-(see Fig.~\ref{fig:Ndet}) despite our stellar sample including $\sim 3.5$ times more \ktwo{} stars 
-(see Fig.~\ref{fig:stars}). These factors compound to produce a lower planet occurrence rate measured
+(see \autoref{fig:Ndet}) despite our stellar sample including $\sim 3.5$ times more \ktwo{} stars 
+(see \autoref{fig:stars}). These factors compound to produce a lower planet occurrence rate measured
 with \ktwo{} than with \kepler{} as the reduced \ktwo{} detection completeness %relative to \kepler{}
-(see Fig.~\ref{fig:compmap}) is insufficient to account for the lower measured
+(see \autoref{fig:compmap}) is insufficient to account for the lower measured
 planet occurrence rates. The discrepancy instead arises from the disparate resources that have
 been dedicated to the confirmation of planets from \kepler{} and \ktwo{.} The result being that
 the number of confirmed planets existing within the set of \ktwo{} planet candidates is underestimated
@@ -668,7 +670,7 @@ In this way, we are assuming that the planet populations studied by each mission
 identical despite existing within distinct stellar populations within the galaxy, albeit with similar
 physical properties.
 
-The MAP $f_{ij}$ map is depicted in Fig.~\ref{fig:fmap}.
+The MAP $f_{ij}$ map is depicted in \autoref{fig:fmap}.
 Here the existence of the radius valley around low mass stars is clearly
 evident. Distinct peaks in the planet frequency are separated along the planetary radius axis and span
 $\sim 0.9-1.4$ R$_{\oplus}$ and $\sim 1.9-2.3$ R$_{\oplus}$ respectively.
@@ -702,19 +704,19 @@ with the valley structure measured from the empirical planet population of FGK s
 asteroseismology \citep{vaneylen18}. \cite{wu19} also provided a visual approximation to the location of the
 radius valley around stars with $M_s \in [0.5,0.76]$ M$_{\odot}$ in their \gaia{-}\kepler{} sample. However
 we find the location of the terrestrial-sized planet peak to exist at longer $P \sim 30$ days compared its
-location at $\sim 5$ days from \cite{wu19} (c.f. Fig. 2). The discrepancy likely originates from differences
+location at $\sim 5$ days from \cite{wu19} (c.f. Figure 2). The discrepancy likely originates from differences
 in the method of correcting for survey incompleteness.
 Recall that in this study the detection sensitivity for \kepler{} stars is computed on a per star basis
 given the unique completeness products from the \kepler{} pipeline whereas \cite{wu19} adopt the piecewise
 completeness levels of 10, 50, or 90\% complete as a function of $P$ and $r_p$ from \cite{zhu18b}.
 
-Also included in Fig.~\ref{fig:fmap} are planets
+Also included in \autoref{fig:fmap} are planets
 with $\geq 3\sigma$ bulk density measurements from either precision radial velocities or
 transit timing variations.
 Planet parameters are retrieved from the NASA Exoplanet Archive for planets orbiting stars with
-\teff{} $\in[2800,4700]$ K, whose orbital periods and radii span the domain considered in Fig.~\ref{fig:fmap},
+\teff{} $\in[2800,4700]$ K, whose orbital periods and radii span the domain considered in \autoref{fig:fmap},
 and whose masses are inconsistent with zero (i.e. no mass upper limits).
-The properties of the resulting 20 planets are listed in Table~\ref{table:rhop}. Based on the
+The properties of the resulting 20 planets are listed in \autoref{table:rhop}. Based on the
 planetary bulk densities $\rho_p$ we define the following composition dispositions: terrestrial
 dispositions
 have $\rho_p+\sigma_{\rho_p} \geq 5.5$ g cm$^{-3}$ and $\rho_p-\sigma_{\rho_p} \geq 3.5$ g cm$^{-3}$,
@@ -723,7 +725,7 @@ have $\rho_p-\sigma_{\rho_p} \leq 2$ g cm$^{-3}$ and $\rho_p+\sigma_{\rho_p} \le
 with all remaining planets being flagged as having an ambiguous bulk composition (i.e. not clearly
 terrestrial-like or likely hosting a significant gaseous envelope).
 
-The vast majority of the retrieved planets in Fig.~\ref{fig:fmap}
+The vast majority of the retrieved planets in \autoref{fig:fmap}
 demonstrate clear composition clustering with planet radius.
 With the exception of the probable terrestrial planet GJ 143b ($P=35.6$ days, $r_p=2.6$ R$_{\oplus}$),
 all terrestrial planets appear to be smaller than 1.8 R$_{\oplus}$ independently of orbital period.
@@ -742,10 +744,10 @@ discussed further in Sect.~\ref{sect:void}.
 
 \subsection{Occurrence rates versus planet radius}
 Next, we marginalize over $P$ and compute the one-dimensional occurrence rate of small close-in planets
-as a function of $r_p$. The resulting occurrence rates are shown in Fig.~\ref{fig:rphist} in which the bimodal
+as a function of $r_p$. The resulting occurrence rates are shown in \autoref{fig:rphist} in which the bimodal
 distribution of planet sizes is again clearly discernible in the MAP occurrence rates.
 The uncertainties on each $f_j$ bin are computed from the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles
-of the $f_j$ posterior. In Fig.~\ref{fig:rphist} we ignore the measured occurrence rate in bins with
+of the $f_j$ posterior. In \autoref{fig:rphist} we ignore the measured occurrence rate in bins with
 $r_p\lesssim 1$ R$_{\oplus}$ where the detection sensitivity is poor.
 
   
@@ -774,7 +776,7 @@ $r_p\lesssim 1$ R$_{\oplus}$ where the detection sensitivity is poor.
 From the bimodal distribution we highlight the approximate radii likely corresponding to planets with terrestrial
 bulk compositions ($r_p\lesssim 1.54$ R$_{\oplus}$) versus planets with significant size fractions in a gaseous
 envelope ($r_p\gtrsim 1.54$ R$_{\oplus}$) around
-low mass stars. Also depicted in Fig.~\ref{fig:rphist} is $f_j$ with a bin width half that of the principal
+low mass stars. Also depicted in \autoref{fig:rphist} is $f_j$ with a bin width half that of the principal
 $f_j$ depiction (i.e. 0.06 R$_{\oplus}$ compared to 0.13 R$_{\oplus}$).
 With finer binning the fractional uncertainties on $f_j$ are sufficiently
 large to eliminate the significance of the distinct bimodal peaks. Despite this, the bimodality in the MAP
@@ -810,7 +812,7 @@ the total number of FPs plus VPs. Notably, \cite{crossfield16b} showed that the 
 on the measured planet radius as giant PCs have a larger likelihood of
 being a FP. Hence, we only focus on PCs with $r_p<4$ R$_{\oplus}$ when deriving FP rates.
 
-The resulting FP rates are reported in Table~\ref{tab:FP}. Half of the studies do not find any probable
+The resulting FP rates are reported in \autoref{tab:FP}. Half of the studies do not find any probable
 FP signals among the small PCs orbiting cool stars in their samples. In such cases, only upper limits on the FP rate
 can be derived which all agree that the FP rate is $\lesssim 20$\% at 95\%. The remaining studies
 each detect at least one FP such that a non-zero maximum likelihood FP rate is measured. Their average FP rate is 5.7\%
@@ -823,7 +825,7 @@ according to the adopted FP rate such that each realization contains $(1-0.057)\
 \input{FPtable}
 
 The effect of including PCs on the derived occurrence rates is assessed by comparing the $f_j$ distributions
-measured with and without the inclusion of PCs (Fig.~\ref{fig:rphistPCs}).
+measured with and without the inclusion of PCs (\autoref{fig:rphistPCs}).
 Again we scale the \ktwo{} occurrence rates
 to those from \kepler{} such that the cumulative occurrence of close-in planets with $r_p \leq 4$ R$_{\oplus}$
 is identical between the two planet populations as their contributions from \kepler{} planets are identical.
@@ -842,7 +844,7 @@ for the remainder of this study.
   \centering
   \includegraphics[scale=.8]{figures/rphist_kruse.png}
   \caption{Comparison of occurrence rates with and without planet candidates included. \emph{Left panel}:
-    same as Fig.~\ref{fig:rphist}. \emph{Right panel}: histogram depicting the relative occurrence
+    same as \autoref{fig:rphist}. \emph{Right panel}: histogram depicting the relative occurrence
     rate of close-in planets with orbital periods $<100$ days derived from the population of confirmed
     planets from \kepler{} and \ktwo{} and supplemented by 119 randomly selected PCs
     around low mass stars from \cite{kruse19}. The radius valley continues to be resolved with
@@ -854,7 +856,7 @@ for the remainder of this study.
 
 \section{Evolution of the radius valley around low mass stars} \label{sect:models}
 \subsection{Slope of the radius valley}
-Fig.~\ref{fig:fmapF} shows the two-dimensional occurrence rate of planets in the $F-r_p$ space for
+\autoref{fig:fmapF} shows the two-dimensional occurrence rate of planets in the $F-r_p$ space for
 our planet sample as well as for the close-in \kepler{} planets around Sun-like stars
 from \cite{martinez19}.
 In this parameter space we calculate the slope of the radius valley with $F$ and compare the measured
@@ -864,7 +866,7 @@ occurrence rates (and their fractional uncertainties at each point $ij$) over th
 $F\in [1,30]$ F$_{\oplus}$ and $r_p\in [1,2.5]$ R$_{\oplus}$.
 Each domain is defined to neglect regions far from the radius valley which would otherwise dominate the
 inverse occurrence rates. The number of sampled planets in the $\log{F}-r_p$ space is then fit with a
-linear function as depicted in Fig.~\ref{fig:fmapF}. Over the $10^3$ realizations of the resampled planet
+linear function as depicted in \autoref{fig:fmapF}. Over the $10^3$ realizations of the resampled planet
 population we measure an average slope and standard deviation of
 $\text{d}r_p / \text{d}\log{F} = -0.123\pm 0.054$. Similarly, repeating this exercise in the $P-r_p$
 space yields $\text{d}r_p / \text{d}\log{P} = 0.085\pm 0.074$.
@@ -924,21 +926,21 @@ a signature of distinct planet formation processes, wherein gas-poor planet form
 around low mass stars, or that the efficiency of atmospheric post processing weakens around lower mass stars.
 
 
-The inclusion of planets with $\geq 3\sigma$ bulk density measurements (see Table~\ref{table:rhop}) in
-Fig.~\ref{fig:fmapF} reveals that all planets that are inconsistent with having bulk terrestrial
+The inclusion of planets with $\geq 3\sigma$ bulk density measurements (see \autoref{table:rhop}) in
+\autoref{fig:fmapF} reveals that all planets that are inconsistent with having bulk terrestrial
 compositions lie above the transition radius predictions from all physical models considered
 (i.e. gas-poor formation, photoevaporation, core-powered mass loss, and impact erosion). However, the
 temperate terrestrial planet LHS 1140b ($F=0.5$ F$_{\oplus}$, $r_p=1.7$ R$_{\oplus}$) sits in the $F-r_p$ parameter
 space below the predicted transition radius from gas-poor formation but above the predicted transition from all
 other models considered. Although LHS 1140b is the only instance of a planet
 existing between the radius valley predictions from gas-poor formation and thermally driven or impact driven
-mass loss in Fig.~\ref{fig:fmapF}, the location and composition of LHS 1140b
+mass loss in \autoref{fig:fmapF}, the location and composition of LHS 1140b
 provides supporting evidence for the applicability of models of 
 gas-poor terrestrial planet formation to the emergence of the radius valley around low mass stars.
 
 \subsection{Planet populations versus stellar mass} \label{sect:Msbin}
 In addition to calculating the occurrence rates $f_{ij}$ among our full stellar sample, here we consider
-the evolution of the planet population in unique host stellar mass bins. Fig.~\ref{fig:rphistcomp} shows
+the evolution of the planet population in unique host stellar mass bins. \autoref{fig:rphistcomp} shows
 the MAP $f_{ij}$ maps in $P-r_p$ space and the marginalized $f_j$ distributions in four stellar mass bins
 representing our full stellar sample
 ($M_s \in [0.08,0.93]$ M$_{\odot}$), the massive half of the sample ($M_s>0.65$ M$_{\odot}$),  
@@ -974,17 +976,17 @@ peak does not appear distinct from the terrestrial planet peak in the MAP $f_{ij
 frequency of terrestrial to gaseous planets appears to increase significantly around M dwarfs compared to the more
 massive K dwarfs. This feature is further accentuated around the lowest mass stars in our sample ($<0.42$
 M$_{\odot}$) for which terrestrial-sized planets clearly dominate the distribution of close-in planets. The relative
-frequency of terrestrial to gaseous planets in each stellar mass bin are reported in Table~\ref{tab:rel}
+frequency of terrestrial to gaseous planets in each stellar mass bin are reported in \autoref{tab:rel}
 for fixed definitions of $r_p \in [1,1.6]$ R$_{\oplus}$ and $r_p \in [1.6,2.5]$ R$_{\oplus}$ respectively. The inner
 limit of 1 R$_{\oplus}$ restricts this analysis to where the detection sensitivity is still informative. The outer
 limit of 2.5 R$_{\oplus}$ is chosen such that the full width at half maximum of the gaseous planet peak in the
-$f_j$ distribution from the full stellar sample is approximately identical for each peak (Fig.~\ref{fig:rphist})
+$f_j$ distribution from the full stellar sample is approximately identical for each peak (\autoref{fig:rphist})
 but is still somewhat arbitrary.
 
 \input{reltable}
 
-The values in Table~\ref{tab:rel} indicate the significant increase in the relative occurrence of terrestrial
-planets with decreasing stellar mass that is illustrated in Fig.~\ref{fig:rphistcomp}. Our measurements show
+The values in \autoref{tab:rel} indicate the significant increase in the relative occurrence of terrestrial
+planets with decreasing stellar mass that is illustrated in \autoref{fig:rphistcomp}. Our measurements show
 that gaseous planets are nearly twice as common as terrestrial planets
 around mid to late K dwarfs ($M_s \in [0.65,0.93]$ M$_{\odot}$) while the relative frequency approaches unity
 around the full suite of M dwarfs ($M_s \in [0.08,0.65]$ M$_{\odot}$). Focusing on mid-to-late M dwarfs only in
@@ -1006,7 +1008,7 @@ requires the preferential formation of terrestrial planets around low mass stars
 by photoevaporation, core-powered mass loss, or impact erosion, have little to no effect. The alternative scenario
 is that planet formation processes around low mass stars continues to produce gaseous planets with significant
 primordial atmospheres that are subsequently stripped by any of the aforementioned processes. The slope of the
-valley measured from Fig.~\ref{fig:fmapF} suggests that the former scenario is important but our calculations of
+valley measured from \autoref{fig:fmapF} suggests that the former scenario is important but our calculations of
 the occurrence rates in various stellar mass bins are unable to solely confirm or reject any physical mechanism
 at this time. 
 
@@ -1021,12 +1023,12 @@ the following hyperparameters: the $f_{ij}$ smoothing parameter, the minimum det
 considered reliable,
 the $P$ bin width, the $r_p$ bin width, and the imposed upper and
 lower $P$ and $r_p$ limits on each peak. The upper and lower $r_p$ limits are defined based on the visual
-inspection of the $f_{ij}$ maps in Fig.~\ref{fig:rphistcomp} and are used to demarcate the
+inspection of the $f_{ij}$ maps in \autoref{fig:rphistcomp} and are used to demarcate the
 boundaries of each peak---and by extension---the valley separating the peaks.
 As an example, if the prescribed boundaries on the terrestrial peak are set to 1-50 days and 0.8-1.4 R$_{\oplus}$,
 then only the occurrence rates over that subset of the $P-r_p$ parameter space are used to calculate the
 $f_{ij}$-weighted terrestrial peak radius. The range of boundary values for each peak are listed in
-Table~\ref{tab:bounds}. In practice, we derive $10^3$ realizations of each $f_{ij}$ map with each realization
+\autoref{tab:bounds}. In practice, we derive $10^3$ realizations of each $f_{ij}$ map with each realization
 having a unique set of the aforementioned hyperparameters.
 The resulting $f_{ij}$ maps are marginalized over $P$ and the $f_j$-weighted radius of
 each peak is computed over the domain bounded by the relevant hyperparameters.
@@ -1034,12 +1036,12 @@ The same is done for the radius valley using the inverse occurrence rates.
 
 \input{boundstable}
 
-The resulting locations of each radius peak and valley are depicted in Fig.~\ref{fig:rpvMs} as a function of
-stellar mass. The locations and uncertainties are also given explicitly in Table~\ref{tab:rpvMs}.
+The resulting locations of each radius peak and valley are depicted in \autoref{fig:rpvMs} as a function of
+stellar mass. The locations and uncertainties are also given explicitly in \autoref{tab:rpvMs}.
 The depicted $M_s$ values are represented by the median stellar mass within each bin and whose
 uncertainties are derived from the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles. In computing the
 feature locations we assume that the bimodal $r_p$ distribution is present in all stellar mass bins
-aside from the lowest mass bin (see Fig.~\ref{fig:rphistcomp}). In the lowest stellar mass bin we
+aside from the lowest mass bin (see \autoref{fig:rphistcomp}). In the lowest stellar mass bin we
 only measure the location of the terrestrial planet peak and its edge which marks the transition from
 terrestrial to gaseous planets despite the latter being inherently rare around these types of stars.
 
@@ -1080,7 +1082,7 @@ are $\text{d}r_{p,\text{terr}} / \text{d}M_s = 0.40$ and $\text{d}r_{p,\text{gas
 respectively. The relative slopes indicate that the most common size of
 gaseous planet decreases more steeply with $M_s$ than the typical size of terrestrial planets. This trend
 is indicative of the effective disappearance of gaseous planets around increasingly lower mass stars
-(see Fig.~\ref{fig:rphistcomp}) while terrestrial-sized planets appear to persist.
+(see \autoref{fig:rphistcomp}) while terrestrial-sized planets appear to persist.
 Furthermore, the reduced slope of the terrestrial peak may be evidence for
 a characteristic planetary core size of $\approx 1$ R$_{\oplus}$ although its exact location is largely uncertain
 due to the limited detection sensitivity to sub-Earth-sized planets.   
@@ -1088,7 +1090,7 @@ due to the limited detection sensitivity to sub-Earth-sized planets.
 Models of the formation of the radius valley based upon photoevaporation \citep{wu19}, gas-poor formation \citep{lopez18},
 and core-powered mass loss \citep{gupta19b} all make explicit predictions for the evolution of the radius valley location
 with stellar mass. Predictions from the core-powered mass loss scenario are dependent on the stellar mass-luminosity
-relation (MLR) $L_s \propto M_s^{\alpha}$. In Fig.~\ref{fig:rpvMs} we consider cases with a constant MLR with $\alpha=5$
+relation (MLR) $L_s \propto M_s^{\alpha}$. In \autoref{fig:rpvMs} we consider cases with a constant MLR with $\alpha=5$
 \citep{gupta19b} and with the empirically-derived piecewise MLR from \cite{eker18}. All models predict a decreasing
 radius valley with decreasing stellar mass but differ in their slopes. 
 At the median stellar mass of our full stellar sample ($0.65$ M$_{\odot}$), the measured location of the radius valley is
@@ -1127,7 +1129,7 @@ given the detection sensitvity, the transit proability, and their inherent rate 
 Through sectors 1-14, \tess{} has observed $N_{s,\text{TESS}} = 23,051$ stars less massive than 0.4 M$_{\odot}$
 with 2 minute cadence from its Candidate Target List \citep[CTL;][]{stassun19}.
 Among these stars, the SPOC has reported three objects of interest close to the radius valley
-between $1.4-1.6$ R$_{\oplus}$ (TOIs 175.01, 406.01, and 667.01). 
+between $1.4-1.6$ R$_{\oplus}$\footnote{\tess{} Objects-of-Interest, TOIs: 175.01, 406.01, and 667.01.}. 
 Assuming a 0\% false positive rate
 among these planet candidates, and the same MAP occurrence rate measured with \kepler{}
 ($f_{\text{valley}}\approx 0.19$ planets per star), we find the probability of \tess{} to detect a transiting planet
@@ -1137,7 +1139,7 @@ $P_{\text{valley,Kep}}=8.56\times 10^{-3}$ to scale the uncertainty on $f_{\text
 valley location---as an increasing number of mid-to-late M dwarfs are observed with 2 minute cadence with \tess{.}
 
 The resulting improvement in the measurement precision of the radius valley with observations of additional mid-to-late
-M dwarfs is shown in Fig.~\ref{fig:improve}.
+M dwarfs is shown in \autoref{fig:improve}.
 The \tess{} curve reveals how precisely the location of the radius valley can be measured given \tess{'s} approximate 
 detection sensivity to planets spanning the radius valley and as the number of low mass stars observed with 2 minute
 cadence is increased. Note that the improvement allotted by \tess{} should only be interpretted as an
@@ -1163,7 +1165,7 @@ approximation given that its detection sensitivity has not yet been adequately c
 
 We define a target measurement precision as that which is required to distinguish between predictions from photoevaporation
 and core-powered mass loss (assuming an empirical mass-luminosity relation) at $3\sigma$ around low mass stars with a median
-stellar mass of 0.35 M$_{\odot}$. Based on the model curves in Fig.~\ref{fig:rpvMs},
+stellar mass of 0.35 M$_{\odot}$. Based on the model curves in \autoref{fig:rpvMs},
 this required precision corresponds to a radius vally uncertainty of $\sim 0.12$ R$_{\oplus}$. A very similar level
 of precision would be required to distinguish between photoevaporation and gas-poor formation as well.
 The approximate \tess{} detection sensitivity implies that \tess{} will be required to observe $\sim 85,000$ mid-to-late M dwarfs
@@ -1177,7 +1179,7 @@ core-powered mass loss---or gas-poor formation---could be distingiushed at $\sim
 Note that these calculations do not include non-CTL stars that may be targeted in the 30 minute \tess{} Full Frame Images
 and could also contribute to the occurrence rate measurements, albeit with a reduced detection sensitivity.
 
-Also included in Fig.~\ref{fig:improve} is the curve for a hypothetical continuation of the primary \kepler{} mission.
+Also included in \autoref{fig:improve} is the curve for a hypothetical continuation of the primary \kepler{} mission.
 The calculation reveals that had \kepler{} been able to continue its prime mission and had
 access to thousands of additional mid-M dwarfs than were targeted in the primary \kepler{} field, then the location
 of the radius valley could have been precisely measured with $\sim 1200$ observed stars.
@@ -1190,7 +1192,7 @@ the PLATO Input Catalog (PIC) known as sample P4 will target $\geq 5000$ M dwarf
 the mission's Long-Duration Observing Phase (LOP) lasting a minimum of two years. Furthermore, the expected random
 noise in P4 is 800 ppm on one hour timescales. To compute the probability of
 detecting a radius valley planet around a mid-to-late M dwarf targeted by \plato{,} we first assume that for a given
-transit S/N, \plato{'s} detection sensivity will be equivalent to that of \kepler{} (Fig.~\ref{fig:senscurves}).
+transit S/N, \plato{'s} detection sensivity will be equivalent to that of \kepler{} (\autoref{fig:senscurves}).
 We fix the transit S/N
 (Eq.~\ref{eq:snr}) of a radius valley planet orbiting a mid-M dwarf using the values $r_p=1.5$ R$_{\oplus}$, $R_s=0.35$
 R$_{\odot}$, $M_s=0.35$ M$_{\odot}$, CDPP$_{1\text{ hr}}=800$ ppm, and $n_{\text{transits}}=73$ for stars in the LOP observing
@@ -1198,7 +1200,7 @@ phase. We note the inexact nature of this calculation which
 neglects the observing cadence and variations in the transit depth and photometric precision with each P4 star.
 Nevertheless, assuming the \kepler{} occurrence rate we estimate that $P_{\text{valley,PLATO}}=2.35 \times 10^{-3}$. This
 probability is $\sim 18$ times the estimated value for \tess{} but is about one quarter that of \kepler{.} The expected
-radius valley measurement precision with \plato{} is also depicted in Fig.~\ref{fig:improve}. 
+radius valley measurement precision with \plato{} is also depicted in \autoref{fig:improve}. 
 
 Although the exact P4 M dwarf sample is not yet defined, recent developments
 at the September 2019 PIC Workshop in Italy\footnote{\url{https://indico.ict.inaf.it/event/806/}} concluded that the
@@ -1224,17 +1226,75 @@ NIRPS; \citealt{bouchy17}, SPIRou; \citealt{donati18}). In defining target sampl
 that are equally complete on either side of the radius valley, it is critically important that the location
 of the transition between terrestrial and gaseous planets is known. In our full stellar sample which includes
 mid-to-late K dwarfs, the measured radius valley location is $1.54\pm 0.16$ R$_{\oplus}$. Although we remind the
-reader that the exact value is dependent on the planet's separation (see Fig.~\ref{fig:fmapF}). A consistent value of
+reader that the exact value is dependent on the planet's separation (see \autoref{fig:fmapF}). A consistent value of
 $1.55^{+0.52}_{-0.50}$ is also recovered---albeit with reduced signficance---around stars later than about M2.5V.
 This value is slightly lower than the valley locations measured around Sun-like stars of
 $\sim 1.9$ R$_{\oplus}$ for $M_s \sim 1.2$ M$_{\odot}$ and $\sim 1.7$ R$_{\oplus}$ for $M_s \sim 0.85$ M$_{\odot}$
 \citep{fulton18}.
 
+\textbf{Furthermore, the opposing slope signs of the radius valley around Sun-like and low mass
+stars (see Fig.~\ref{fig:fmapF}) has implications for where in the planetary parameter space one expects to find
+predominantly terrestrial or gaseous planets. Fig.~\ref{fig:transition} reveals the region of interest for resolving
+the terrestrial-to-gaseous transition in the $P-r_p$ space by comparing the radius valley slope measured in this work around
+low mass stars to the slope measured around Sun-like stars from the CKS sample \citep{martinez19}. The latter is scaled
+from its median stellar mass of 1.01 M$_{\odot}$ to the median stellar mass of our sample (0.65 M$_{\odot}$) using the
+$M_s$-dependent scaling relation of the radius valley under photoevaporation \citep{wu19}. The measured transitions
+intersect at $P\sim 23.52$ days such that two regions of interest emerge and are bounded by}
+
+\begin{equation}
+  r_p \in 
+  \begin{cases}
+        [r_{p,\text{this work}}, r_{p,\text{M19}}], & \quad P < 23.52 \text{ days,} \\
+        [r_{p,\text{M19}}, r_{p,\text{this work}}], & \quad P > 23.52 \text{ days.} \\
+  \end{cases}  \label{eq:transition}
+\end{equation}
+
+\noindent where
+
+\begin{align}
+  r_{p,\text{this work}} &= 0.11\cdot \log_{10}(P)+1.52, \\
+  r_{p,\text{M19}} &= -0.48\cdot \log_{10}(P)+2.32.
+\end{align}
+
+\noindent \textbf{These subsets of the $P-r_p$ parameter space define the regions of interest for resolving the
+  terrestrial-to-gaseous transition around low mass stars. For example, at $P\lesssim 23.52$ days, thermally driven
+  atmospheric mass loss, such as that from photoevaporation, predicts that planets in the set defined in
+  Eq.~\ref{eq:transition} should be predominantly rocky. Whereas the gas-poor formation scenario, whose predicted
+  radius valley slope differs in sign from that of thermally driven mass loss, would predict that those planets be
+  predominantly gaseous. These predictions can be robustly tested by targeting planets within the
+  Eq.~\ref{eq:transition} regions of interest and obtaining precise planetary bulk density measurements.
+  As seen in Fig.~\ref{fig:transition}, there are only $\sim 5$ planets in the region of interest with $\geq 3\sigma$ bulk
+  density measurements. These planets highlight the decrease in bulk density with increasing $r_p$ although insufficient
+  information
+  is available to resolve a possibly sharp transition. The \tess{} SPOC has already identified three TOIs of interest
+  around stars with \teff{} $<4700$ K\footnote{TOIs: 654.01, 732.02, and 1184.01.} that should be targeted by RV follow-up
+  campaigns.}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.99\hsize]{figures/fmapregion_Msgt0d0_xbin39_ybin26.png}
+  \caption{Regions of interest for resolving the transition between terrestrial and gaseous planets
+    around low mass stars. The colormap depicts the occurrence rate of small close-in planets from
+    Fig.~\ref{fig:fmap}. The terrestrial-to-gaseous transition measured in this work is highlighted
+    by the \emph{solid black line}. The transition measured around FGK stars from \cite{martinez19}
+    is highlighted by the \emph{dashed black line} after being scaled to the median stellar mass of
+    our sample. The shaded regions bounded by
+    these curves represent the most interesting subset of the $P-r_p$ parameter space for resolving
+    the transition around low mass stars from precise bulk density measurements. TOIs from the
+    SPOC that fall within the region of interest are marked by an `X'. Also overplotted are planets
+    with $\geq 3\sigma$ bulk density measurements from the literature that are classified as having either
+    a terrestrial (\emph{circles}), a gaseous (\emph{triangles}), or an ambiguous (\emph{squares}) bulk
+    composition.}
+  \label{fig:transition}
+\end{figure}
+
+
+
 \subsection{Imperfect clearing of the radius valley} \label{sect:void}
-As noted in Sect.~\ref{sect:fmap} and evidenced in Fig.~\ref{fig:fmap}, the radius valley is not completely
+As noted in Sect.~\ref{sect:fmap} and evidenced in \autoref{fig:fmap}, the radius valley is not completely
 void of confirmed planets. If the radius valley around low mass stars is produced solely from the late formation
 of terrestrial planets in a gas-poor environment---as the measured slope of the radius valley suggests
-(Fig.~\ref{fig:fmapF})---then the partial filling of the valley may point to a continuum of formed planet sizes
+(\autoref{fig:fmapF})---then the partial filling of the valley may point to a continuum of formed planet sizes
 rather than two distinct populations of terrestrial and gaseous planets. However if the radius valley is instead
 sculpted by atmospheric post processing---as the radius valley around Sun-like stars seems to be
 \citep{fulton17,fulton18,vaneylen18,martinez19}---then the partial filling of the valley would imply that post
@@ -1249,7 +1309,7 @@ Visual
 investigation of the occurrence rates of small close-in planets in the stellar mass bins considered by
 \citealt{fulton18} (i.e. $M_s<0.97$ M$_{\odot}$, $0.97 \leq M_s/\text{M}_{\odot} \leq 1.11$, and $M_s>1.11$ M$_{\odot}$)
 suggests that the trend of increased filling of the valley with decreasing stellar mass may hold true   
-\citep[c.f. Fig. 9;][]{fulton18}. However we emphasize that this hypothesis has not been tested rigorously.   
+\citep[c.f. Figure 9;][]{fulton18}. However we emphasize that this hypothesis has not been tested rigorously.   
 We also note that classical models of photoevaporation do not explicitly consider the effects of
 planetary magnetic fields on the efficiency of atmospheric mass loss and indeed the presence of such magnetic
 fields can partially stall atmospheric escape by varying amounts depending on the core composition of the
@@ -1257,7 +1317,7 @@ planet \citep{owen19}.
 
 The simplest explanation for the imperfect clearing of the radius valley instead does not invoke that either
 gas-poor formation or atmospheric post processing is solely responsible for the valley's formation.
-In comparing the slope of the radius valley around low mass and Sun-like stars (Fig.~\ref{fig:fmapF}), it is
+In comparing the slope of the radius valley around low mass and Sun-like stars (\autoref{fig:fmapF}), it is
 clear that the dominant process affecting the slope of the valley (i.e. $\text{d}r_p/\text{d}\log{F}$)
 evolves from a positive slope to a negative slope from Sun-like to low mass stars. However,
 the threshold $M_s$ dividing each regime is unresolved such that the planet population considered herein
