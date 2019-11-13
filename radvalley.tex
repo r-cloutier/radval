@@ -122,7 +122,7 @@ consequently enabled robust investigations of the occurrence rate of planets wit
 One striking outcome of such studies was that the so-called super-Earths and sub-Neptunes---whose
 radii span sizes intermediate between those of the Earth and Neptune---represent the most common
 type of planet around Sun-like stars and early M dwarfs alike
-\citep[e.g.][]{youdin11,howard12,dressing13,fressin13,petigura13b,morton14,dressing15a,mulders15,gaidos16,fulton17,hardegree19}.
+\citep[e.g.][]{youdin11,howard12,dressing13,fressin13,petigura13b,morton14,dressing15a,mulders15a,gaidos16,fulton17,hardegree19}.
 Furthermore, mass measurements of many of these transiting planets via transit-timing variations
 or precision radial velocity measurements revealed that the majority of planets
 smaller than $\sim 1.6$ R$_{\oplus}$ are consistent with having bulk terrestrial compositions
@@ -1083,7 +1083,10 @@ is indicative of the effective disappearance of gaseous planets around increasin
 (see \autoref{fig:rphistcomp}) while terrestrial-sized planets appear to persist.
 Furthermore, the reduced slope of the terrestrial peak may be evidence for
 a characteristic planetary core size of $\approx 1$ R$_{\oplus}$ although its exact location is largely uncertain
-due to the limited detection sensitivity to sub-Earth-sized planets.   
+due to the limited detection sensitivity to sub-Earth-sized planets. Typical core sizes may also be stellar mass
+dependent as a core size for a fixed mass is composition dependent and the mass of heavy elements per star
+is known to to be higher around M dwarfs compared to around FGK stars \citep{mulders15a,mulders15b,neil19}.
+
 
 Models of the formation of the radius valley based upon photoevaporation \citep{wu19}, gas-poor formation \citep{lopez18},
 and core-powered mass loss \citep{gupta19b} all make explicit predictions for the evolution of the radius valley location
@@ -1231,55 +1234,57 @@ $\sim 1.9$ R$_{\oplus}$ for $M_s \sim 1.2$ M$_{\odot}$ and $\sim 1.7$ R$_{\oplus
 \citep{fulton18}.
 
 \textbf{Furthermore, the opposing slope signs of the radius valley around Sun-like and low mass
-stars (see Fig.~\ref{fig:fmapF}) has implications for where in the planetary parameter space one expects to find
-predominantly terrestrial or gaseous planets. Fig.~\ref{fig:transition} reveals the region of interest for resolving
+stars has implications for where in the planetary parameter space one expects to find
+predominantly terrestrial or gaseous planets. \autoref{fig:transition} reveals the region of interest for resolving
 the terrestrial-to-gaseous transition in the $P-r_p$ space by comparing the radius valley slope measured in this work around
 low mass stars to the slope measured around Sun-like stars from the CKS sample \citep{martinez19}. The latter is scaled
 from its median stellar mass of 1.01 M$_{\odot}$ to the median stellar mass of our sample (0.65 M$_{\odot}$) using the
-$M_s$-dependent scaling relation of the radius valley under photoevaporation \citep{wu19}. The measured transitions
+$M_s$-dependent scaling relation of the radius valley under photoevaporation \citep{wu19}.}
+
+\textbf{The measured transitions around low mass and Sun-like stars
 intersect at $P\sim 23.52$ days such that two regions of interest emerge and are bounded by}
 
 \begin{equation}
   r_p \in 
   \begin{cases}
-        [r_{p,\text{valley, this work}}, r_{p,\text{valley, M19}}], & P < 23.52 \text{ days,} \\
-        [r_{p,\text{valley, M19}}, r_{p,\text{valley, this work}}], & P > 23.52 \text{ days.} \\
+        [r_{p,\text{valley,this work}}, r_{p,\text{valley,M19}}], & P < 23.52 \text{ days,} \\
+        [r_{p,\text{valley,M19}}, r_{p,\text{valley,this work}}], & P > 23.52 \text{ days.} \\
   \end{cases}  \label{eq:transition}
 \end{equation}
 
 \noindent where
 
 \begin{align}
-  r_{p,\text{valley, this work}} &= 0.11\cdot \log_{10}(P)+1.52, \\
-  r_{p,\text{valley, M19}} &= -0.48\cdot \log_{10}(P)+2.32.
+  r_{p,\text{valley,this work}} &= 0.11\cdot \log_{10}(P)+1.52, \\
+  r_{p,\text{valley,M19}} &= -0.48\cdot \log_{10}(P)+2.32.
 \end{align}
 
-\noindent \textbf{These subsets of the $P-r_p$ parameter space define the regions of interest for resolving the
-  terrestrial-to-gaseous transition around low mass stars. For example, at $P\lesssim 23.52$ days, thermally driven
-  atmospheric mass loss, such as that from photoevaporation, predicts that planets in the set defined in
+\noindent \textbf{These subsets of the $P-r_p$ space define the regions of interest for resolving the
+  terrestrial-to-gaseous transition around low mass stars. For example at $P\lesssim 23.52$ days, thermally driven
+  atmospheric mass loss, such as that from photoevaporation, predicts that planets in the set defined by
   Eq.~\ref{eq:transition} should be predominantly rocky. Whereas the gas-poor formation scenario, whose predicted
-  radius valley slope differs in sign from that of thermally driven mass loss, would predict that those planets be
+  radius valley slope differs in sign from that of thermally driven mass loss, predicts that those planets should be
   predominantly gaseous. These predictions can be robustly tested by targeting planets within the
   Eq.~\ref{eq:transition} regions of interest and obtaining precise planetary bulk density measurements.
-  As seen in Fig.~\ref{fig:transition}, there are only $\sim 5$ planets in the region of interest with $\geq 3\sigma$ bulk
-  density measurements. These planets highlight the decrease in bulk density with increasing $r_p$ although insufficient
+  As seen in \autoref{fig:transition}, there are only $\sim 5$ planets in the region of interest with $\geq 3\sigma$ bulk
+  density measurements. These planets reveal the decrease in bulk density with increasing $r_p$ although insufficient
   information
   is available to resolve a possibly sharp transition. The \tess{} SPOC has already identified three TOIs of interest
-  around stars with \teff{} $<4700$ K\footnote{TOIs: 654.01, 732.02, and 1184.01.} that should be targeted by RV follow-up
-  campaigns.}
+  around stars with \teff{} $<4700$ K that should be targeted by RV follow-up
+  campaigns.\footnote{TOIs: 654.01, 732.02, and 1184.01.} }
 
 \begin{figure}
   \centering
   \includegraphics[width=0.99\hsize]{figures/fmapregion_Msgt0d0_xbin39_ybin26.png}
   \caption{Regions of interest for resolving the transition between terrestrial and gaseous planets
     around low mass stars. The colormap depicts the occurrence rate of small close-in planets from
-    Fig.~\ref{fig:fmap}. The terrestrial-to-gaseous transition measured in this work is highlighted
+    \autoref{fig:fmap}. The terrestrial-to-gaseous transition measured in this work is highlighted
     by the \emph{solid black line}. The transition measured around FGK stars from \cite{martinez19}
     is highlighted by the \emph{dashed black line} after being scaled to the median stellar mass of
     our sample. The shaded regions bounded by
-    these curves represent the most interesting subset of the $P-r_p$ parameter space for resolving
-    the transition around low mass stars from precise bulk density measurements. TOIs from the
-    SPOC that fall within the region of interest are marked by an `X'. Also overplotted are planets
+    these curves represent the subset of the $P-r_p$ parameter space of interest for resolving
+    the transition around low mass stars from precise bulk density measurements. The three TOIs from the
+    SPOC that fall within this region are marked by an `x'. Also overplotted are planets
     with $\geq 3\sigma$ bulk density measurements from the literature that are classified as having either
     a terrestrial (\emph{circles}), a gaseous (\emph{triangles}), or an ambiguous (\emph{squares}) bulk
     composition.}
@@ -1329,28 +1334,29 @@ This study presented calculations of the occurrence rate of small close-in plane
 using data from the \kepler{} and \ktwo{} transit surveys. Our main findings are summarized below.
 
 \begin{itemize}
-\item The radius valley structure in the occurrence rate of small close-in planets,
-  previously resolved around Sun-like
-  stars, is demonstrated to persist around low mass stars (i.e. mid-K to mid-M dwarfs).
-\item The radius valley around low mass stars exhibits a negative slope with insolation unlike 
-  around Sun-like stars whose measured slope is positive. The observed slope
-  supports models of gas-poor terrestrial planet formation without invoking atmospheric escape from photoevaporation,
+\item The radius valley structure in the occurrence rate of small close-in planets---previously resolved around
+  Sun-like stars---is demonstrated to persist around low mass stars (i.e. mid-K to mid-M dwarfs).
+\item The radius valley around low mass stars exhibits a negative slope with orbital separation
+  ($\text{d}r_p / \text{d}\log{F} = -0.123\pm 0.054$) unlike 
+  around Sun-like stars whose measured slope is positive. These observations
+  support models of gas-poor terrestrial planet formation without invoking atmospheric escape from photoevaporation,
   core-powered mass loss, or erosion by planetesimal impacts.
-\item The gaseous planet peak in the bimodal occurrence rates, centered at $\sim 2$ R$_{\oplus}$, effectively
+\item The gaseous planet peak in the bimodal occurrence rates centered at $\sim 2$ R$_{\oplus}$, effectively
   vanishes around mid-M dwarfs as terrestrial planets ($\lesssim 1.6$ R$_{\oplus}$) increasingly dominate the close-in
   planet population towards later spectral types. The relative fraction of terrestrial to gaseous planets increases
   from $\sim 0.5\pm 0.1 \to 8.5\pm 4.6$ from mid-K to mid-M dwarfs.
 \item The occurrence rate-weighted central radius of each planet peak and the radius valley shift to smaller
-  sizes with decreasing stellar mass. The slope of the gaseous peak's radius with stellar mass is shown to be
-  twice that of the terrestrial peak radius indicating that the complete planet population in each stellar mass bin
+  sizes with decreasing stellar mass. The slope of the gaseous planet peak's radius with stellar mass is shown to be
+  twice that of the terrestrial peak radius indicating that the planet population in each stellar mass bin
   tends to converge towards rocky planet cores of $\sim 1$ R$_{\oplus}$ around later spectral types.
 \item Robust inferences to distinguish between various proposed physical mechanisms for the formation of the
-  radius valley are expoected to require $\mathcal{O}(85,000)$ mid-M dwarfs observed with 2 minute cadence with
+  radius valley are expected to require $\mathcal{O}(85,000)$ mid-M dwarfs observed with 2 minute cadence with
   \tess{} or $\mathcal{O}(4700)$ mid-M dwarfs observed with \plato{} based on its expected performance and
-  observing strategy. 
+  observing strategy.
+\item We advocate that transiting planets around stars with \teff{} $<4700$ K, and whose orbital periods and radii are
+  situated between model predictions of the location of the terrestrial-to-gaseous transition (see \autoref{fig:transition}),
+  should be targeted by RV campaigns to resolve location and slope of this transition using precise bulk density measurements. 
 \end{itemize}
-
-
 
 
 \acknowledgements
