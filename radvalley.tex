@@ -71,14 +71,14 @@
   \pdfendlink
 }
 
-\shortauthors{Cloutier et al.}
+\shortauthors{Cloutier \& Menou}
 \shorttitle{Evolution of the radius valley with stellar mass}
 
 \begin{document}
 \title{Evolution of the radius valley around low mass stars from \emph{KEPLER} and \emph{K2}}
 %\title{The radius valley around low mass stars from Kepler and K2: } 
 \author{Ryan Cloutier\altaffilmark{1,2}}
-\author{Kristen Menou\altaffilmark{3,2} et al.}
+\author{Kristen Menou\altaffilmark{3,2}}
 
 \email{ryan.cloutier@cfa.harvard.edu}
 
@@ -184,7 +184,7 @@ with stellar mass can allude to which process---if any---dominates the evolution
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.98\hsize]{figures/Bergerplanethist.png}
+  %\includegraphics[width=0.98\hsize]{figures/Bergerplanethist.png}
   \caption{Empirical distributions of \kepler{} planet radii. Histograms of \kepler{} planet radii
     from \cite{berger18} for planets with host stellar effective temperatures \teff{} $\in [4700,6500]$ K
     (\emph{blue}) and \teff{} $<4700$ K (\emph{red}). The former subset of 2816 planets corresponds to the
@@ -267,7 +267,7 @@ $M_s$ is $\sim 5.5$\%.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.98\hsize]{figures/stellar_corner_KepandK2.png}
+  %\includegraphics[width=0.98\hsize]{figures/stellar_corner_KepandK2.png}
   \caption{Low mass dwarf stellar samples from \kepler{} and \ktwo{.} Distributions of \kepler{} magnitudes,
     effective temperatures, stellar radii, and stellar masses for stars in our final stellar sample from either
     \kepler{} (\emph{blue histogram and markers}) or \ktwo{} (\emph{red histogram and markers}).}
@@ -395,10 +395,19 @@ measurement uncertainties and with a fractional precision on $P$ inflated to 20\
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.98\hsize]{figures/Ndetmap_Msgt0d0_xbin45_ybin27.png}
-  \caption{Empirical population of confirmed close-in planets around low mass stars.
+  \includegraphics[width=\hsize]{figures/Ndetmap_map_Msgt0d0_xbin45_ybin27.png}%
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off4}{fig:off4}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on4}{fig:on4}{1}%
+  \includegraphics[width=\hsize]{figures/Ndetmap_kepk2_Msgt0d0_xbin45_ybin27.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  \caption{(\emph{Interactive figure}) Empirical population of confirmed close-in planets around low mass stars.
     The distribution of 275 and 53 confirmed planets from \kepler{}
-    and \ktwo{} respectively as a function of orbital period, insolation, and planet radius. The two-dimensional maps are
+    and \ktwo{}
+    \ToggleLayer{fig:on4,fig:off4}{\protect\cdbox{(\emph{circles and diamonds} respectively)}}
+    as a function of orbital period, insolation, and planet radius. The two-dimensional maps are
     Monte-Carlo sampled from the measurement uncertainties on the planetary radii and insolations while 
     the fractional uncertainties on the orbital periods are inflated to
     20\%.} %\emph{Lower panels}: same as the upper panels except for an expanded planet population that is supplemented by
@@ -476,7 +485,7 @@ are shown in \autoref{fig:senscurves}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.98\hsize]{figures/MES_SNR.png}
+  %\includegraphics[width=0.98\hsize]{figures/MES_SNR.png}
   \caption{Correlation between the \kepler{} multi-event statistic and transit S/N. The mapping between the MES and
     S/N based on the synthetic planetary signals injected into the \kepler{} pipeline \citep{christiansen15}.
     The number-weighted powerlaw fit (\emph{solid line}) to the correlation differs slightly from a one-to-one relation
@@ -487,7 +496,7 @@ are shown in \autoref{fig:senscurves}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.98\hsize]{figures/senscurves.png}
+  %\includegraphics[width=0.98\hsize]{figures/senscurves.png}
   \caption{Average detection sensitivity for \kepler{} and \ktwo{.} The \emph{solid curves} represent the
     average transiting planet detection sensitivity for the \kepler{} and \ktwo{} stars in our sample as
     a function of the transit S/N (Eq.~\ref{eq:snr}). The shaded regions mark the 16$^{th}$ and 84$^{th}$
@@ -583,7 +592,7 @@ averaged over the index $n$, are shown in \autoref{fig:sensmap}.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.98\hsize]{figures/sensmap.png}
+  %\includegraphics[width=0.98\hsize]{figures/sensmap.png}
   \caption{Average detection sensitivity versus orbital period and planetary radius.
     The detection sensitivity maps averaged over \kepler{} stars (\emph{left panel)} and over \ktwo{} stars
     (\emph{right panel}) from our sample of low mass dwarf stars.} 
@@ -610,7 +619,7 @@ shown in \autoref{fig:compmap}.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.98\hsize]{figures/compmap.png}
+  %\includegraphics[width=0.98\hsize]{figures/compmap.png}
   \caption{Average completeness versus orbital period and planetary radius.
     Maps of the product of the detection sensitivity and geometric transit probability averaged over \kepler{} stars
     (\emph{left panel)} and over \ktwo{} stars (\emph{right panel}) from our sample of low mass dwarf stars.} 
@@ -685,13 +694,34 @@ occurrence rate of $2.83\pm 0.36$ planets per star.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=.8\hsize]{figures/fmap_Msgt0d0_xbin39_ybin26.png}
-  \caption{Planet occurrence rate versus orbital period and planetary radius. The maximum a-posteriori occurrence
-    rate map calculated from the population of confirmed planets from \kepler{} (\emph{circles}) and
-    \ktwo{} (\emph{diamonds}) around low mass dwarf
-    stars. For comparison, overplotted are the empirical locations of the radius valley around FGK stars 
+  \includegraphics[width=\hsize]{figures/fmap_bkgd_Msgt0d0_xbin39_ybin26.png}%
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off3}{fig:off3}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on3}{fig:on3}{1}%
+  \includegraphics[width=\hsize]{figures/fmap_kepk2_Msgt0d0_xbin39_ybin26.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off1}{fig:off1}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on1}{fig:on1}{1}%
+  \includegraphics[width=\hsize]{figures/fmap_curve_Msgt0d0_xbin39_ybin26.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off4}{fig:off4}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on4}{fig:on4}{1}%
+  \includegraphics[width=\hsize]{figures/fmap_planets_Msgt0d0_xbin39_ybin26.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  \caption{(\emph{Interactive figure}) Planet occurrence rate versus orbital period and planetary radius. The maximum a-posteriori occurrence
+    rate map calculated from the population of confirmed planets from \kepler{} and
+    \ktwo{} \ToggleLayer{fig:on3,fig:off3}{\protect\cdbox{(\emph{circles and diamonds})}} around low mass dwarf
+    stars. For comparison, overplotted are the \ToggleLayer{fig:on1,fig:off1}{\protect\cdbox{empirical locations}}
+    of the radius valley around FGK stars 
     characterized via asteroseismology \citep[\emph{dashed line},][]{vaneylen18} and the approximate radius
-    valley around mid-K to early-M dwarfs \citep[\emph{dotted line},][]{wu19}. Also overplotted are planets
+    valley around mid-K to early-M dwarfs \citep[\emph{dotted line},][]{wu19}. Also overplotted are
+    \ToggleLayer{fig:on4,fig:off4}{\protect\cdbox{planets}}
     with $\geq 3\sigma$ bulk density measurements from the literature that are classified as having either
     a rocky (\emph{circles}), a gaseous (\emph{triangles}), or an ambiguous (\emph{squares}) bulk
     composition. Marker colors are indicative of the MAP planet bulk densities. 
@@ -753,7 +783,7 @@ $r_p\lesssim 1$ R$_{\oplus}$ where the detection sensitivity is poor.
   
 \begin{figure*}
   \centering
-  \includegraphics[scale=.8]{figures/rphist_double.png}
+  %\includegraphics[scale=.8]{figures/rphist_double.png}
   \caption{Occurrence rate of planets as a function of size. \emph{Upper panel}:
     histogram depicting the relative occurrence
     rate of close-in planets with orbital periods $<100$ days derived from the population of confirmed
@@ -843,7 +873,7 @@ for the remainder of this study.
 
 \begin{figure*}
   \centering
-  \includegraphics[scale=.8]{figures/rphist_kruse.png}
+  %\includegraphics[scale=.8]{figures/rphist_kruse.png}
   \caption{Comparison of occurrence rates with and without planet candidates included. \emph{Left panel}:
     same as \autoref{fig:rphist}. \emph{Right panel}: histogram depicting the relative occurrence
     rate of close-in planets with orbital periods $<100$ days derived from the population of confirmed
@@ -873,9 +903,17 @@ $\text{d}r_p / \text{d}\log{F} = -0.123\pm 0.054$. Similarly, repeating this exe
 space yields $\text{d}r_p / \text{d}\log{P} = 0.085\pm 0.074$.
 
 \begin{figure*}
-  \centering %.48
-  \includegraphics[width=.8\hsize]{figures/fmapF_Msgt0d0_xbin39_ybin26_insolation.png}
-  \includegraphics[width=.85\hsize]{figures_tmp/fmapF_martinez/fmapF_martinez001.png}
+  \centering
+  %\includegraphics[width=.8\hsize]{figures/fmapF_Msgt0d0_xbin39_ybin26_insolation.png}
+  %\includegraphics[width=.8\hsize]{figures/fmapF_bkgd_Msgt0d0_xbin39_ybin26_insolation.png}%
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off1}{fig:off1}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on1}{fig:on1}{1}%
+  %\includegraphics[width=.8\hsize]{figures/fmapF_models_Msgt0d0_xbin39_ybin26_insolation.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  %\includegraphics[width=.85\hsize]{figures_tmp/fmapF_martinez/fmapF_martinez001.png}
   \caption{Planet occurrence rates versus insolation and planet radius around low mass and Sun-like stars.
     \emph{Upper panel}: the maximum a-posteriori occurrence
     rate map calculated from the population of confirmed planets from \kepler{} (\emph{circles}) and
@@ -960,7 +998,7 @@ M$_{\odot}$ (i.e. $\sim 62$\% of our confirmed planet sample).
 
 \begin{figure*}
   \centering
-  \includegraphics[width=.98\hsize]{figures/rphist_compMs.png}
+  %\includegraphics[width=.98\hsize]{figures/rphist_compMs.png}
   \caption{2D and 1D planet occurrence rates in various stellar mass bins. \emph{Top panels}: planet occurrence
     rate maps as a function of orbital period and planet radius. \emph{Bottom panels}: distributions of the relative
     planet occurrence rate as a function of planet radius. Note the differing occurrence rate scales.
@@ -1052,20 +1090,49 @@ rocky to non-rocky planets despite the latter being inherently rare around these
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.9\hsize]{figures/rpvMsFULL_KepK2.png}
-  \caption{Evolution of the radius valley features with stellar mass. \emph{Solid markers}:
+  \includegraphics[width=\hsize]{figures/rpvMsFULL_KepK2_bkgd.png}%
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off4}{fig:off4}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on4}{fig:on4}{1}%
+  \includegraphics[width=\hsize]{figures/rpvMsFULL_KepK2_models.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off1}{fig:off1}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on1}{fig:on1}{1}%
+  \includegraphics[width=\hsize]{figures/rpvMsFULL_KepK2_FP18.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off3}{fig:off3}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on3}{fig:on3}{1}%
+  \includegraphics[width=\hsize]{figures/rpvMsFULL_KepK2_bin.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  \begin{ocg}{fig:off2}{fig:off2}{0}%
+  \end{ocg}%
+  \begin{ocg}{fig:on2}{fig:on2}{1}%
+  \includegraphics[width=\hsize]{figures/rpvMsFULL_KepK2_Ms.png}%
+  \end{ocg}
+  \hspace{-\hsize}%
+  \caption{(\emph{Interactive figure}) Evolution of the radius valley features with stellar mass. \emph{Solid markers}:
     the occurrence rate-weighted locations of the non-rocky planet peak (\emph{blue markers}), the
     radius valley (\emph{black markers}) and the rocky planet peak (\emph{red markers})
     as a function of host stellar mass. Measurements around Sun-like stars with $M_s>0.8$ M$_{\odot}$ are
-    retrieved from \cite{fulton18} (\emph{open circles}). Feature radii from our full sample with a median value of
-    $M_s = 0.651^{+0.058}_{-0.096}$ M$_{\odot}$ are depicted as \emph{filled circles}. \emph{Filled squares}
+    retrieved from \cite{fulton18} \ToggleLayer{fig:on1,fig:off1}{\protect\cdbox{(\emph{open circles})}}.
+    Feature radii from our full sample with a median value of
+    $M_s = 0.651^{+0.058}_{-0.096}$ M$_{\odot}$ are depicted as
+    \ToggleLayer{fig:on2,fig:off2}{\protect\cdbox{\emph{filled circles}}}.
+    \ToggleLayer{fig:on3,fig:off3}{\protect\cdbox{\emph{Filled squares}}}
     depict the feature radii from partitioning our stellar sample into three $M_s$ bins: $M_s \in [0.65,0.93]$ M$_{\odot}$,
     $M_s \in [0.08,0.65]$ M$_{\odot}$, and $M_s \in [0.08,0.42]$ M$_{\odot}$. Markers in each stellar mass bin are slightly
     offset along the $M_s$ axis to assist in visualizing the errorbars. Uncertainties on the
     peak and valley locations are derived by sampling the measured occurrence rates and their uncertainties along
     with samples of the hyperparameters controlling map smoothing, minimum detection sensitivity, planet parameter
-    binning, and the assumed feature ranges in $P$ and $r_p$. The green
-    curves represent theoretical predictions for the evolution of the radius valley with stellar mass based on
+    binning, and the assumed feature ranges in $P$ and $r_p$. The
+    \ToggleLayer{fig:on4,fig:off4}{\protect\cdbox{\emph{green curves}}}
+    represent theoretical predictions for the evolution of the radius valley with stellar mass based on
     physical models of gas-poor terrestrial planet formation (\emph{dotted}; \citealt{lopez18}),
     core-powered atmospheric mass loss
     with an empirical mass-luminosity relation (\emph{solid}; \citealt{gupta19b}), a constant mass-luminosity
@@ -1131,20 +1198,20 @@ This value is slightly lower than the valley locations measured around Sun-like 
 $\sim 1.9$ R$_{\oplus}$ for $M_s \sim 1.2$ M$_{\odot}$ and $\sim 1.7$ R$_{\oplus}$ for $M_s \sim 0.85$ M$_{\odot}$
 \citep{fulton18}.
 
-\textbf{Furthermore, the opposing slope signs of the radius valley around Sun-like and low mass
+Furthermore, the opposing slope signs of the radius valley around Sun-like and low mass
 stars has implications for where in the planetary parameter space one expects to find
 predominantly rocky and non-rocky planets. \autoref{fig:transition} highlights the region of interest for resolving
 the rocky to non-rocky transition in the $P-r_p$ space. This region is defined by the intermediate region between the
 radius valley slope measured in this work to the slope measured around Sun-like stars from the CKS sample \citep{martinez19}
 where the latter is first scaled
 from its median stellar mass of 1.01 M$_{\odot}$ to the median stellar mass of our sample (0.65 M$_{\odot}$) using the
-$M_s$-dependent scaling relation of the radius valley under photoevaporation \citep{wu19}.}
+$M_s$-dependent scaling relation of the radius valley under photoevaporation \citep{wu19}.
 For reference, recall the measured slopes of
 $\text{d}r_p/\text{d}\log{P} = 0.085$ and $\text{d}\log{r_p}/\text{d}\log{P} = -0.11$ in the low mass and Sun-like stellar
 mass regimes respectively.
 
-\textbf{The measured transitions from each stellar mass regime
-intersect at $P\sim 23.52$ days such that two regions of interest emerge and are bounded by}
+The measured transitions from each stellar mass regime
+intersect at $P\sim 23.52$ days such that two regions of interest emerge and are bounded by
 
 \begin{equation}
   r_p \in 
@@ -1161,7 +1228,7 @@ intersect at $P\sim 23.52$ days such that two regions of interest emerge and are
   r_{p,\text{valley,M19}} &= -0.48\cdot \log_{10}(P)+2.32.
 \end{align}
 
-\noindent \textbf{These subsets of the $P-r_p$ space define the regions of interest for resolving the
+\noindent These subsets of the $P-r_p$ space define the regions of interest for resolving the
   rocky to non-rocky transition around low mass stars. For example, at $P\lesssim 23.52$ days thermally driven
   atmospheric mass loss, such as that from photoevaporation, predicts that planets in the set defined by
   Eq.~\ref{eq:transition} should be predominantly rocky. Whereas the gas-poor formation scenario, whose predicted
@@ -1175,11 +1242,11 @@ intersect at $P\sim 23.52$ days such that two regions of interest emerge and are
   TOIs\footnote{\tess{} Object-of-Interest.}
   around stars with \teff{} $<4700$ K that satisfy Eq.~\ref{eq:transition} and should be targeted by RV
   follow-up campaigns.\footnote{TOIs: 134.01 \citep{astudillodefru19}, 237.01, 260.01, 393.01, 544.01, 702.01, 807.01, 833.01,
-    836.02, 873.01, and 1075.01.} Note that all eleven planet candidates have $P<23.52$ days.}
+    836.02, 873.01, and 1075.01.} Note that all eleven planet candidates have $P<23.52$ days.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.99\hsize]{figures/fmapregion_Msgt0d0_xbin39_ybin26.png}
+  %\includegraphics[width=0.99\hsize]{figures/fmapregion_Msgt0d0_xbin39_ybin26.png}
   \caption{Regions of interest for resolving the transition between rocky and non-rocky planets
     around low mass stars. The colormap depicts the occurrence rate of small close-in planets from
     \autoref{fig:fmap}. The rocky to non-rocky transition measured in this work is highlighted
@@ -1237,7 +1304,7 @@ approximation given that its detection sensitivity has not yet been adequately c
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.98\hsize]{figures/rpuncertainty_TESSv2.png}
+  %\includegraphics[width=0.98\hsize]{figures/rpuncertainty_TESSv2.png}
   \caption{Expected improvement in the measurement precision of the radius valley location with the number of observed
     low mass stars. Measurement precision curves of the upper and lower uncertainties on the location of the radius valley 
     are derived from binomial statistics. These calculations use approximate and expected detection sensitivity
