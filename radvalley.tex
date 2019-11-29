@@ -96,7 +96,7 @@ of Toronto, 50 St. George Street, Toronto, ON, M5S 3H4, Canada}
   %Resolving the so-called radius valley around low mass stars can provide valuable
   %constraints on the physical mechanisms that sculpt the valley and so far have been largely limited
   %by relatively poor counting statistics.
-  Here we calculate the occurrence rate of small close-in planets around low mass dwarf stars
+  We present calculations of the occurrence rate of small close-in planets around low mass dwarf stars
   using the known planet populations from the \kepler{} and \ktwo{} missions while
   exploiting the \gaia{} DR2 data to refine the stellar parameters. 
   The application of %appropriate
@@ -110,41 +110,17 @@ of Toronto, 50 St. George Street, Toronto, ON, M5S 3H4, Canada}
   which increases from $0.5\pm 0.1$ to $8.5\pm 4.6$ from mid-K to mid-M dwarfs.
   Furthermore, the location of the radius valley features are shown to shift to smaller sizes with
   decreasing stellar mass in agreement with physical models of photoevaporation,
-  core-powered mass loss, and gas-poor formation. %Although current measurements are
-  %insufficient to robustly identify the dominant formation pathway of the radius valley,
-  %such inferences may be obtained by \tess{} with $\mathcal{O}(85,000)$
-  %mid-to-late M dwarfs observed with 2-minute cadence.
-  \textbf{The measurements presented herein precisely indicate the subset of planetary orbital periods and radii
-    that should be targeted in radial velocity surveys to resolve the rocky to non-rocky transition
-    around low mass stars.}  
+  core-powered mass loss, and gas-poor formation. Although current measurements are
+  insufficient to robustly identify the dominant formation pathway of the radius valley,
+  such inferences may be obtained by \tess{} with $\mathcal{O}(85,000)$
+  mid-to-late M dwarfs observed with 2-minute cadence.
+  The measurements presented herein precisely indicate the subset of planetary orbital periods and radii
+  that should be targeted in radial velocity surveys to resolve the rocky to non-rocky transition
+  around low mass stars. 
 \end{abstract}
 
 
-  Here we calculate the occurrence rate of small close-in planets around low mass dwarf stars
-  using the known planet populations from the \kepler{} and \ktwo{} missions while
-  exploiting the \gaia{} DR2 data to refine the stellar parameters. 
-  The application of %appropriate
-  completeness corrections %to the empirical planet population
-  clearly reveals the radius valley in the maximum a-posteriori occurrence rates as a
-  function of orbital separation and planet radius. The slope of the valley with orbital separation
-  bears the opposite sign from that measured around Sun-like stars suggesting that
-  thermally driven atmospheric mass loss may not dominate the evolution of planets in the low stellar mass
-  regime or that we are witnessing the emergence of a separate channel of planet formation.
-  The latter notion is supported by the relative occurrence of rocky to non-rocky planets
-  which increases from $0.5\pm 0.1$ to $8.5\pm 4.6$ from mid-K to mid-M dwarfs.
-  Furthermore, the location of the radius valley features are shown to shift to smaller sizes with
-  decreasing stellar mass in agreement with physical models of photoevaporation,
-  core-powered mass loss, and gas-poor formation. %Although current measurements are
-  %insufficient to robustly identify the dominant formation pathway of the radius valley,
-  %such inferences may be obtained by \tess{} with $\mathcal{O}(85,000)$
-  %mid-to-late M dwarfs observed with 2-minute cadence.
-  \textbf{The measurements presented herein precisely indicate the subset of planetary orbital periods and radii
-    that should be targeted in radial velocity surveys to resolve the rocky to non-rocky transition
-    around low mass stars.}  
-
-
 \section{Introduction}
-\textbf{?? ask dave about acknowledgement and abstract}
 NASA's \kepler{} space telescope has discovered thousands of exoplanets over its lifetime and
 consequently enabled robust investigations of the occurrence rate of planets within our galaxy.
 One striking outcome of such studies was that the so-called super-Earths and sub-Neptunes---whose
@@ -160,7 +136,7 @@ Early studies of the \kepler{} planet population
 hinted that planets at small orbital separations exhibited a
 bimodal radius distribution \citep[e.g.][]{owen13}---commonly referred to as the radius valley---that
 is thought to be representative of a population of small, predominantly rocky planets plus a population
-of inflated non-rocky planets that have retained significant H/He envelopes.
+of inflated non-rocky planets that have retained significant H-He envelopes.
 Consequently, numerous studies of planet formation and evolution sought to explain the
 apparent bimodality. One such proposed mechanism is
 that of photoevaporation wherein the gaseous envelopes of small close-in planets may be stripped by
@@ -192,8 +168,8 @@ of terrestrial planets in a gas-poor environment. Secondly, the feature location
 average radius of the peaks and valley) appear to exist at smaller planet radii with decreasing stellar
 mass \citep{fulton18,wu19}.
 
-In this study, we extend the investigation of the occurrence rate of small close-in planets to systems hosted by
-low mass dwarf stars later than mid-K dwarfs.
+In this study, we extend the investigation of the occurrence rate of small close-in planets to the low mass
+stellar regime by considering planetary systems hosted by low mass dwarf stars later than mid-K dwarfs.
 The empirical population of known planets in this stellar mass regime features nearly an order of magnitude
 fewer planets than around Sun-like stars thus making the detection of the radius valley more
 difficult and at a lower signal-to-noise. This fact is clearly evidenced in the empirical \kepler{} planet population
@@ -530,7 +506,7 @@ are shown in \autoref{fig:senscurves}.
 \end{figure}
 
 
-\subsection{K2 Sensitivity}
+\subsection{K2 Sensitivity} \label{sect:k2sens}
 Unlike the primary \kepler{} mission, the \ktwo{} data products do not feature detailed completeness and reliability
 products. To derive the detection sensitivity among the \ktwo{} stars in our sample we employ the transit detection
 pipeline \texttt{ORION} \citep{cloutier19b}.
@@ -627,7 +603,7 @@ averaged over the index $n$, are shown in \autoref{fig:sensmap}.
 \end{figure*}
 
 
-\subsection{Survey Completeness}
+\subsection{Survey Completeness} \label{sect:comp}
 Only transiting planets are detectable in transit surveys. To correct for the non-detection of otherwise
 detectable but non-transiting planets we compute
 the geometric transit probability for each star $n$ and at each grid cell $ij$ in the $P-r_p$ space to be
@@ -691,19 +667,24 @@ Taken together, and noting from Bayes theorem that the posterior probability of 
 the maximum a-posteriori (MAP) occurrence rate and uncertainty maps according to Eq.~\ref{eq:feq}.
 
 Before proceeding, first recall that our planet sample contains $\sim 5$ times more confirmed planets
-from \kepler{} than from \ktwo{} 
-(see \autoref{fig:Ndet}) despite our stellar sample including $\sim 3.5$ times more \ktwo{} stars 
+from \kepler{} than from \ktwo{}
+(see \autoref{fig:Ndet}) despite our stellar sample containing $\sim 4.4$ times more stars osberved by
+\ktwo{} than by \kepler{} 
 (see \autoref{fig:stars}). These factors compound to produce a lower planet occurrence rate measured
-with \ktwo{} than with \kepler{} as the reduced \ktwo{} detection completeness %relative to \kepler{}
+from \ktwo{} confirmed planets than with \kepler{} as the reduced \ktwo{} detection completeness
 (see \autoref{fig:compmap}) is insufficient to account for the lower measured
-planet occurrence rates. The discrepancy instead arises from the disparate resources that have
-been dedicated to the confirmation of planets from \kepler{} and \ktwo{.} The result being that
-the number of confirmed planets existing within the set of \ktwo{} planet candidates is underestimated
+planet occurrence rates. \textbf{Explicitly, we measure cumulative occurrence rates of
+  $2.48\pm 0.32$ and $0.75\pm 0.11$ confirmed planets per star with $P\in [0.5,100]$ days
+  and $r_p\in [0.5,4]$ R$_{\oplus}$ from \kepler{} and \ktwo{} respectively.}
+The discrepancy arises from the disparate resources that have
+been dedicated to the validation of planet candidates from \kepler{} and \ktwo{.} The result being that
+the number of real planets within the full set of planet candidates from \ktwo{} is underestimated
 by the number of planet candidates that have been reported as validated to date. We address this discrepancy
 by scaling the cumulative occurrence rate measured by \ktwo{} to that of \kepler{.}
-In this way, we are assuming that the planet populations studied by each mission are inherently
-identical despite existing within distinct stellar populations within the galaxy, albeit with similar
-physical properties.
+In this way, we inherently assume that the planet populations studied by each mission are inherently
+equivalent despite existing around distinct stellar populations within the galaxy, albeit with similar
+physical properties. In Sect.~\ref{sect:comparef} we will revisit the comparison of the planet occurrences
+rates from \kepler{} and \ktwo{} following the inclusion of \ktwo{} planet candidates.
 
 The MAP $f_{ij}$ map is depicted in \autoref{fig:fmap}.
 Here the existence of the radius valley around low mass stars is clearly
@@ -716,8 +697,9 @@ The occurrence rates also highlight the relative dearth of planets larger than $
 including the Neptunian desert at short orbital periods \citep{lundkvist16,mazeh16}. The large scale
 structure of the measured occurrence rates are also broadly consistent with previous investigations
 of the planet population around low mass \kepler{} stars \citep{morton14,dressing15a,gaidos16} such
-as the prominence of planets $\lesssim 2$ R$_{\oplus}$ with $P \sim 10-60$ days and a measured cumulative
-occurrence rate of $2.83\pm 0.36$ planets per star.
+as the prominence of planets $\lesssim 2$ R$_{\oplus}$ with $P \sim 10-60$ days and the measured
+cumulative occurrence rate of $2.48\pm 0.32$ planets per star with $P\in [0.5,100]$ days and
+$r_p\in [0.5,4]$ R$_{\oplus}$.
 
 \begin{figure*}
   \centering
@@ -768,32 +750,30 @@ given the unique completeness products from the \kepler{} pipeline whereas \cite
 completeness levels of 10, 50, or 90\% complete as a function of $P$ and $r_p$ from \cite{zhu18b}.
 
 Also included in \autoref{fig:fmap} are planets
-with $\geq 3\sigma$ bulk density measurements from either precision radial velocities or
+with $\geq 3\sigma$ bulk density measurements ($\rho_p$) from either precision radial velocities or
 transit timing variations.
 Planet parameters are retrieved from the NASA Exoplanet Archive for planets orbiting stars with
 \teff{} $\in[2800,4700]$ K, whose orbital periods and radii span the domain considered in \autoref{fig:fmap},
 and whose masses are inconsistent with zero (i.e. no mass upper limits).
-The properties of the resulting 20 planets are listed in \autoref{table:rhop}. Based on the
-planetary bulk densities $\rho_p$ we define the following composition dispositions: rocky
-dispositions
-have $\rho_p+\sigma_{\rho_p} \geq 5.5$ g cm$^{-3}$ and $\rho_p-\sigma_{\rho_p} \geq 3.5$ g cm$^{-3}$,
-gaseous dispositions 
-have $\rho_p-\sigma_{\rho_p} \leq 2$ g cm$^{-3}$ and $\rho_p+\sigma_{\rho_p} \leq 3.5$ g cm$^{-3}$,
-with all remaining planets being flagged as having an ambiguous bulk composition (i.e. not clearly
-terrestrial-like or likely hosting a significant gaseous envelope).
+The properties of the resulting 18 planets are listed in \autoref{table:rhop}. \textbf{Based on the
+  planetary masses, radii, and compositional mass-radius relations from \cite{zeng13},
+  we define the following composition dispositions: \emph{rocky}
+  planets have bulk densities that are greater than or consistent with a purely rocky composition
+  (i.e. 100\% MgSiO$_3$) given the planet's size, \emph{gaseous} planets have bulk densities that are less
+  than that of a pure water world (i.e. 100\% H$_2$O) given the planet's size, 
+  and all remaining planets are flagged as having an \emph{ambiguous} bulk composition (i.e. not clearly
+  terrestrial-like or likely to be hosting a significant gaseous envelope).}
 
-The vast majority of the retrieved planets in \autoref{fig:fmap}
-demonstrate clear composition clustering with planet radius.
-With the exception of the probable rocky planet GJ 143b ($P=35.6$ days, $r_p=2.6$ R$_{\oplus}$),
-all rocky planets appear to be smaller than 1.8 R$_{\oplus}$ independently of orbital period.
+\input{densitytable}
+
+The retrieved planets in \autoref{fig:fmap} demonstrate clear compositional clustering with planet radius.
+All rocky planets appear to be smaller than 1.8 R$_{\oplus}$ independently of orbital period.
 Similarly, all four gaseous planets are larger than 2.6 R$_{\oplus}$ while the three remaining planets
 with intermediate radii correspond to those with ambiguous bulk compositions. 
 Thus we are justified in classifying the occurrence rate peak spanning $\sim 0.9-1.4$ R$_{\oplus}$
 as representing rocky planets. The second peak between $\sim 1.9-2.3$ R$_{\oplus}$ hosts
 planets with ambiguous bulk compositions but are clearly inconsistent with being rocky
 such that we will refer to this feature as the non-rocky peak in what follows.
-
-\input{densitytable}
 
 Lastly, we note that the radius valley as a function of $P$ is not completely void of planets.
 This may allude to the efficiency of any gap clearing mechanism around low mass stars and is
@@ -832,7 +812,7 @@ $r_p\lesssim 1$ R$_{\oplus}$ where the detection sensitivity is poor.
 
 From the bimodal distribution we highlight the approximate radii likely corresponding to planets with rocky
 bulk compositions ($r_p\lesssim 1.54$ R$_{\oplus}$) versus planets with significant size fractions in a volatile-rich
-or extended H/He gaseous
+or extended H-He gaseous
 envelope ($r_p\gtrsim 1.54$ R$_{\oplus}$) around
 low mass stars. Also depicted in \autoref{fig:rphist} is $f_j$ with a bin width half that of the principal
 $f_j$ depiction (i.e. 0.06 R$_{\oplus}$ compared to 0.13 R$_{\oplus}$).
@@ -883,11 +863,7 @@ according to the adopted FP rate such that each realization contains $(1-0.057)\
 \input{FPtable}
 
 The effect of including PCs on the derived occurrence rates is assessed by comparing the $f_j$ distributions
-measured with and without the inclusion of PCs (\autoref{fig:rphistPCs}).
-Again we scale the \ktwo{} occurrence rates
-to those from \kepler{} such that the cumulative occurrence of close-in planets with $r_p \leq 4$ R$_{\oplus}$
-is identical between the two planet populations as their contributions from \kepler{} planets are identical.
-The radius valley continues to be resolved in
+measured with and without the inclusion of PCs (\autoref{fig:rphistPCs}). The radius valley continues to be resolved in
 the MAP occurrence rates. Furthermore, the addition of PCs reduces the median $f_j$ uncertainty among planets
 with $r_p>1$ R$_{\oplus}$ from
 0.0216 to 0.0186 planets per star (i.e. $\sim 15$\% improvement). However, the partial filling of the gap is
@@ -911,6 +887,29 @@ for the remainder of this study.
   \label{fig:rphistPCs}
 \end{figure*}
 
+
+\subsection{Comparison of the recovered planet occurrence rates from Kepler and K2} \label{sect:comparef}
+\textbf{Here we present a non-exhaustive comparison of the occurrence rates of small close-in planets around
+  low mass dwarf stars from \kepler{} and \ktwo{.} Recall from Sect.~\ref{sect:fmap} that
+  we measure cumulative occurrence rates from confirmed \kepler{} and \ktwo{} planets of 
+  $2.48\pm 0.32$ and $0.75\pm 0.11$ planets per star respectively. However, noting that 
+  the FP rate of small \ktwo{} PCs is small ($\sim 5.7$\%, \autoref{tab:FP}), many \ktwo{} PCs should contribute
+  to the calculation of the occurrence rates from \ktwo{.}}
+
+\textbf{We consider the 126 PCs from the transiting planet search in \ktwo{} campaigns 0-8 \citep{kruse19}.
+  Statistically correcting
+  for FPs results in 119 PCs plus 52 confirmed planets around 7227 \ktwo{} stars within our stellar sample that
+  were observed in any of the \ktwo{} campaigns 0-8. Given the period and radius of each of these 171 planets,
+  we apply the completeness corrections computed in Sect.~\ref{sect:k2sens}, divide out the number of low mass stars
+  observed in campaigns 0-8, and measure a cumulative occurrence rate of $2.26\pm 0.38$ planets per star. The inclusion
+  of PCs from \cite{kruse19} now makes the \ktwo{} measurement
+  consistent with the cumulative occurrence rate from \kepler{} indicating that the \kepler{} and
+  \ktwo{} planet populations are consistent and that the reduced detection sensitivity of \ktwo{} compared to
+  \kepler{} is genuine (c.f. Fig.~\ref{fig:senscurves}). Note that the lesser \ktwo{} completeness continues to
+  have a negative
+  effect on the precision of the occurrence rate measurement despite \ktwo{} campaigns 0-8 having $\sim 1.8$ times
+  as many low mass dwarf stars as \kepler{.}
+}
 
 \section{Evolution of the radius valley around low mass stars} \label{sect:models}
 \subsection{Slope of the radius valley}
