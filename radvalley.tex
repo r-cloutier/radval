@@ -97,26 +97,27 @@ of Toronto, 50 St. George Street, Toronto, ON, M5S 3H4, Canada}
   %constraints on the physical mechanisms that sculpt the valley and so far have been largely limited
   %by relatively poor counting statistics.
   We present calculations of the occurrence rate of small close-in planets around low mass dwarf stars
-  using the known planet populations from the \kepler{} and \ktwo{} missions while
-  exploiting the \gaia{} DR2 data to refine the stellar parameters. 
-  The application of %appropriate
-  completeness corrections %to the empirical planet population
+  using the known planet populations from the \kepler{} and \ktwo{} missions.
+  %while exploiting the \gaia{} DR2 data to refine the stellar parameters. 
+  Applying completeness corrections %to the empirical planet population
   clearly reveals the radius valley in the maximum a-posteriori occurrence rates as a
-  function of orbital separation and planet radius. The slope of the valley with orbital separation
-  bears the opposite sign from that measured around Sun-like stars suggesting that
+  function of orbital separation and planet radius. We measure the slope of the valley
+  to be $r_{p,\text{valley}} \propto F^{-0.060\pm 0.025}$ which
+  bears the opposite sign from that measured around Sun-like stars thus suggesting that
   thermally driven atmospheric mass loss may not dominate the evolution of planets in the low stellar mass
   regime or that we are witnessing the emergence of a separate channel of planet formation.
   The latter notion is supported by the relative occurrence of rocky to non-rocky planets
-  which increases from $0.5\pm 0.1$ around mid-K dwarfs to $8.5\pm 4.6$ around mid-M dwarfs.
-  Furthermore, the location of the radius valley features are shown to shift to smaller sizes with
+  increasing from $0.5\pm 0.1$ around mid-K dwarfs to $8.5\pm 4.6$ around mid-M dwarfs.
+  Furthermore, the center of the radius valley at $1.54\pm 0.16$ R$_{\oplus}$ is
+  shown to shift to smaller sizes with
   decreasing stellar mass in agreement with physical models of photoevaporation,
   core-powered mass loss, and gas-poor formation. Although current measurements are
   insufficient to robustly identify the dominant formation pathway of the radius valley,
   such inferences may be obtained by \tess{} with $\mathcal{O}(85,000)$
   mid-to-late M dwarfs observed with 2-minute cadence.
-  The measurements presented herein precisely indicate the subset of planetary orbital periods and radii
-  that should be targeted in radial velocity surveys to resolve the rocky to non-rocky transition
-  around low mass stars. 
+  The measurements presented herein also precisely designate the subset of planetary orbital periods
+  and radii that should be targeted in radial velocity surveys to resolve the rocky to non-rocky
+  transition around low mass stars. 
 \end{abstract}
 
 
@@ -913,22 +914,32 @@ for the remainder of this study.
 
 \section{Evolution of the radius valley around low mass stars} \label{sect:models}
 \subsection{Slope of the radius valley}
-\autoref{fig:fmapF} shows the two-dimensional occurrence rate of planets in the $F-r_p$ space for
+\autoref{fig:fmapF} shows the two-dimensional planetary occurrence rates in the $F-r_p$ space for
 our planet sample as well as for the close-in \kepler{} planets around Sun-like stars
 from \cite{martinez19}.
 In this parameter space we calculate the slope of the radius valley with $F$ and compare the measured
 value to model predictions of the transition from rocky to non-rocky planets
-versus insolation. We measure the slope by resampling $10^3$ planet populations from the inverse
-occurrence rates (and their fractional uncertainties at each point $ij$) over the domains
-$F\in [1,30]$ F$_{\oplus}$ and $r_p\in [1,2.5]$ R$_{\oplus}$.
-Each domain is defined to neglect regions far from the radius valley that would otherwise dominate the
-inverse occurrence rates. The number of sampled planets in the $\log{F}-r_p$ space is then fit with a
-linear function as depicted in \autoref{fig:fmapF}. Over the $10^3$ realizations of resampled planet
+versus insolation. \textbf{We measure the slope using a similar methodology to \cite{martinez19} wherein
+  the two-dimensionsal occurrence rates are first resampled from its MAP value and uncertainties in
+  $10^3$ realizations. In each realization the
+  one-dimensional occurrence rate distribution $f_j(r_p)$ is computed in logarithmically spaced $F$
+bins. From each distribution the $f_j$-weighted radii of the rocky and non-rocky peaks are then calculated.
+The central radius of the valley is computed as the average radius between the two peaks
+assuming a uniform weighting as we are interested in measuring the location of the valley and not the relative
+strength of the two peaks as a function of $F$. The resulting radius valley locations in the $\log{F}-\log{r_p}$
+space are then fit with a linear model as depicted in \autoref{fig:fmapF}. 
+%We measure the slope by resampling $10^3$ planet populations from the inverse
+%occurrence rates (and their fractional uncertainties at each point $ij$) over the domains
+%$F\in [1,30]$ F$_{\oplus}$ and $r_p\in [1,2.5]$ R$_{\oplus}$.
+%Each domain is defined to neglect regions far from the radius valley that would otherwise dominate the
+%inverse occurrence rates. The number of sampled planets in the $\log{F}-r_p$ space is then fit with a
+%linear function as depicted in \autoref{fig:fmapF}.
+Over the $10^3$ realizations of resampled planet
 populations, we measure an average slope and standard deviation of
-$\text{d}r_p / \text{d}\log{F} = -0.12\pm 0.05$. Similarly, repeating this exercise in the $P-r_p$
-space yields $\text{d}r_p / \text{d}\log{P} = 0.11\pm 0.08$. For ease of reference, the slopes measured
+$r_{p,\text{valley}} \propto F^{-0.060\pm 0.025}$. Similarly, repeating this exercise in the $\log{P}-\log{r_p}$
+space yields $r_{p,\text{valley}} \propto P^{-0.058\pm 0.022}$. For ease of reference, the slopes measured
 in this work and around FGK stars from the CKS \citep{martinez19} are reported in
-Table~\autoref{table:slopes}.
+Table~\autoref{table:slopes}.}
 
 \input{slopetable}
 
@@ -971,23 +982,21 @@ Table~\autoref{table:slopes}.
     planets in the following scenarios: core-powered mass loss \citep{gupta19b}, photoevaporation
     \citep{lopez18}, and gas-poor formation \cite{lopez18}. We measure the
     \ToggleLayer{fig:on2F,fig:off2F}{\protect\cdbox{slope of the radius valley}}
-    to be $\text{d}r_p / \text{d}\log{F} = -0.12\pm 0.05$ which is consistent with predictions
+    to be $r_{p,\text{valley}} \propto F^{-0.060\pm 0.025}$ which is consistent with predictions
     from gas-poor formation of terrestrial planets. Also overplotted are
     \ToggleLayer{fig:on4F,fig:off4F}{\protect\cdbox{planets}}
     with $\geq 3\sigma$ bulk density measurements from the literature that are classified as having either
     a rocky (\emph{circles}), a gaseous (\emph{triangles}), or an ambiguous (\emph{squares}) bulk
     composition. Marker colors are indicative of the MAP planet bulk densities.
     \emph{Lower panel}: the occurrence rate map of close-in
-    \kepler{} planets around Sun-like stars \citep[$\text{d}\log{r_p}/\text{d}\log{F} = 0.12\pm 0.02$][]{martinez19}.
-    %The measured slopes for the planet populations around Sun-like and low mass stars have opposing signs.
-    Note the unique $F$ and $r_p$ scales compared to the top panel.}
+    \kepler{} planets around Sun-like stars \citep[$r_{p,\text{valley}} \propto F^{0.12\pm 0.02}$;][]{martinez19}.
+    Note the unique $F$ and $r_p$ scales depicted in each panel.}
   \label{fig:fmapF}
 \end{figure*}
 
-The negative slope of $\text{d}r_p / \text{d}\log{F} = -0.12$ indicates that the location of the radius valley
+The negative slope of $r_{p,\text{valley}} \propto F^{-0.06}$ indicates that the location of the radius valley
 drops to smaller planet radii with increasing insolation (i.e. towards smaller orbital separations).
-This behavior
-is broadly consistent with models of the formation small rocky planets in a gas-poor environment
+This behavior is broadly consistent with models of the formation small rocky planets in a gas-poor environment
 \citep{lee14,lee16,lopez18}. This formation scenario
 leads to the transition from rocky to non-rocky planets emerging due to the
 superposition of rocky and non-rocky planet populations whose formation timescales differ. In this scenario, the
@@ -995,16 +1004,16 @@ transition radius as a function of orbital separation is set by the maximum mass
 itself is set by the amount of available solid material for the proto-planet to form out of via collisional
 growth. According to the
 minimum-mass extrasolar nebula \citep{chiang13}, the solid surface density radial profile is
-$\sigma_{\text{solid}} \propto a^{-1.6}$, where $a$ is the semimajor axis. The amount of solid material 
+$\sigma_{\text{solid}} \propto a^{-1.6}$ where $a$ is the semimajor axis. The amount of solid material 
 accreted by a proto-planet
-is proportional to its Hill radius $r_H = a(m_p/3M_s)^{1/3}$ such that integrating over the disk surface results
+is proportional to its Hill radius $r_H = a(m_p/3M_s)^{1/3}$ such that integrating over the feeding zone within
+the disk surface results
 in the maximum mass of a bare rocky core $m_{p,\text{max}} \propto a^{0.6} M_s^{-0.5}$, or
 $r_{p,\text{valley}} \propto a^{0.16} M_s^{-0.14}$ after applying the rocky planet mass-radius relation
-\citep{zeng16}. Hence, the transition radius is predicted to occur at larger planet radii with increasing $a$
-for a given host spectral type \citep{lopez18}. The corresponding theoretical scaling of the transition
+\citep{zeng16}. Hence, the transition radius is predicted to occur at larger planet radii with increasing
+separation for a given host spectral type \citep{lopez18}. The corresponding theoretical scaling of the transition
 radius with insolation for a given spectral type is $r_{p,\text{valley}} \propto F^{-0.08}$
-\citep{lopez18} which is 
-consistent with our measured scaling between $r_{p,\text{valley}}$ and $\log{F}$ of $-0.12\pm 0.05$.
+which is consistent with our measured scaling of $r_{p,\text{valley}}\propto F^{-0.060\pm 0.025}$.
 
 In addition to being consistent with predictions from gas-poor terrestrial planet formation models,
 our slope measurements are inconsistent with models of thermally driven atmospheric
@@ -1012,22 +1021,21 @@ escape from photoevaporation or core-powered mass loss that predict
 an increasing transition radius with increasing insolation ($r_{p,\text{valley}} \propto F^{0.11}$; \citealt{lopez18},  
 $r_{p,valley} \propto F^{0.10}$; \citealt{gupta19b} respectively).
 The negative slope of the radius valley around low mass stars differs in sign from the trend seen around
-Sun-like stars \citep[$\text{d}r_p / \text{d}\log{F} = +0.12$, $\text{d}r_p / \text{d}\log{P} = -0.11$]{martinez19}.
-The differing observational findings in each stellar mass regime may either be interpreted as
-a signature of distinct planet formation processes, wherein gas-poor planet formation is more prominent
-around low mass stars, or that the efficiency of atmospheric post processing weakens around lower mass stars.
-
+Sun-like stars \citep[$r_{p,\text{valley}}\propto F^{0.12\pm 0.02}, r_{p,\text{valley}}\propto P^{-0.11\pm 0.03}$;][]{martinez19}.
+These differing observational findings in each stellar mass regime may either be interpreted as
+a signature of distinct planet formation processes wherein gas-poor planet formation is more prominent
+around low mass stars, or that the efficiency of atmospheric post-processing is weakened around lower mass stars.
 
 The inclusion of planets with $\geq 3\sigma$ bulk density measurements (see \autoref{table:rhop}) in
 \autoref{fig:fmapF} reveals that all planets that are inconsistent with having bulk rocky
 compositions lie above the transition radius predictions from all physical models considered
 (i.e. gas-poor formation, photoevaporation, core-powered mass loss, and impact erosion). However, the
-temperate rocky planet LHS 1140b ($F=0.5$ F$_{\oplus}$, $r_p=1.7$ R$_{\oplus}$) sits in the $F-r_p$ parameter
+temperate rocky planet LHS 1140b ($F=0.5$ F$_{\oplus}$, $r_p=1.73$ R$_{\oplus}$) sits in the $F-r_p$ parameter
 space below the predicted transition radius from gas-poor formation but above the predicted transition from
 photoevaporation, core-powered mass loss, and impact erosion. Although LHS 1140b is the only instance of a planet
 existing between the radius valley predictions from gas-poor formation and thermally driven or impact driven
-mass loss in \autoref{fig:fmapF}, the location and composition of LHS 1140b
-provides supporting evidence for the applicability of models of 
+mass loss in \autoref{fig:fmapF}, the location and rocky composition of LHS 1140b
+provide supporting evidence for the applicability of models of 
 gas-poor terrestrial planet formation to the emergence of the radius valley around low mass stars.
 
 \subsection{Planet populations versus stellar mass} \label{sect:Msbin}
@@ -1369,16 +1377,14 @@ $\sim 1.9$ R$_{\oplus}$ for $M_s \sim 1.2$ M$_{\odot}$ and $\sim 1.7$ R$_{\oplus
 \citep{fulton18}.
 
 Furthermore, the opposing slope signs of the radius valley around Sun-like and low mass
-stars has implications for where in the planetary parameter space one expects to find
+stars (c.f. \autoref{fig:fmapF} and \autoref{table:slopes})
+has implications for where in the planetary parameter space one expects to find
 predominantly rocky and non-rocky planets. \autoref{fig:transition} highlights the region of interest for resolving
 the rocky to non-rocky transition in the $P-r_p$ space. This region is defined by the intermediate region between the
 radius valley slope measured in this work to the slope measured around Sun-like stars from the CKS sample \citep{martinez19}
 where the latter is first scaled
 from its median stellar mass of 1.01 M$_{\odot}$ to the median stellar mass of our sample (0.65 M$_{\odot}$) using the
 $M_s$-dependent scaling relation of the radius valley under photoevaporation \citep{wu19}.
-For reference, recall the measured slopes of
-$\text{d}r_p/\text{d}\log{P} = 0.11$ and $\text{d}\log{r_p}/\text{d}\log{P} = -0.11$ in the low mass and Sun-like stellar
-mass regimes respectively.
 
 The measured transitions from each stellar mass regime
 intersect at $P\sim 23.52$ days such that two regions of interest emerge and are bounded by
@@ -1482,7 +1488,7 @@ planet \citep{owen19}.
 The simplest explanation for the imperfect clearing of the radius valley instead does not invoke that either
 gas-poor formation or atmospheric post processing is solely responsible for the valley's formation.
 In comparing the slope of the radius valley around low mass and Sun-like stars (\autoref{fig:fmapF}), it is
-clear that the dominant process affecting the slope of the valley (i.e. $\text{d}r_p/\text{d}\log{F}$)
+clear that the dominant process affecting the slope of the valley with insolation
 evolves from a positive slope to a negative slope from Sun-like to low mass stars. However,
 the threshold $M_s$ dividing each regime is unresolved such that the planet population considered herein
 likely features the superposition of processes such as gas-poor formation and thermally driven mass loss. The
@@ -1498,13 +1504,13 @@ using data from the \kepler{} and \ktwo{} transit surveys. Our main findings are
 \item The radius valley structure in the occurrence rate of small close-in planets---previously resolved around
   Sun-like stars---is demonstrated to persist around low mass stars (i.e. mid-K to mid-M dwarfs).
 \item The radius valley around low mass stars exhibits a negative slope with insolation
-  ($\text{d}r_p / \text{d}\log{F} = -0.12\pm 0.05$) unlike 
+  ($r_{p,\text{valley}} \propto F^{-0.060\pm 0.025}$) unlike 
   around Sun-like stars whose measured slope is positive
-  \citep[$\text{d}\log{r_p} / \text{d}\log{F} = 0.12\pm 0.02$]{martinez19}. This result 
+  \citep[$r_{p,\text{valley}} \propto F^{0.12\pm 0.02}$;][]{martinez19}. This result 
   supports models of gas-poor terrestrial planet formation without invoking atmospheric escape from photoevaporation,
   core-powered mass loss, or erosion by planetesimal impacts.
 \item The non-rocky planet peak in the bimodal occurrence rates is centered at $\sim 2$ R$_{\oplus}$ and effectively
-  vanishes around mid-M dwarfs as rocky planets ($\lesssim 1.6$ R$_{\oplus}$) increasingly dominate the close-in
+  vanishes around mid-M dwarfs as rocky planets ($\lesssim 1.54$ R$_{\oplus}$) increasingly dominate the close-in
   planet population towards later spectral types. The relative fraction of rocky to non-rocky planets increases
   from $\sim 0.5\pm 0.1 \to 8.5\pm 4.6$ from mid-K to mid-M dwarfs.
 \item The occurrence rate-weighted location of the radius valley---and the central radius of each planet peak---shift
