@@ -669,7 +669,7 @@ the maximum a-posteriori (MAP) occurrence rate and uncertainty maps according to
 
 Before proceeding, first recall that our planet sample contains $\sim 5$ times more confirmed planets
 from \kepler{} than from \ktwo{}
-(see \autoref{fig:Ndet}) despite our stellar sample containing $\sim 4.4$ times more stars osberved by
+(see \autoref{fig:Ndet}) despite our stellar sample containing $\sim 4.4$ times more stars observed by
 \ktwo{} than by \kepler{} 
 (see \autoref{fig:stars}). These factors compound to produce a lower planet occurrence rate measured
 from \ktwo{} confirmed planets than with \kepler{} as the reduced \ktwo{} detection completeness
@@ -761,8 +761,8 @@ The properties of the resulting 18 planets are listed in \autoref{table:rhop}. \
   we define the following composition dispositions: \emph{rocky}
   planets have bulk densities that are greater than or consistent with a purely rocky composition
   (i.e. 100\% MgSiO$_3$) given the planet's size, \emph{gaseous} planets have bulk densities that are less
-  than that of a pure water world (i.e. 100\% H$_2$O) given the planet's size, 
-  and all remaining planets are flagged as having an \emph{ambiguous} bulk composition (i.e. not clearly
+  than and inconsistent with that of a pure water world (i.e. 100\% H$_2$O) given the planet's size, 
+  and all intermediate planets are flagged as having an \emph{ambiguous} bulk composition (i.e. not clearly
   terrestrial-like or likely to be hosting a significant gaseous envelope).}
 
 \input{densitytable}
@@ -890,12 +890,14 @@ for the remainder of this study.
 
 
 \subsection{Comparison of the recovered planet occurrence rates from Kepler and K2} \label{sect:comparef}
-\textbf{Here we present a non-exhaustive comparison of the occurrence rates of small close-in planets around
+\textbf{Here we present a broad comparison of the occurrence rates of small close-in planets around
   low mass dwarf stars from \kepler{} and \ktwo{.} Recall from Sect.~\ref{sect:fmap} that
   we measure cumulative occurrence rates from confirmed \kepler{} and \ktwo{} planets of 
-  $2.48\pm 0.32$ and $0.75\pm 0.11$ planets per star respectively. However, noting that 
+  $2.48\pm 0.32$ and $0.75\pm 0.11$ planets per star respectively. Note that the former is consistent with
+  previous measurements from \kepler{} \citep{morton14,dressing15a,gaidos16}. However, noting that 
   the FP rate of small \ktwo{} PCs is small ($\sim 5.7$\%, \autoref{tab:FP}), many \ktwo{} PCs should contribute
-  to the calculation of the occurrence rates from \ktwo{.}}
+  to the calculation of the occurrence rates from \ktwo{.}
+}
 
 \textbf{We consider the 126 PCs from the transiting planet search in \ktwo{} campaigns 0-8 \citep{kruse19}.
   Statistically correcting
@@ -903,8 +905,8 @@ for the remainder of this study.
   were observed in any of the \ktwo{} campaigns 0-8. Given the period and radius of each of these 171 planets,
   we apply the completeness corrections computed in Sect.~\ref{sect:k2sens}, divide out the number of low mass stars
   observed in campaigns 0-8, and measure a cumulative occurrence rate of $2.26\pm 0.38$ planets per star. The inclusion
-  of PCs from \cite{kruse19} now makes the \ktwo{} measurement
-  consistent with the cumulative occurrence rate from \kepler{} indicating that the \kepler{} and
+  of PCs from \cite{kruse19} boosts the cumulative occurrence rate measurement from \ktwo{} to a value that is
+  consistent with that from \kepler{.} This indicates that the \kepler{} and
   \ktwo{} planet populations are consistent and that the reduced detection sensitivity of \ktwo{} compared to
   \kepler{} is genuine (c.f. Fig.~\ref{fig:senscurves}). Note that the lesser \ktwo{} completeness continues to
   have a negative
@@ -920,7 +922,7 @@ from \cite{martinez19}.
 In this parameter space we calculate the slope of the radius valley with $F$ and compare the measured
 value to model predictions of the transition from rocky to non-rocky planets
 versus insolation. \textbf{We measure the slope using a similar methodology to \cite{martinez19} wherein
-  the two-dimensionsal occurrence rates are first resampled from its MAP value and uncertainties in
+  the two-dimensional occurrence rates are first resampled from its MAP value and uncertainties in
   $10^3$ realizations. In each realization the
   one-dimensional occurrence rate distribution $f_j(r_p)$ is computed in logarithmically spaced $F$
 bins. From each distribution the $f_j$-weighted radii of the rocky and non-rocky peaks are then calculated.
@@ -1541,11 +1543,3 @@ Canada and a grant from the National Aeronautics and Space Administration in sup
 \bibliography{refs}
 
 \end{document}
-
-
-% what does it mean to measure the valley location 
-
-% change characterization of planet dispositions from bulk density to whether or not the planet is above or below the 70%rock - 30% iron curve in MR space  
-
-% derive the K2 occurrence rate around mid-K and M dwarfs from Kruse sample of PCs and compare it to their results from Kepler to show
-% that hoepfully they're the same
