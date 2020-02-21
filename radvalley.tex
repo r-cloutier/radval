@@ -186,7 +186,7 @@ with stellar mass can allude to which process---if any---dominates the evolution
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.98\hsize]{Bergerplanethist.png}
+  \includegraphics[width=0.98\hsize]{figures/Bergerplanethist.png}
   \caption{Empirical distributions of \kepler{} planet radii. Histograms of \kepler{} planet radii
     from \cite{berger18} for planets with host stellar effective temperatures \teff{} $\in [4700,6500]$ K
     (\emph{blue}) and \teff{} $<4700$ K (\emph{red}). The former subset of 2816 planets corresponds to the
@@ -269,7 +269,7 @@ $M_s$ is $\sim 5.5$\%.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.98\hsize]{stellar_corner_KepandK2.png}
+  \includegraphics[width=0.98\hsize]{figures/stellar_corner_KepandK2.png}
   \caption{Low mass dwarf stellar samples from \kepler{} and \ktwo{.} Distributions of \kepler{} magnitudes,
     effective temperatures, stellar radii, and stellar masses for stars in our final stellar sample from either
     \kepler{} (\emph{blue histogram and markers}) or \ktwo{} (\emph{red histogram and markers}).}
@@ -397,12 +397,12 @@ measurement uncertainties and with a fractional precision on $P$ inflated to 20\
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\hsize]{Ndetmap_map_Msgt0d0_xbin45_ybin27.png}%
+  \includegraphics[width=\hsize]{figures/Ndetmap_map_Msgt0d0_xbin45_ybin27.png}%
   \hspace{-\hsize}%
   \begin{ocg}{fig:offNd}{fig:offNd}{0}%
   \end{ocg}%
   \begin{ocg}{fig:onNd}{fig:onNd}{1}%
-  \includegraphics[width=\hsize]{Ndetmap_kepk2_Msgt0d0_xbin45_ybin27.png}%
+  \includegraphics[width=\hsize]{figures/Ndetmap_kepk2_Msgt0d0_xbin45_ybin27.png}%
   \end{ocg}
   \hspace{-\hsize}%
   \caption{(\emph{Interactive figure}) Empirical population of confirmed close-in planets around low mass stars.
@@ -448,8 +448,9 @@ The derivation of the \kepler{} planet detection sensitivity follows from the me
 \kepler{} completeness products for DR25 and the SOC 9.3 version of the \kepler{} pipeline
 \citep{jenkins10} are available
 for all of the stars in our \kepler{} sample \citep{burke15,burke17}. Detection sensitivities
-(or efficiencies) were calculated via transiting planetary signal injections at the pixel level
-which are subsequently processed by the \kepler{} pipeline Transiting Planet Search (TPS) module from
+(or efficiencies) were calculated via transiting planetary signal injections at the pixel level.
+The light curves with injected signals
+were subsequently processed by the \kepler{} pipeline Transiting Planet Search (TPS) module from
 which the detection sensitivity is computed as the fraction of
 injected signals that are successfully recovered by the pipeline as a function of the Multi-event statistic
 \citep[MES;][]{christiansen15,christiansen17}.
@@ -473,21 +474,21 @@ To compute the \kepler{} detection sensitivity as a function of S/N, we first
 derive the mapping between the MES and the transit S/N using the data from \cite{christiansen15} who
 derived the detection sensitivity of the \kepler{} pipeline from one year of data. 
 The parameters of the injected planets are provided along with their corresponding MES and CDPP at each value of
-$D$ considered. For each injected planet we interpolate its MES and CDPP values to $D$ and calculate
-the transit S/N using Eq.~\ref{eq:snr}. The mapping between MES and S/N is shown in \autoref{fig:messnr}
+$D$ considered. For each injected planet, we interpolate its MES and CDPP values to $D$ and calculate
+the corresponding transit S/N using Eq.~\ref{eq:snr}. The mapping between MES and S/N is shown in \autoref{fig:messnr}
 for the full set of injected planets whose transit S/N values span 2.7-4843. Given the large number of injected planetary
 signals ($>10^4$), we fit the number-weighted S/N to MES mapping using the \texttt{scipy.curve\_fit} non-linear least
 squares algorithm with a powerlaw function of the form $\text{MES} = A\cdot \text{S/N}^{\alpha}$. We find a best-fit
 amplitude and powerlaw index of $A=0.977$ and $\alpha=0.967$ respectively with negligible uncertainties.
 This relation is used to map the transit S/N to MES
-which is then mapped to the detection sensitivity. The average \kepler{} detection sensitivity curve as a function of
-transit S/N, along with the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles for the stars in our \kepler{} sample
-are shown in \autoref{fig:senscurves}.
+which is then mapped to the detection sensitivity. The average detection sensitivity curve for stars in our
+\kepler{} sample curve, and as a function of transit S/N, is shown in \autoref{fig:senscurves}
+along with its $16^{\text{th}}$ and $84^{\text{th}}$ percentiles.
 
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.98\hsize]{MES_SNR.png}
+  \includegraphics[width=0.98\hsize]{figures/MES_SNR.png}
   \caption{Correlation between the \kepler{} multi-event statistic and transit S/N. The mapping between the MES and
     S/N based on the synthetic planetary signals injected into the \kepler{} pipeline \citep{christiansen15}.
     The number-weighted powerlaw fit (\emph{solid line}) to the correlation differs slightly from a one-to-one relation
@@ -498,7 +499,7 @@ are shown in \autoref{fig:senscurves}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.98\hsize]{senscurves.png}
+  \includegraphics[width=0.98\hsize]{figures/senscurves.png}
   \caption{Average detection sensitivity for \kepler{} and \ktwo{.} The \emph{solid curves} represent the
     average transiting planet detection sensitivity for the \kepler{} and \ktwo{} stars in our sample as
     a function of the transit S/N (Eq.~\ref{eq:snr}). The shaded regions mark the 16$^{th}$ and 84$^{th}$
@@ -563,8 +564,9 @@ $P \leq 100$ days. The average \ktwo{} detection sensitivity curve, along with t
 $16^{\text{th}}$ and $84^{\text{th}}$ percentiles, are also included in \autoref{fig:senscurves}. The quality
 of the pointing corrections within the \texttt{EVEREST} light curves can vary widely within our sample such
 that there is considerably more variance in the \ktwo{} detection sensitivity relative to \kepler{.} Furthermore,
-the average detection sensitivity is significantly reduced compared to \kepler{.} %The effect of the reduced
-%sensitivity on the derived occurrence rates is discussed in Sect.~\ref{sect:occurrence}.
+\textbf{the maximum detection sensitivity is seen to be approximately 60-70\% that of \kepler{,}
+  a result that is consistent with recent investigations of the completeness in \ktwo{} Campaign 5
+  \citep{zink20}.}
 The reduced sensitivity is due in-part to the imperfect corrections of the pointing and
 to the lesser time baseline of $\sim 80$ days in a typical \ktwo{} light curve compared to \kepler{.} 
 Furthermore, \texttt{ORION} was originally developed for use on the 2-minute cadence data
@@ -590,12 +592,13 @@ $j$ respectively. \textbf{The calculation of the sensitivity in $P-r_p$ space is
 We consider orbital periods $P \in [0.5,100]$ days and planet radii $r_p \in [0.5,4]$ R$_{\oplus}$.
 \textbf{For each star
 $n$, and at each grid cell $ij$, we compute the average S/N. This value is then mapped to the detection sensitivity
-using the curves in \autoref{fig:senscurves}.} The resulting detection sensitivity maps for \kepler{} and \ktwo{,}
+  of that grid cell
+  using the curves in \autoref{fig:senscurves}.} The resulting detection sensitivity maps for \kepler{} and \ktwo{,}
 averaged over $n$, are shown in \autoref{fig:sensmap}.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.98\hsize]{sensmap.png}
+  \includegraphics[width=0.98\hsize]{figures/sensmap.png}
   \caption{Average detection sensitivity versus orbital period and planetary radius.
     The detection sensitivity maps averaged over \kepler{} stars (\emph{left panel)} and over \ktwo{} stars
     (\emph{right panel}) from our sample of low mass dwarf stars.} 
@@ -605,7 +608,7 @@ averaged over $n$, are shown in \autoref{fig:sensmap}.
 
 \subsection{Survey completeness} \label{sect:comp}
 Only transiting planets are detectable in transit surveys. To correct for the non-detection of otherwise
-detectable but non-transiting planets we compute
+detectable but non-transiting planets, we compute
 the geometric transit probability $p_t$ for each star $n$ and at each grid cell $ij$ in the $P-r_p$ space to be
 
 \begin{equation}
@@ -616,13 +619,13 @@ the geometric transit probability $p_t$ for each star $n$ and at each grid cell 
 constant scalar modifications to $p_{t,nij}$ from effects such as grazing transits or non-zero eccentricities 
 \citep{barnes07b}.
 
-The product of each star's detection sensitivity with its geometric transit probability yields completeness
+The product of each star's detection sensitivity with its geometric transit probability yield completeness
 maps as a function of $P$ and $r_p$. The average completeness maps for our \kepler{} and \ktwo{} stars are
 shown in \autoref{fig:compmap}.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.98\hsize]{compmap.png}
+  \includegraphics[width=0.98\hsize]{figures/compmap.png}
   \caption{Average completeness versus orbital period and planetary radius.
     Maps of the product of the detection sensitivity and geometric transit probability averaged over \kepler{} stars
     (\emph{left panel)} and over \ktwo{} stars (\emph{right panel}) from our sample of low mass dwarf stars.} 
@@ -703,24 +706,24 @@ $r_p\in [0.5,4]$ R$_{\oplus}$.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=.9\hsize]{fmap_bkgd_Msgt0d0_xbin39_ybin26.png}%
+  \includegraphics[width=.9\hsize]{figures/fmap_bkgd_Msgt0d0_xbin39_ybin26.png}%
   \hspace{-.9\hsize}%
   \begin{ocg}{fig:off3}{fig:off3}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on3}{fig:on3}{1}%
-  \includegraphics[width=.9\hsize]{fmap_kepk2_Msgt0d0_xbin39_ybin26.png}%
+  \includegraphics[width=.9\hsize]{figures/fmap_kepk2_Msgt0d0_xbin39_ybin26.png}%
   \end{ocg}
   \hspace{-.9\hsize}%
   \begin{ocg}{fig:off1}{fig:off1}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on1}{fig:on1}{1}%
-  \includegraphics[width=.9\hsize]{fmap_curve_Msgt0d0_xbin39_ybin26.png}%
+  \includegraphics[width=.9\hsize]{figures/fmap_curve_Msgt0d0_xbin39_ybin26.png}%
   \end{ocg}
   \hspace{-.9\hsize}%
   \begin{ocg}{fig:off4}{fig:off4}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on4}{fig:on4}{1}%
-  \includegraphics[width=.9\hsize]{fmap_planets_Msgt0d0_xbin39_ybin26.png}%
+  \includegraphics[width=.9\hsize]{figures/fmap_planets_Msgt0d0_xbin39_ybin26.png}%
   \end{ocg}
   \hspace{-.9\hsize}%
   \caption{(\emph{Interactive figure}) Planet occurrence rate versus orbital period and planetary radius. The maximum a-posteriori occurrence
@@ -797,7 +800,7 @@ $r_p\lesssim 1$ R$_{\oplus}$ where the detection sensitivity is poor.
   
 \begin{figure*}
   \centering
-  \includegraphics[scale=.8]{rphist_double.png}
+  \includegraphics[scale=.8]{figures/rphist_double.png}
   \caption{Occurrence rate of planets as a function of size. \emph{Upper panel}:
     histogram depicting the relative occurrence
     rate of close-in planets with orbital periods $<100$ days derived from the population of confirmed
@@ -883,7 +886,7 @@ for the remainder of this study.
 
 \begin{figure*}
   \centering
-  \includegraphics[scale=.8]{rphist_kruse.png}
+  \includegraphics[scale=.8]{figures/rphist_kruse.png}
   \caption{Comparison of occurrence rates with and without planet candidates included. \emph{Left panel}:
     same as \autoref{fig:rphist}. \emph{Right panel}: histogram depicting the relative occurrence
     rate of close-in planets with orbital periods $<100$ days derived from the population of confirmed
@@ -947,30 +950,30 @@ in this work and around FGK stars from the CKS \citep{martinez19} are reported i
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.85\hsize]{fmapFmart_bkgd_Msgt0d0_xbin39_ybin26_insolation.png}%
+  \includegraphics[width=0.85\hsize]{figures/fmapFmart_bkgd_Msgt0d0_xbin39_ybin26_insolation.png}%
   \hspace{-0.85\hsize}%
   \begin{ocg}{fig:off1F}{fig:off1F}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on1F}{fig:on1F}{1}%
-  \includegraphics[width=0.85\hsize]{fmapFmart_kepk2_Msgt0d0_xbin39_ybin26_insolation.png}%
+  \includegraphics[width=0.85\hsize]{figures/fmapFmart_kepk2_Msgt0d0_xbin39_ybin26_insolation.png}%
   \end{ocg}
   \hspace{-0.85\hsize}%
   \begin{ocg}{fig:off2F}{fig:off2F}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on2F}{fig:on2F}{1}%
-  \includegraphics[width=0.85\hsize]{fmapFmart_slope_Msgt0d0_xbin39_ybin26_insolation.png}%
+  \includegraphics[width=0.85\hsize]{figures/fmapFmart_slope_Msgt0d0_xbin39_ybin26_insolation.png}%
   \end{ocg}
   \hspace{-0.85\hsize}%
   \begin{ocg}{fig:off3F}{fig:off3F}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on3F}{fig:on3F}{1}%
-  \includegraphics[width=0.85\hsize]{fmapFmart_models_Msgt0d0_xbin39_ybin26_insolation.png}%
+  \includegraphics[width=0.85\hsize]{figures/fmapFmart_models_Msgt0d0_xbin39_ybin26_insolation.png}%
   \end{ocg}
   \hspace{-0.85\hsize}%
   \begin{ocg}{fig:off4F}{fig:off4F}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on4F}{fig:on4F}{1}%
-  \includegraphics[width=0.85\hsize]{fmapFmart_planets_Msgt0d0_xbin39_ybin26_insolation.png}%
+  \includegraphics[width=0.85\hsize]{figures/fmapFmart_planets_Msgt0d0_xbin39_ybin26_insolation.png}%
   \end{ocg}
   \hspace{-0.85\hsize}%
   \caption{(\emph{Interactive figure})
@@ -1059,12 +1062,12 @@ M$_{\odot}$ (i.e. $\sim 62$\% of our confirmed planet sample).
 
 \begin{figure*}
   \centering
-  \includegraphics[width=.98\hsize]{rphist_bkgd_compMs.png}%
+  \includegraphics[width=.98\hsize]{figures/rphist_bkgd_compMs.png}%
   \hspace{-.98\hsize}%
   \begin{ocg}{fig:off4r}{fig:off4r}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on4r}{fig:on4r}{1}%
-  \includegraphics[width=.98\hsize]{rphist_kepk2_compMs.png}%
+  \includegraphics[width=.98\hsize]{figures/rphist_kepk2_compMs.png}%
   \end{ocg}
   \hspace{-.98\hsize}%
   \caption{(\emph{Interactive figure}) 2D and 1D planet occurrence rates in various stellar mass bins. \emph{Top panels}: planet occurrence
@@ -1161,30 +1164,30 @@ rocky to non-rocky planets despite the latter being inherently rare around these
 
 \begin{figure*}
   \centering
-  \includegraphics[width=.97\hsize]{rpvMsFULL_KepK2_bkgd.png}%
+  \includegraphics[width=.97\hsize]{figures/rpvMsFULL_KepK2_bkgd.png}%
   \hspace{-.97\hsize}%
   \begin{ocg}{fig:off4M}{fig:off4M}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on4M}{fig:on4M}{1}%
-  \includegraphics[width=.97\hsize]{rpvMsFULL_KepK2_models.png}%
+  \includegraphics[width=.97\hsize]{figures/rpvMsFULL_KepK2_models.png}%
   \end{ocg}
   \hspace{-.97\hsize}%
   \begin{ocg}{fig:off1M}{fig:off1M}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on1M}{fig:on1M}{1}%
-  \includegraphics[width=.97\hsize]{rpvMsFULL_KepK2_FP18.png}%
+  \includegraphics[width=.97\hsize]{figures/rpvMsFULL_KepK2_FP18.png}%
   \end{ocg}
   \hspace{-.97\hsize}%
   \begin{ocg}{fig:off3M}{fig:off3M}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on3M}{fig:on3M}{1}%
-  \includegraphics[width=.97\hsize]{rpvMsFULL_KepK2_bin.png}%
+  \includegraphics[width=.97\hsize]{figures/rpvMsFULL_KepK2_bin.png}%
   \end{ocg}
   \hspace{-.97\hsize}%
   \begin{ocg}{fig:off2M}{fig:off2M}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on2M}{fig:on2M}{1}%
-  \includegraphics[width=.97\hsize]{rpvMsFULL_KepK2_Ms.png}%
+  \includegraphics[width=.97\hsize]{figures/rpvMsFULL_KepK2_Ms.png}%
   \end{ocg}
   \hspace{-.97\hsize}%
   \caption{(\emph{Interactive figure}) Evolution of the radius valley features with stellar mass. \emph{Solid markers}:
@@ -1295,7 +1298,7 @@ approximation given that its detection sensitivity has not yet been adequately c
 
 \begin{figure*}
   \centering
-  \includegraphics[width=0.98\hsize]{rpuncertainty_TESSv2.png}
+  \includegraphics[width=0.98\hsize]{figures/rpuncertainty_TESSv2.png}
   \caption{Expected improvement in the measurement precision of the radius valley location with the number of observed
     low mass stars. Measurement precision curves of the upper and lower uncertainties on the location of the radius valley 
     are derived from binomial statistics. These calculations use approximate and expected detection sensitivity
@@ -1425,24 +1428,24 @@ intersect at $P\sim 23.52$ days such that two regions of interest emerge and are
 
 \begin{figure}
   \centering
-  \includegraphics[width=\hsize]{fmapregion_bkgd_Msgt0d0_xbin39_ybin26.png}%
+  \includegraphics[width=\hsize]{figures/fmapregion_bkgd_Msgt0d0_xbin39_ybin26.png}%
   \hspace{-\hsize}%
   \begin{ocg}{fig:off4pr}{fig:off4pr}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on4pr}{fig:on4pr}{1}%
-  \includegraphics[width=\hsize]{fmapregion_slope_Msgt0d0_xbin39_ybin26.png}%
+  \includegraphics[width=\hsize]{figures/fmapregion_slope_Msgt0d0_xbin39_ybin26.png}%
   \end{ocg}
   \hspace{-\hsize}%
   \begin{ocg}{fig:off1pr}{fig:off1pr}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on1pr}{fig:on1pr}{1}%
-  \includegraphics[width=\hsize]{fmapregion_planets_Msgt0d0_xbin39_ybin26.png}%
+  \includegraphics[width=\hsize]{figures/fmapregion_planets_Msgt0d0_xbin39_ybin26.png}%
   \end{ocg}
   \hspace{-\hsize}%
   \begin{ocg}{fig:off3pr}{fig:off3pr}{0}%
   \end{ocg}%
   \begin{ocg}{fig:on3pr}{fig:on3pr}{1}%
-  \includegraphics[width=\hsize]{fmapregion_tois_Msgt0d0_xbin39_ybin26.png}%
+  \includegraphics[width=\hsize]{figures/fmapregion_tois_Msgt0d0_xbin39_ybin26.png}%
   \end{ocg}
   \hspace{-\hsize}%
   \caption{(\emph{Interactive figure}) Regions of interest for resolving the transition between rocky and non-rocky planets
