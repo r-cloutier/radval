@@ -181,9 +181,8 @@ the data from \citealt{berger18}). Herein we leverage the precise stellar parall
 for low mass stars observed by \kepler{} and \ktwo{} to refine the stellar parameters and compute precise
 occurrence rates of close-in planets with the goal of resolving the radius valley and accurately measuring the
 locations of its features and their uncertainties. Although it is unlikely that a single physical
-mechanism is solely responsible for sculpting the radius valley, investigation the evolution of the valley features
+mechanism is solely responsible for sculpting the radius valley, investigating the evolution of the valley features
 with stellar mass can allude to which process---if any---dominates the evolution of close-in planets.
-
 
 \begin{figure}
   \centering
@@ -207,13 +206,13 @@ to calculate the occurrence rate of small close-in planets in which the structur
 low mass stars is resolved (Sect.~\ref{sect:occurrence}). In Sect.~\ref{sect:models} we compare our results to
 model predictions and to results from planet population studies around Sun-like stars. 
 Sect.~\ref{sect:discussion} presents a discussion of our results
-and its implications followed by a summary of our main findings in Sect.~\ref{sect:conclusions}.
+and their implications followed by a summary of our main findings in Sect.~\ref{sect:conclusions}.
 
 
 \section{Low mass dwarf stellar sample} \label{sect:stars}
-The goal of this study is to extend measurements of the occurrence rate of close-in planets to planetary systems hosted
-by low mass dwarf stars with effective temperatures \teff{} $<4700$ K: the lower limit of \teff{}
-considered in the California Kepler Survey \citep[CKS;][]{fulton17}.
+The goal of this study is to extend measurements of the occurrence rate of close-in planets to planetary systems
+around low mass dwarf stars with effective temperatures \teff{} $<4700$ K, where 4700 K was the lower limit on
+\teff{} that was considered in the California Kepler Survey \citep[CKS;][]{fulton17}.
 This adopted temperature threshold approximately corresponds to spectral types later than
 K3.5V \citep{pecaut13}. In the following subsections we define our stellar samples from each of \kepler{} or \ktwo{.}
 
@@ -230,7 +229,7 @@ Kepler Survey \citep[CKS;][]{petigura17} where available, and \teff{} values for
 with \teff{} measurements to refine the stellar radii using the Stefan-Boltzmann law for the majority of \kepler{} FGK stars.
 However, bolometric corrections for \kepler{} M dwarfs with \teff{} $<4100$ K
 and absolute $K_s$-band magnitudes $M_{K_s}>3$ are known to suffer significant inaccuracies owing to incomplete
-molecular line lists. For these stars, \cite{berger18} instead adopted the empirically-derived M dwarf radius-luminosity
+molecular line lists \citep{mann15}. For these stars, \cite{berger18} instead adopted the empirically-derived M dwarf radius-luminosity
 relation from \cite{mann15} to refine the M dwarf stellar radii. \cite{berger18} also combined \teff{} and the 
 luminosity measurements to derive stellar evolutionary flags aimed at classifying stars as either a dwarf, a subgiant, or a
 red giant.
@@ -239,12 +238,12 @@ Stellar masses $M_s$ are not reported by \cite{berger18}. In order to study the 
 we derive $M_s$ values given the measured stellar radii $R_s$ and using the mass-radius relation from \cite{boyajian12} 
 applicable to both K and M dwarfs.
 \cite{boyajian12} acquired interferometric measurements with the \emph{CHARA} array of 21 nearby K and M dwarfs
-to measure the angular size of each stellar disk at the level of $\lesssim 5$\%. Their stellar sample was supplemented by 12
+to measure the angular size of each stellar disk at the level of $\lesssim 5$\%. Their stellar sample was supplemented by twelve
 literature measurements of $R_s$ from interferometry. Mass measurements were then derived using the $K_s$-band mass-luminosity
 relation from \cite{henry93} which was valid for their full stellar sample spanning 0.13-0.90 R$_{\odot}$. \cite{boyajian12}
 parameterized the stellar mass-radius relationship as a quadratic in $M_s$ and reported values and uncertainties for each polynomial
-coefficient. Here, we assume independent Gaussian probability density functions (PDF) for each coefficient and sample their values
-along with each star's $R_s$ from their respective measurement uncertainties to derive the $M_s$ PDF for all of the low mass dwarfs
+coefficient. Here, we sample each coefficient its independent Gaussian probability density function (PDF), along with
+each star's $R_s$ from its measurement uncertainty, to derive the $M_s$ PDF for all of the low mass dwarfs
 in our preliminary \kepler{} sample.
 
 We define our final \kepler{} stellar sample by focusing on stars that satisfy the following criteria:
@@ -262,8 +261,8 @@ are available (see Sect.~\ref{sect:kepsens}). Based on these criteria, we retrie
 stars whose stellar parameters are depicted in \autoref{fig:stars}.
 In our \kepler{} sample, the \kepler{} magnitudes span $K_p \in [10.35, 16.00]$ with a median value of 15.16,
 effective temperatures span \teff{} $\in [3154, 4870]$ K with a median value of 4394 K,
-stellar radii span $R_s \in [0.17, 0.87]$ R$_{\odot}$ with a median value of 0.68 R$_{\odot}$, and
-stellar masses span $M_s \in [0.13, 0.88]$ M$_{\odot}$ with a median value of 0.70 M$_{\odot}$.
+stellar radii span $R_s \in [0.17, 0.87]$ R$_{\odot}$ with a median value of 0.64 R$_{\odot}$, and
+stellar masses span $M_s \in [0.13, 0.88]$ M$_{\odot}$ with a median value of 0.67 M$_{\odot}$.
 Our final \kepler{} sample boasts a median fractional $R_s$ uncertainty of $\sim 6.7$\% which is $\sim 4-5$
 times smaller than the typical $R_s$ uncertainty reported in the KSPC. The median fractional uncertainty on
 $M_s$ is $\sim 5.5$\%.
@@ -283,14 +282,14 @@ MAST\footnote{Mikulski Archive for Space Telescopes, \url{https://archive.stsci.
 search was restricted to \ktwo{} stars with \teff{} $<4900$ K, \logg{} $>4$, and $R_s<1$ R$_{\odot}$. Note that these
 criteria are not intended to represent the parameter ranges for low mass dwarf stars but are intended as
 conservative conditions to encapsulate all such stars prior to their refinement using the \gaia{} DR2
-data. From MAST we retrieve each star's Ecliptic Plane Input Catalog
+data. From MAST, we retrieve each star's Ecliptic Plane Input Catalog
 (EPIC) numerical identifier, stellar photometry in the \kepler{} bandpass $K_p$ and 2MASS bands $JHK_s$, along
 with measured values of \teff{,} \logg{,} [Fe/H], and $R_s$.
 
 We proceed with refining the stellar parameters by cross-matching our initial \ktwo{} sample with \gaia{}  
 DR2 using the \gaia{-}\ktwo{} data products from Megan Bedell\footnote{\url{https://gaia-kepler.fun/}}. Where
-available, we retrieve reach star's celestial coordinates, stellar parallaxes $\varpi$, and \gaia{} photometry.
-Measurements of $R_s$ then follow from the methodology of \cite{berger18} and outlined as follows.
+available, we retrieve each star's celestial coordinates, stellar parallaxes $\varpi$, and \gaia{} photometry.
+\textbf{Measurements of $R_s$ then follow from the methodology of \cite{berger18} which is outlined as follows.}
 The formalism of \cite{bailerjones18} is used to transform the assumed
 Gaussian-distributed $\varpi$ PDFs into stellar distance PDFs which need not remain Gaussian.
 Using the measured distances $d$ and celestial coordinates, we interpolate over the $E_{B-V}$ extinction maps using the
@@ -298,26 +297,26 @@ Using the measured distances $d$ and celestial coordinates, we interpolate over 
 $A_{K_s}$. We then calculate each star's absolute $K_s$-band magnitude $M_{K_s} = K_s - \mu - A_{K_s}$ where
 the distance modulus is $\mu = 5\log_{10}(d/10\text{ pc})$.
 
-For the earliest stars in our sample ($M_{K_s}\leq 4.6$) , for which the bolometric corrections
-are still reliable, we interpolate the MIST bolometric correction grids \citep{choi16} over \teff{,} \logg{,} [Fe/H],
+For the earliest stars in our sample ($M_{K_s}\leq 4.6$), for which the bolometric corrections
+are reliable, we interpolate the MIST bolometric correction grids \citep{choi16} over \teff{,} \logg{,} [Fe/H],
 and $A_V$ to derive the $K_s$-band bolometric corrections $BC_{K_s}$. We then compute the
 absolute bolometric magnitudes $M_{\text{bol}}=M_{K_s} + BC_{K_s}$ and consequently the bolometric stellar
-luminosities as 
+luminosities from
 
 \begin{equation}
   L_{\text{bol}} = L_0 \cdot 10^{-0.4 M_{\text{bol}}},
 \end{equation}
 
 \noindent where $L_0 = 3.0128 \times 10^{28}$ W \citep{mamajek15}. The refined $R_s$ values
-are then calculated using the Stefan-Boltzmann law given $L_{\text{bol}}$ and \teff{} with measurement uncertainties
+are then calculated using the Stefan-Boltzmann law given $L_{\text{bol}}$ and \teff{,} with measurement uncertainties
 propagated throughout.
 
 For the remaining late type stars with $M_{K_s}>4.6$, we revert to the empirically-derived radius-luminosity relation
 from \cite{mann15} to calculate the M dwarf stellar radii. \cite{mann15} fit a second-order polynomial to $R_s$ as
 a function of $M_{K_s}$ which has a characteristic dispersion in the fractional radius uncertainty of 2.89\%. To quantify
 the final $R_s$ uncertainty we sample $M_{K_s}$ from its posterior PDF and transform each $M_{K_s}$ draw to an $R_s$ value
-using the aforementioned radius-luminosity relation. To each star's derived $R_s$ PDF, we add an additional
-dispersion term, in quadrature, whose fractional uncertainty is 2.89\%. Stellar masses within our \ktwo{} sample are derived
+using the aforementioned radius-luminosity relation. We then add, in quadrature, an additional dispersion term equal to
+the dispersion in the radius-luminosity relation. Stellar masses within our \ktwo{} sample are derived
 identically to the method applied to the \kepler{} sample using the \cite{boyajian12} stellar
 mass-radius relation (see Sect.~\ref{sect:kep}). 
 
@@ -343,14 +342,14 @@ from \cite{fulton17} that aims to reject evolved stars:
 stellar parameters are also depicted in \autoref{fig:stars}.
 In our \ktwo{} sample, the \kepler{} magnitudes span $K_p \in [8.47, 14.68]$ with a median value of 14.04,
 effective temperatures span \teff{} $\in [3246, 4856]$ K with a median value of 4017 K,
-stellar radii span $R_s \in [0.14, 0.94]$ R$_{\odot}$ with a median value of 0.70 R$_{\odot}$, and
-stellar masses span $M_s \in [0.09, 0.93]$ M$_{\odot}$ with a median value of 0.69 M$_{\odot}$.
+stellar radii span $R_s \in [0.14, 0.94]$ R$_{\odot}$ with a median value of 0.66 R$_{\odot}$, and
+stellar masses span $M_s \in [0.09, 0.93]$ M$_{\odot}$ with a median value of 0.65 M$_{\odot}$.
 The stars in this sample exhibit a median fractional $R_s$ uncertainty of $\sim 3.5$\% which is $\sim 2$
 times smaller than the typical $R_s$ uncertainty obtained for stars in our \kepler{} sample.
 The median fractional uncertainty on $M_s$ is $\sim 3.9$\%.
 
 Our full stellar sample therefore contains 17393 stars.
-Each of the \kepler{} and \ktwo{} stellar samples are dominated by mid-to-late K dwarfs
+Each of the \kepler{} and \ktwo{} stellar samples is dominated by mid-to-late K dwarfs
 with temperatures and radii $\gtrsim 3800$ K and $\gtrsim 0.6$ R$_{\odot}$ respectively. This
 fact will have important implications on our ability to precisely measure the planet occurrence
 rate around the lowest mass stars in our sample.
@@ -566,8 +565,8 @@ of the pointing corrections within the \texttt{EVEREST} light curves can vary wi
 that there is considerably more variance in the \ktwo{} detection sensitivity relative to \kepler{.} Furthermore,
 the average detection sensitivity is significantly reduced compared to \kepler{.} %The effect of the reduced
 %sensitivity on the derived occurrence rates is discussed in Sect.~\ref{sect:occurrence}.
-The reduced sensitivity is due in-part to the imperfect corrections of the reduced pointing accuracy and
-to the limited time baseline of $\sim 80$ days in a typical \ktwo{} light curve compared to \kepler{.} 
+The reduced sensitivity is due in-part to the imperfect corrections of the pointing and
+to the lesser time baseline of $\sim 80$ days in a typical \ktwo{} light curve compared to \kepler{.} 
 Furthermore, \texttt{ORION} was originally developed for use on the 2-minute cadence data
 from the \tess{} mission. Here
 we have not attempted to optimize the performance of \texttt{ORION} on \ktwo{} light curves 
@@ -583,17 +582,16 @@ as being independent and planetary.
 The sensitivity curves depicted in \autoref{fig:senscurves} enable us to extend the visualization of the
 detection sensitivity to two dimensions. Explicitly, we consider the detection sensitivity
 $s_{nij}$ for each star (indexed by $n$) and as a function of $P$ and $r_p$ which are indexed by $i$ and
-$j$ respectively. Consideration of the sensitivity in $P-r_p$ space is needed to evaluate the
-occurrence rates in that parameter space and ultimately for understanding the structure of
-the radius valley around low mass stars due to the dependence of the efficiency of atmospheric loss on
-both planet size and separation, regardless of the physical mechanism involved. 
+$j$ respectively. \textbf{The calculation of the sensitivity in $P-r_p$ space is needed to evaluate the
+  occurrence rates in that parameter space. Resolving the structure of the radius valley
+  in $P-r_p$ space is required to understand the efficiency of atmospheric loss on
+  both planet size and separation regardless of the physical mechanism responsible.}
 
-We consider orbital periods $P \in [0.5,100]$ days and planet radii $r_p \in [0.5,4]$ R$_{\oplus}$. At
-each grid cell $nij$ we compute the average S/N within the cell and map that value to the detection sensitivity
-using the data in \autoref{fig:senscurves}. The detection sensitivity maps for \kepler{} and \ktwo{,}
-averaged over the index $n$, are shown in \autoref{fig:sensmap}.
-
- 
+We consider orbital periods $P \in [0.5,100]$ days and planet radii $r_p \in [0.5,4]$ R$_{\oplus}$.
+\textbf{For each star
+$n$, and at each grid cell $ij$, we compute the average S/N. This value is then mapped to the detection sensitivity
+using the curves in \autoref{fig:senscurves}.} The resulting detection sensitivity maps for \kepler{} and \ktwo{,}
+averaged over $n$, are shown in \autoref{fig:sensmap}.
 
 \begin{figure*}
   \centering
@@ -608,17 +606,17 @@ averaged over the index $n$, are shown in \autoref{fig:sensmap}.
 \subsection{Survey completeness} \label{sect:comp}
 Only transiting planets are detectable in transit surveys. To correct for the non-detection of otherwise
 detectable but non-transiting planets we compute
-the geometric transit probability for each star $n$ and at each grid cell $ij$ in the $P-r_p$ space to be
+the geometric transit probability $p_t$ for each star $n$ and at each grid cell $ij$ in the $P-r_p$ space to be
 
 \begin{equation}
-  p_{t,nij} = \frac{R_{s,n} + r_{p,j}}{a_{ni}}. \label{eq:ptransit}
+  p_{t,nij} = \frac{R_{s,n}}{a_{ni}}. \label{eq:ptransit}
 \end{equation}
 
 \noindent Note that we are only interested in the relative planet occurrence rate and therefore do not consider
 constant scalar modifications to $p_{t,nij}$ from effects such as grazing transits or non-zero eccentricities 
 \citep{barnes07b}.
 
-The product of each star's detection sensitivity with its geometric transit probability yield completeness
+The product of each star's detection sensitivity with its geometric transit probability yields completeness
 maps as a function of $P$ and $r_p$. The average completeness maps for our \kepler{} and \ktwo{} stars are
 shown in \autoref{fig:compmap}.
 
@@ -734,7 +732,7 @@ $r_p\in [0.5,4]$ R$_{\oplus}$.
     valley around mid-K to early-M dwarfs \citep[\emph{dotted line},][]{wu19}. Also overplotted are
     \ToggleLayer{fig:on4,fig:off4}{\protect\cdbox{planets}}
     with $\geq 3\sigma$ bulk density measurements from the literature that are classified as having either
-    a rocky (\emph{circles}), a gaseous (\emph{triangles}), or an ambiguous (\emph{squares}) bulk
+    a rocky (\emph{circles}), a gaseous (\emph{triangles}), or an intermediate (\emph{squares}) bulk
     composition. Marker colors are indicative of the MAP planet bulk densities. 
     The shaded region indicates where the \kepler{} sensitivity falls below 10\%.} 
   \label{fig:fmap}
@@ -763,7 +761,7 @@ we define the following composition dispositions: \emph{rocky}
 planets have bulk densities that are greater than or consistent with a purely rocky composition
 (i.e. 100\% MgSiO$_3$) given the planet's size, \emph{gaseous} planets have bulk densities that are less
 than and inconsistent with that of a pure water world (i.e. 100\% H$_2$O) given the planet's size, 
-and all intermediate planets are flagged as having an \emph{ambiguous} bulk composition (i.e. not clearly
+and all intermediate planets are flagged as having an \emph{intermediate} bulk composition (i.e. not clearly
 terrestrial-like or likely to be hosting a significant gaseous envelope).
 
 \input{densitytable}
@@ -771,11 +769,14 @@ terrestrial-like or likely to be hosting a significant gaseous envelope).
 The retrieved planets in \autoref{fig:fmap} demonstrate clear compositional clustering with planet radius.
 All rocky planets appear to be smaller than 1.8 R$_{\oplus}$ independently of orbital period.
 Similarly, all four gaseous planets are larger than 2.6 R$_{\oplus}$ while the three remaining planets
-with intermediate radii correspond to those with ambiguous bulk compositions. 
+with intermediate radii correspond to those with intermediate bulk compositions. 
 Thus we are justified in classifying the occurrence rate peak spanning $\sim 0.9-1.4$ R$_{\oplus}$
-as representing rocky planets. The second peak between $\sim 1.9-2.3$ R$_{\oplus}$ hosts
-planets with ambiguous bulk compositions but are clearly inconsistent with being rocky
-such that we will refer to this feature as the non-rocky peak in what follows.
+as representing rocky planets. \textbf{The second peak between $\sim 1.9-2.3$ R$_{\oplus}$ hosts
+planets with intermediate bulk compositions that are clearly inconsistent with being rocky, but due to
+degeneracies in planetary internal structure models, these planets are not unambiguously known
+to host extended gaseous envelopes. In other words, the bulk compositions of these planets
+are consistent with both being volatile-rich or hosting an extended H/He envelope. 
+We will refer to this feature as the non-rocky peak in what follows.}
 
 Lastly, we note that the radius valley as a function of $P$ is not completely void of planets.
 This may allude to the efficiency of any gap clearing mechanism around low mass stars and is
@@ -787,8 +788,10 @@ discussed further in Sect.~\ref{sect:void}.
 Next, we marginalize over $P$ and compute the one-dimensional occurrence rate of small close-in planets
 as a function of $r_p$. The resulting occurrence rates are shown in \autoref{fig:rphist} in which the bimodal
 distribution of planet sizes is again clearly discernible in the MAP occurrence rates.
-The uncertainties on each $f_j$ bin are computed from the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles
-of the $f_j$ posterior. In \autoref{fig:rphist} we ignore the measured occurrence rate in bins with
+\textbf{The uncertainty on each $f_j$ bin is computed from the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles
+  of its $f_j$ posterior and are thus correlated given the smooth nature of the two-dimensional occurrence
+  rates (\autoref{fig:fmap}).}
+In \autoref{fig:rphist} we ignore the measured occurrence rate in bins with
 $r_p\lesssim 1$ R$_{\oplus}$ where the detection sensitivity is poor.
 
   
@@ -832,10 +835,9 @@ around low mass stars.
 In an attempt to improve the counting statistics in the occurrence rate calculations,
 we will consider an enlarged planet sample. This sample is the union of our existing sample of confirmed planets
 with a set of additional planet candidates (PCs) from the \ktwo{}
-mission. Specifically, we consider the set of PCs reported by \cite{kruse19}
-%% could add more studies here
-from \ktwo{} campaigns 0-8 that includes 126 PCs not already included in our sample of confirmed planets
-and orbiting stars contained within our stellar sample.
+mission. \textbf{Specifically, we consider the set of PCs reported by \cite{kruse19}
+from \ktwo{} campaigns 0-8. This set includes 126 PCs that are not already included in our sample of confirmed
+planets but do orbit stars within our stellar sample.}
 
 By definition we cannot identify which PCs are true planets of interest for this study and
 which PCs are instead produced by an astrophysical false positive. 
@@ -857,12 +859,12 @@ being a FP. Hence, we only focus on PCs with $r_p<4$ R$_{\oplus}$ when deriving 
 
 The resulting FP rates are reported in \autoref{tab:FP}. Half of the studies do not find any probable
 FP signals among the small PCs orbiting cool stars in their samples. In such cases, only upper limits on the FP rate
-can be derived which all agree that the FP rate is $\lesssim 20$\% at 95\%. The remaining studies
+can be derived which all agree that the FP rate is $\lesssim 20$\% at 95\% confidence. The remaining studies
 each detect at least one FP such that a non-zero maximum likelihood FP rate is measured. Their average FP rate is 5.7\%
 which is also in agreement with the derived upper limits from the aforementioned studies.
-We proceed by constructing $10^3$ realizations of the planet population
-that includes all confirmed planets from both \kepler{} and \ktwo{} plus a subset of the 126 \ktwo{} PCs from
-\cite{kruse19}. The subset of included PCs are randomly sampled from the full set of PCs
+\textbf{We proceed by constructing $10^3$ planet population realizations. Each realization
+  includes all confirmed planets from both \kepler{} and \ktwo{,} plus a subset of the 126 \ktwo{} PCs from
+\cite{kruse19}.} The subset of included PCs are randomly sampled from the full set of PCs
 according to the adopted FP rate such that each realization contains $(1-0.057)\cdot 126 \approx 119$ PCs.
 
 \input{FPtable}
@@ -986,7 +988,7 @@ in this work and around FGK stars from the CKS \citep{martinez19} are reported i
     from gas-poor formation of terrestrial planets. Also overplotted are
     \ToggleLayer{fig:on4F,fig:off4F}{\protect\cdbox{planets}}
     with $\geq 3\sigma$ bulk density measurements from the literature that are classified as having either
-    a rocky (\emph{circles}), a gaseous (\emph{triangles}), or an ambiguous (\emph{squares}) bulk
+    a rocky (\emph{circles}), a gaseous (\emph{triangles}), or an intermediate (\emph{squares}) bulk
     composition. Marker colors are indicative of the MAP planet bulk densities.
     \emph{Lower panel}: the occurrence rate map of close-in
     \kepler{} planets around Sun-like stars \citep[$r_{p,\text{valley}} \propto F^{0.12\pm 0.02}$;][]{martinez19}.
@@ -1082,7 +1084,7 @@ M$_{\odot}$ (i.e. $\sim 62$\% of our confirmed planet sample).
 In considering stars less massive than 0.65 M$_{\odot}$, the non-rocky planet peak begins to diminish relative
 to the terrestrial-sized planets. As evidenced in the MAP $f_j$ distribution around stars with
 $M_s \in [0.08,0.65]$ M$_{\odot}$, the radius valley might persist around 1.6 R$_{\oplus}$ but the non-rocky planet
-peak does not appear distinct from the rocky planet peak in the MAP $f_{ij}$ map. That is that the relative
+peak does not appear distinct from the rocky planet peak in the MAP $f_{ij}$ map. In other words, the relative
 frequency of rocky to non-rocky planets appears to increase significantly around M dwarfs compared to the more
 massive K dwarfs. This feature is further accentuated around the lowest mass stars in our sample ($<0.42$
 M$_{\odot}$) for which terrestrial-sized planets clearly dominate the distribution of close-in planets. The relative
@@ -1113,7 +1115,7 @@ hundreds of days where giant planets begin to emerge around these stars \citep{b
 
 Although our data show a significant increase in the relative occurrence of rocky to non-rocky planets
 around increasingly lower mass stars, we are unable to firmly identify the cause of this trend with these data.
-That is that there are two outstanding hypotheses that cannot be ruled out by our data. The first scenario
+In other words, there are two outstanding hypotheses that cannot be ruled out by our data. The first scenario
 requires the preferential formation of rocky planets around low mass stars such that atmospheric processing
 by photoevaporation, core-powered mass loss, or impact erosion, have little to no effect. The alternative scenario
 is that planet formation processes around low mass stars continues to produce non-rocky planets with significant
@@ -1227,9 +1229,10 @@ a characteristic planetary core size of $\approx 1$ R$_{\oplus}$ although its ex
 due to the limited detection sensitivity to sub-Earth-sized planets. Furthermore, the probabilistic classification
 of rocky planets as being primordially rocky or an evaporated core requires additional information
 about the planet's orbit and stellar host properties \citep{neil19b}. 
-For example, typical core sizes may be $M_s$-dependent
-as a core size for a fixed core mass is composition dependent and the mass of heavy elements per star
-is known to to be higher around M dwarfs compared to around FGK stars \citep{mulders15a,mulders15b,neil19}.
+\textbf{For example, there may be exist a stellar dependence on typical core sizes.
+  This is because for Earth-like cores, the core size is intimately related to the core mass and
+  final core masses depend on the availability of heavy elements which
+is known to be higher around M dwarfs than around FGK stars \citep{mulders15a,mulders15b,neil19}.}
 
 Models of the formation of the radius valley based upon photoevaporation \citep{wu19}, gas-poor formation \citep{lopez18},
 and core-powered mass loss \citep{gupta19b} all make explicit predictions for the evolution of the radius valley location
@@ -1413,12 +1416,12 @@ intersect at $P\sim 23.52$ days such that two regions of interest emerge and are
   Eq.~\ref{eq:transition} regions of interest and obtaining precise planetary bulk density measurements.
   As seen in \autoref{fig:transition}, there are only $\sim 5$ planets in the region of interest with $\geq 3\sigma$ bulk
   density measurements. These planets reveal the decrease in bulk density with increasing $r_p$ although insufficient
-  information is available to resolve a possibly sharp transition.
-  NASA's Transiting Exoplanet Survey Satellite \citep[\tess{;}][]{ricker15} has already identified eleven
-  TOIs\footnote{\tess{} Object-of-Interest.}
-  around stars with \teff{} $<4700$ K that satisfy Eq.~\ref{eq:transition} and should be targeted by RV
-  follow-up campaigns.\footnote{TOIs: 134.01 \citep{astudillodefru19}, 237.01, 260.01, 544.01, 702.01, 807.01, 833.01,
-    836.02, 873.01, 1075.01, and 1201.01.} Note that all eleven planet candidates have $P<23.52$ days.
+  information is available to resolve a possibly sharp transition. \textbf{At the time of writing, \tess{}
+    has identified such eleven TOIs\footnote{\tess{} Object-of-Interest.}
+    around stars with \teff{} $<4700$ K that satisfy Eq.~\ref{eq:transition}. Ten of these TOIs have
+    $J<11$ and should be strongly considered as targets for RV follow-up campaigns}\footnote{TOIs: 134.01
+    \citep{astudillodefru19}, 237.01, 544.01, 702.01, 807.01, 833.01,
+    836.02, 873.01, 1075.01, and 1201.01.}. Note that all ten TOIs have $P<23.52$ days.
 
 \begin{figure}
   \centering
@@ -1454,7 +1457,7 @@ intersect at $P\sim 23.52$ days such that two regions of interest emerge and are
     that fall within this region are marked by an `x'. Also overplotted are
     \ToggleLayer{fig:on1pr,fig:off1pr}{\protect\cdbox{planets}}
     with $\geq 3\sigma$ bulk density measurements from the literature that are classified as having either
-    a rocky (\emph{circles}), a gaseous (\emph{triangles}), or an ambiguous (\emph{squares}) bulk
+    a rocky (\emph{circles}), a gaseous (\emph{triangles}), or an intermediate (\emph{squares}) bulk
     composition. Marker colors are indicative of the MAP planet bulk densities.}
   \label{fig:transition}
 \end{figure}
