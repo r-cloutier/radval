@@ -1193,14 +1193,18 @@ The same is done for the radius valley using the inverse occurrence rates.
 
 \input{boundstable}
 
-The resulting locations of each radius peak and valley are depicted in \autoref{fig:rpvMs} as a function of
-stellar mass. The locations and uncertainties are also given explicitly in \autoref{tab:rpvMs}.
-The depicted $M_s$ values are represented by the median stellar mass within each bin and whose
-uncertainties are derived from the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles. In computing the
+The resulting locations of each radius peak and the
+valley are depicted in \autoref{fig:rpvMs} as a function of
+stellar mass. The feature locations and uncertainties are also given explicitly in \autoref{tab:rpvMs}.
+The depicted $M_s$ values are represented by the median stellar mass within each bin with
+uncertainties derived from the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles. In computing the
 feature locations we assume that the bimodal $r_p$ distribution is present in all stellar mass bins
-aside from the lowest mass bin (see \autoref{fig:rphistcomp}). In the lowest stellar mass bin we
+aside from the lowest mass bin wherein the non-rocky peak becomes insignificant
+(see \autoref{fig:rphistcomp}). In the lowest stellar mass bin, we
 only measure the location of the rocky planet peak and its edge which marks the transition from
 rocky to non-rocky planets despite the latter being inherently rare around these types of stars.
+These feature radii are then compared to those measured by \cite{fulton18} around Sun-like stars with
+$M_s <0.97$ M$_{\odot}$, $M_s \in [0.97,1.11]$ M$_{\odot}$, and $M_s >1.11$ M$_{\odot}$.
 
 \input{rpvMstable}
 
@@ -1259,12 +1263,11 @@ rocky to non-rocky planets despite the latter being inherently rare around these
 \end{figure*}
 
 
-The measured feature radii are compared to those measured in \cite{fulton18} around Sun-like stars with
-$M_s <0.97$ M$_{\odot}$, $M_s \in [0.97,1.11]$ M$_{\odot}$, and $M_s >1.11$ M$_{\odot}$.
-Most notably, the location of each feature measured from our full stellar sample continues the trend of monotonically
+\autoref{fig:rpvMs} reveals that
+the location of each feature, measured from our full stellar sample, continues the trend of monotonically
 decreasing towards smaller $r_p$ with decreasing $M_s$. The slopes of this decrease for the rocky and non-rocky
-planet peaks measured with the three points from \cite{fulton18} and from our full stellar sample
-are $\text{d}r_{p,\text{terr}} / \text{d}M_s = 0.40$ and $\text{d}r_{p,\text{gas}} / \text{d}M_s = 0.97$
+planet peaks, measured with the three points from \cite{fulton18} and from our full stellar sample,
+are $\text{d}r_{p,\text{rock}} / \text{d}M_s = 0.40$ and $\text{d}r_{p,\text{gas}} / \text{d}M_s = 0.97$
 respectively. The relative slopes indicate that the most common size of
 non-rocky planet decreases more steeply with $M_s$ than the typical size of rocky planets. This trend
 is indicative of the effective disappearance of non-rocky planets around increasingly lower mass stars
@@ -1279,21 +1282,22 @@ about the planet's orbit and stellar host properties \citep{neil19b}.
   final core masses depend on the availability of heavy elements which
 is known to be higher around M dwarfs than around FGK stars \citep{mulders15a,mulders15b,neil19}.}
 
-Models of the formation of the radius valley based upon photoevaporation \citep{wu19}, gas-poor formation \citep{lopez18},
-and core-powered mass loss \citep{gupta19b} all make explicit predictions for the evolution of the radius valley location
+Models of the formation of the radius valley based on photoevaporation \citep{wu19}, gas-poor formation \citep{lopez18},
+and core-powered mass loss \citep{gupta19b}, all make explicit predictions for the evolution of the radius valley location
 with stellar mass. Predictions from the core-powered mass loss scenario are dependent on the stellar mass-luminosity
-relation (MLR) $L_s \propto M_s^{\alpha}$. In \autoref{fig:rpvMs} we consider cases with a constant MLR with $\alpha=5$
-\citep{gupta19b} and with the empirically-derived piecewise MLR from \cite{eker18}. All models predict a decreasing
-radius valley with decreasing stellar mass but differ in their slopes. 
+relation (MLR) $L_s \propto M_s^{\alpha}$. In \autoref{fig:rpvMs}, we consider predictions assuming either
+a constant MLR with $\alpha=5$ \citep{gupta19b} or the empirically-derived piecewise MLR from
+\cite{eker18}. All models predict a decreasing radius valley with decreasing stellar mass, but the models
+differ in the predicted rates of this decrease. 
 At the median stellar mass of our full stellar sample ($0.65$ M$_{\odot}$), the measured location of the radius valley is
 $1.54\pm 0.16$ R$_{\oplus}$. This value---combined with measurements from Sun-like stars---favors
 a steep $\text{d}r_{p,\text{valley}} / \text{d}M_s$ slope although we are
 unable to distinguish between competing physical models given the measurement uncertainties.
 Fortunately, the model predictions continue to diverge
-with decreasing stellar mass such that measurements of the valley location in decreasing $M_s$ bins may be used to
+with decreasing stellar mass such that measurements of the valley's location in decreasing $M_s$ bins may be used to
 rule out the operation of certain physical mechanisms in the low stellar mass regime. Although the trend of decreasing
 feature radii with decreasing stellar mass appears to be upheld, the poor counting statistics in the reduced
-$M_s$ bins prevent any significant inference regarding the relative strength of the competing physical mechanisms.
+$M_s$ bins prevent significant inferences with regards to the relative strength of the competing physical processes.
 This problem can only be addressed by increasing the number of mid-to-late M dwarfs in transit surveys and by maximizing
 the detection sensitivity to planets spanning the radius valley (see Sect.~\ref{sect:improve}).
 
