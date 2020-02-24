@@ -638,8 +638,8 @@ shown in \autoref{fig:compmap}.
 The detection and validation of planets from the \kepler{} and \ktwo{} missions enables the measurement of the
 occurrence rate of planets given the completeness corrections derived in Sect.~\ref{sect:completeness}.
 For the index $i$ representing a planet's orbital period and $j$ representing the planetary
-radius, the probability of detecting an integer number of planets within that grid cell ($k_{ij}$) around
-$N_s$ stars is given by the binomial likelihood function
+radius, the probability of detecting an integer number of planets within that grid cell ($k_{ij}$), around
+$N_s$ stars, is given by the binomial likelihood function
 
 \begin{equation}
   \mathcal{L}_{nij}(k_{ij}|N_s,P_{nij}) = \binom{N_s}{k_{ij}} \prod_{n=1}^{N_s} P_{nij}^{k_{ij}} (1-P_{nij})^{N_s-k_{ij}}
@@ -655,8 +655,8 @@ $N_s$ stars is given by the binomial likelihood function
 
 \noindent is the probability of detecting a planet in the $ij$ grid cell around the $n^{\text{th}}$ star.
 This quantity is dependent on the detection sensitivity $s_{nij}$, the transit probability $p_{t,nij}$, and the 
-intrinsic occurrence rate of planets in the grid cell $ij$ $f_{ij}$ which is assumed to be common to all
-of the $N_s$ stars in the sample.
+intrinsic occurrence rate of planets in the grid cell $f_{ij}$, which is assumed to be universal among all
+$N_s$ stars in the sample.
 Recall that the number of planet detections $k_{ij}$ was depicted in \autoref{fig:Ndet} and
 calculations of $s_{nij}$ and $p_{t,nij}$ produced the completeness maps shown in \autoref{fig:compmap}. 
 Taken together, and noting from Bayes theorem that the posterior probability of $f_{ij}$ is 
@@ -681,16 +681,16 @@ $2.48\pm 0.32$ and $0.75\pm 0.11$ confirmed planets per star with $P\in [0.5,100
 and $r_p\in [0.5,4]$ R$_{\oplus}$ from \kepler{} and \ktwo{} respectively.
 The discrepancy arises from the disparate resources that have
 been dedicated to the validation of planet candidates from \kepler{} and \ktwo{.} The result being that
-the number of real planets within the full set of planet candidates from \ktwo{} is underestimated
+the number of real planets within the full set of \ktwo{} planet candidates is underestimated
 by the number of planet candidates that have been reported as validated to date. We address this discrepancy
 by scaling the cumulative occurrence rate measured by \ktwo{} to that of \kepler{.}
-In this way, we inherently assume that the planet populations studied by each mission are inherently
-equivalent despite existing around distinct stellar populations within the galaxy, albeit with similar
+In this way, we are implicitly assuming that the planet populations studied by each mission are inherently
+equivalent, despite existing around distinct stellar populations within the galaxy, albeit with similar
 physical properties. In Sect.~\ref{sect:comparef} we will revisit the comparison of the planet occurrences
 rates from \kepler{} and \ktwo{} following the inclusion of \ktwo{} planet candidates.
 
 The MAP $f_{ij}$ map is depicted in \autoref{fig:fmap}.
-Here the existence of the radius valley around low mass stars is clearly
+Here, the existence of the radius valley around low mass stars is clearly
 evident. Distinct peaks in the planet frequency are separated along the planetary radius axis and span
 $\sim 0.9-1.4$ R$_{\oplus}$ and $\sim 1.9-2.3$ R$_{\oplus}$ respectively.
 Note however that the lower limit on the former peak 
@@ -744,7 +744,7 @@ $r_p\in [0.5,4]$ R$_{\oplus}$.
 The location and slope of the radius valley (i.e. $\text{d}r_p/\text{d}\log{P})$ appear broadly consistent
 with the valley structure measured from the empirical planet population of FGK stars characterized via
 asteroseismology \citep{vaneylen18}. \cite{wu19} also provided a visual approximation to the location of the
-radius valley around stars with $M_s \in [0.5,0.76]$ M$_{\odot}$ in their \gaia{-}\kepler{} sample. However
+radius valley around stars with $M_s \in [0.5,0.76]$ M$_{\odot}$ in their \gaia{-}\kepler{} sample. However,
 we find the location of the terrestrial-sized planet peak to exist at longer $P \sim 30$ days compared its
 location at $\sim 5$ days from \cite{wu19} (c.f. Figure 2). The discrepancy likely originates from differences
 in the method of correcting for survey incompleteness.
@@ -752,40 +752,61 @@ Recall that in this study the detection sensitivity for \kepler{} stars is compu
 given the unique completeness products from the \kepler{} pipeline whereas \cite{wu19} adopt the piecewise
 completeness levels of 10, 50, or 90\% complete as a function of $P$ and $r_p$ from \cite{zhu18b}.
 
-Also included in \autoref{fig:fmap} are planets
+Also included in \autoref{fig:fmap}, are planets
 with $\geq 3\sigma$ bulk density measurements ($\rho_p$) from either precision radial velocities or
 transit timing variations.
 Planet parameters are retrieved from the NASA Exoplanet Archive for planets orbiting stars with
 \teff{} $\in[2800,4700]$ K, whose orbital periods and radii span the domain considered in \autoref{fig:fmap},
 and whose masses are inconsistent with zero (i.e. no mass upper limits).
-The properties of the resulting 18 planets are listed in \autoref{table:rhop}. Based on the
+The properties of the resulting 20 planets are listed in \autoref{table:rhop}. Based on the
 planetary masses, radii, and compositional mass-radius relations from \cite{zeng13},
 we define the following composition dispositions: \emph{rocky}
 planets have bulk densities that are greater than or consistent with a purely rocky composition
 (i.e. 100\% MgSiO$_3$) given the planet's size, \emph{gaseous} planets have bulk densities that are less
-than and inconsistent with that of a pure water world (i.e. 100\% H$_2$O) given the planet's size, 
-and all intermediate planets are flagged as having an \emph{intermediate} bulk composition (i.e. not clearly
-terrestrial-like or likely to be hosting a significant gaseous envelope).
+dense then and inconsistent with that of a pure water world (i.e. 100\% H$_2$O) given the planet's size, 
+and all remaining planets are flagged as having an \emph{intermediate} bulk composition (i.e. not clearly
+terrestrial-like or likely to be hosting a significant H/He envelope).
 
 \input{densitytable}
 
 The retrieved planets in \autoref{fig:fmap} demonstrate clear compositional clustering with planet radius.
-All rocky planets appear to be smaller than 1.8 R$_{\oplus}$ independently of orbital period.
+All rocky planets appear to be smaller than 1.8 R$_{\oplus}$, independently of orbital period.
 Similarly, all four gaseous planets are larger than 2.6 R$_{\oplus}$ while the three remaining planets
 with intermediate radii correspond to those with intermediate bulk compositions. 
-Thus we are justified in classifying the occurrence rate peak spanning $\sim 0.9-1.4$ R$_{\oplus}$
+Thus, we are justified in classifying the occurrence rate peak spanning $\sim 0.9-1.4$ R$_{\oplus}$
 as representing rocky planets. \textbf{The second peak between $\sim 1.9-2.3$ R$_{\oplus}$ hosts
-planets with intermediate bulk compositions that are clearly inconsistent with being rocky, but due to
+planets with intermediate bulk compositions that are clearly inconsistent with being rocky. However, due to
 degeneracies in planetary internal structure models, these planets are not unambiguously known
-to host extended gaseous envelopes. In other words, the bulk compositions of these planets
-are consistent with both being volatile-rich or hosting an extended H/He envelope. 
-We will refer to this feature as the non-rocky peak in what follows.}
+to host extended H/He envelopes as their masses and radii 
+are consistent with either being volatile-rich, or with having an Earth-like solid core plus an extended
+H/He envelope \citep{valencia13}. We will refer to this peak in the occurrence rate distribution
+as the non-rocky peak in what follows.}
+
+\textbf{To test the statistical significance of the bimodality in \autoref{fig:fmap}, we used
+  the \texttt{sklearn.mixture} package to fit the $f_{ij}$ distribution with a Gaussian mixture model with
+  1-5 components. For the purpose of model comparison, we then computed the Bayesian Information
+  Criterion (BIC) for each mixture model with its unique number of components.
+  Multiple components are strongly favored over a single component indicating that the peaks in the
+  occurrence rate distribution are signficant. For example,
+  $\Delta(\text{BIC}_{12})=\text{BIC}_1-\text{BIC}_2\sim 400$
+  such that the two-component model is strongly favored over a single component\footnote{\cite{kass95}
+    recommend that a model $n$ is strongly favored over a competing model $m$
+    when $\Delta(\text{BIC}_{mn})=\text{BIC}_m-\text{BIC}_n > 10$.}. We note that the three-component model
+  is found to have the lowest BIC with $\Delta(\text{BIC}_{23})=\text{BIC}_2-\text{BIC}_3\sim 90$ and
+  $\Delta(BIC_{34})=BIC_3-BIC_4\sim -10$ such that it is strongly favored over two components but only
+  marginally favored over a more complex mixture model of four Gaussian components. The three components
+  in the MAP $f_{ij}$ map encapsulate the rocky planet peak plus the two apparent peaks around $\sim 2.2$
+  R$_{\oplus}$ and centered on $\sim 11$ days and $\sim 50$ days. Given the uncertaintities on $f_{ij}$,
+  which are not communicated in \autoref{fig:fmap}, it is unclear whether the third component
+  at $P=50 days$ and $r_p=2.2$ R$_{\oplus}$ is a real feature in the occurrence rate distribution. Deeper
+  transiting planet searches around low mass stars will be required to investigate the validity of this
+  third component.} 
 
 Lastly, we note that the radius valley as a function of $P$ is not completely void of planets.
-This may allude to the efficiency of any gap clearing mechanism around low mass stars and is
-discussed further in Sect.~\ref{sect:void}.
+This may allude to the relative efficiencies of various gap clearing mechanisms around low mass stars and
+are discussed further in Sect.~\ref{sect:void}.
 
-\vspace{1cm}
+%\vspace{1cm}
 
 \subsection{Occurrence rates versus planet radius}
 Next, we marginalize over $P$ and compute the one-dimensional occurrence rate of small close-in planets
@@ -794,7 +815,7 @@ distribution of planet sizes is again clearly discernible in the MAP occurrence 
 \textbf{The uncertainty on each $f_j$ bin is computed from the $16^{\text{th}}$ and $84^{\text{th}}$ percentiles
   of its $f_j$ posterior and are thus correlated given the smooth nature of the two-dimensional occurrence
   rates (\autoref{fig:fmap}).}
-In \autoref{fig:rphist} we ignore the measured occurrence rate in bins with
+In \autoref{fig:rphist} we ignore the measured occurrence rates in bins with
 $r_p\lesssim 1$ R$_{\oplus}$ where the detection sensitivity is poor.
 
   
@@ -820,19 +841,28 @@ $r_p\lesssim 1$ R$_{\oplus}$ where the detection sensitivity is poor.
   \label{fig:rphist}
 \end{figure*}
 
-From the bimodal distribution we highlight the approximate radii likely corresponding to planets with rocky
-bulk compositions ($r_p\lesssim 1.54$ R$_{\oplus}$) versus planets with significant size fractions in a volatile-rich
-or extended H-He gaseous
-envelope ($r_p\gtrsim 1.54$ R$_{\oplus}$) around
-low mass stars. Also depicted in \autoref{fig:rphist} is $f_j$ with a bin width half that of the principal
+From the bimodal distribution, we highlight the approximate radii likely corresponding to planets with rocky
+bulk compositions ($r_p\lesssim 1.54$ R$_{\oplus}$) versus planets with significant size fractions in an extended
+gaseous envelope ($r_p\gtrsim 1.54$ R$_{\oplus}$).
+A second depiction of $f_j$ is included in \autoref{fig:rphist} with a bin width that is half that of the principal
 $f_j$ depiction (i.e. 0.06 R$_{\oplus}$ compared to 0.13 R$_{\oplus}$).
-With finer binning the fractional uncertainties on $f_j$ are sufficiently
+With the finer binning, the fractional uncertainties on $f_j$ are sufficiently
 large to eliminate the significance of the distinct bimodal peaks. Despite this, the bimodality in the MAP
 occurrence rate continues to persist with the location of the valley features only being marginally affected.
 We interpret this as further evidence for the existence of the radius valley in the close-in planet population
 around low mass stars.
 
-\vspace{1cm}
+%\vspace{1cm}
+
+\textbf{Similarly to the two-dimensional occurrence rates in Sect.~\ref{sect:fmap}, we test the statistical significance
+of the apparent bimodality in \autoref{fig:rphist} by comparing the BIC values for 1-5 components of a Gaussian
+mixture model. We find that the two-component model has the lowest BIC and is strongly favored over a single
+component as $\Delta(\text{BIC}_{12})=\text{BIC}_1-\text{BIC}_2 \sim 20$. Furthermore, 
+$\Delta(\text{BIC}_{23})=\text{BIC}_2-\text{BIC}_3 \sim -10$ such that two components are also favored over
+a more complex mixture model of three Gaussian components. These results emphasize
+that the detection of the valley is significant and that it likely features two components representing
+rocky and larger, non-rocky planet populations respectively.}
+
 
 \subsection{Inclusion of supplemental K2 planet candidates}
 In an attempt to improve the counting statistics in the occurrence rate calculations,
