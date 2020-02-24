@@ -865,59 +865,62 @@ rocky and larger, non-rocky planet populations respectively.}
 
 
 \subsection{Inclusion of supplemental K2 planet candidates}
-In an attempt to improve the counting statistics in the occurrence rate calculations,
-we will consider an enlarged planet sample. This sample is the union of our existing sample of confirmed planets
-with a set of additional planet candidates (PCs) from the \ktwo{}
+In an attempt to improve the counting statistics of the occurrence rate calculations, and to
+mitigate any bias introduced by solely focusing on confirmed planets, here
+we consider an enlarged planet sample that includes planet candidates (PCs). 
+This new sample is the union of our existing sample of confirmed planets
+with a set of additional PCs from the \ktwo{}
 mission. \textbf{Specifically, we consider the set of PCs reported by \cite{kruse19}
 from \ktwo{} campaigns 0-8. This set includes 126 PCs that are not already included in our sample of confirmed
 planets but do orbit stars within our stellar sample.}
 
-By definition we cannot identify which PCs are true planets of interest for this study and
+By definition, we cannot identify which PCs are true planets of interest for this study and
 which PCs are instead produced by an astrophysical false positive. 
 The inclusion of \ktwo{} PCs therefore requires that we account for sample contamination by false positives
-probabilistically. We do so by considering
-a number of studies from the literature that perform a transiting planet search in \ktwo{---}from any subset of its
+probabilistically. We do so by considering six
+studies from the literature that perform a transiting planet search in \ktwo{---}from any subset of its
 campaigns---and attempt to validate their uncovered PCs statistically based on follow-up observations
 \citep{montet15,crossfield16b,dressing17,hirano18,livingston18a,mayo18}. Each of these studies utilized some combination of
 ground-based photometry to validate planet ephemerides, reconnaissance
 spectroscopy to identify spectroscopic binaries, and speckle or AO-assisted imaging to search for nearby stellar companions.
 Each of the aforementioned studies used their respective set of follow-up observations together with the
 statistical validation tool \texttt{vespa} \citep{morton12,morton15} to statistically classify their PCs as either a validated
-planet (VP)\footnote{Validated and confirmed planets are equivalent dispositions.},
+planet (VP)\footnote{Validated and confirmed planets are considered equivalent dispositions.},
 a false positive (FP), or some other inconclusive disposition (e.g. remains a PC). The FP rate around cool
 stars (\teff{} $< 4700$ K) from each study is estimated by calculating the ratio of the number of reported FPs to
 the total number of FPs plus VPs. Notably, \cite{crossfield16b} showed that the FP rate in their \ktwo{} sample is dependent
-on the measured planet radius as giant PCs have a larger likelihood of
-being a FP. Hence, we only focus on PCs with $r_p<4$ R$_{\oplus}$ when deriving FP rates.
+on the measured planet radius as giant PCs have a higher likelihood of
+being a FP. We therefore only focus on PCs with $r_p<4$ R$_{\oplus}$ when deriving FP rates.
 
 The resulting FP rates are reported in \autoref{tab:FP}. Half of the studies do not find any probable
 FP signals among the small PCs orbiting cool stars in their samples. In such cases, only upper limits on the FP rate
 can be derived which all agree that the FP rate is $\lesssim 20$\% at 95\% confidence. The remaining studies
 each detect at least one FP such that a non-zero maximum likelihood FP rate is measured. Their average FP rate is 5.7\%
 which is also in agreement with the derived upper limits from the aforementioned studies.
+
+\input{FPtable}
+
 \textbf{We proceed by constructing $10^3$ planet population realizations. Each realization
   includes all confirmed planets from both \kepler{} and \ktwo{,} plus a subset of the 126 \ktwo{} PCs from
 \cite{kruse19}.} The subset of included PCs are randomly sampled from the full set of PCs
 according to the adopted FP rate such that each realization contains $(1-0.057)\cdot 126 \approx 119$ PCs.
-
-\input{FPtable}
-
 The effect of including PCs on the derived occurrence rates is assessed by comparing the $f_j$ distributions
-measured with and without the inclusion of PCs (\autoref{fig:rphistPCs}). The radius valley continues to be resolved in
+measured with and without the inclusion of PCs in \autoref{fig:rphistPCs}. The radius valley continues to be resolved in
 the MAP occurrence rates. Furthermore, the addition of PCs reduces the median $f_j$ uncertainty among planets
 with $r_p>1$ R$_{\oplus}$ from
 0.0216 to 0.0186 planets per star (i.e. $\sim 15$\% improvement). However, the partial filling of the gap is
 further substantiated as the contrast between the maximum $f_j$ of the rocky planet peak ($r_p \sim 1.3$ R$_{\oplus}$)
-and the minimum $f_j$ of the valley ($r_p \sim 1.6$ R$_{\oplus}$) decreases from 0.070
-to 0.054 R$_{\oplus}$ (i.e. $3.2\sigma \to 2.9\sigma$). Contamination by true FPs in the planet sample containing
+and the minimum $f_j$ of the valley ($r_p \sim 1.6$ R$_{\oplus}$) decreases from 0.070 to 0.054 R$_{\oplus}$
+%(i.e. $3.2\sigma \to 2.9\sigma$).
+Contamination by true FPs in the planet sample containing
 PCs may contribute to the reduced significance of the valley so we revert to considering confirmed planets only
-for the remainder of this study. 
-
+for the remainder of this study.
 
 \begin{figure*}
   \centering
   \includegraphics[scale=.8]{figures/rphist_kruse.png}
-  \caption{Comparison of occurrence rates with and without planet candidates included. \emph{Left panel}:
+  \caption{Comparison of the occurrence rates derived from planet samples with and without planet
+    candidates included. \emph{Left panel}:
     same as \autoref{fig:rphist}. \emph{Right panel}: histogram depicting the relative occurrence
     rate of close-in planets with orbital periods $<100$ days derived from the population of confirmed
     planets from \kepler{} and \ktwo{} and supplemented by 119 randomly selected PCs
@@ -931,19 +934,21 @@ for the remainder of this study.
 \subsection{Comparison of the recovered planet occurrence rates from Kepler and K2} \label{sect:comparef}
 Here we present a broad comparison of the occurrence rates of small close-in planets around
 low mass dwarf stars from \kepler{} and \ktwo{.} Recall from Sect.~\ref{sect:fmap} that
-we measure cumulative occurrence rates from confirmed \kepler{} and \ktwo{} planets of 
+we measure cumulative occurrence rates from \kepler{} and \ktwo{} of 
 $2.48\pm 0.32$ and $0.75\pm 0.11$ planets per star respectively. Note that the former is consistent with
 previous measurements from \kepler{} \citep{morton14,dressing15a,gaidos16}. However, noting that 
 the FP rate of small \ktwo{} PCs is small ($\sim 5.7$\%, \autoref{tab:FP}), many \ktwo{} PCs should contribute
-to the calculation of the occurrence rates from \ktwo{.}
-
+to the calculation of the occurrence rates from \ktwo{} thus increasing its value and likely becoming less
+discrepant with the \kepler{-}derived value.
 
 We consider the 126 PCs from the transiting planet search in \ktwo{} campaigns 0-8 \citep{kruse19}.
 Statistically correcting
 for FPs results in 119 PCs plus 52 confirmed planets around 7227 \ktwo{} stars within our stellar sample that
 were observed in any of the \ktwo{} campaigns 0-8. Given the period and radius of each of these 171 planets,
 we apply the completeness corrections computed in Sect.~\ref{sect:k2sens}, divide out the number of low mass stars
-observed in campaigns 0-8, and measure a cumulative occurrence rate of $2.26\pm 0.38$ planets per star. The inclusion
+observed in campaigns 0-8, and measure a cumulative occurrence rate of $2.26\pm 0.38$ planets per star.
+
+The inclusion
 of PCs from \cite{kruse19} boosts the cumulative occurrence rate measurement from \ktwo{} to a value that is
 consistent with that from \kepler{} (i.e. $2.48\pm 0.32$). This indicates that the \kepler{} and
 \ktwo{} planet populations are consistent and that the reduced detection sensitivity of \ktwo{} compared to
@@ -953,6 +958,8 @@ effect on the precision of the occurrence rate measurement despite \ktwo{} campa
 as many low mass dwarf stars as \kepler{.} We also note that in this comparison we have not corrected for any stellar
 mass dependence of the occurrences rates which may produce a true discrepancy between the \kepler{} and \ktwo{}
 values as their respective stellar samples within this study are not equivalent (c.f. \autoref{fig:stars}).  
+\textbf{The agreement that we have demonstrated between the cumulative occurrence rates from \kepler{} and \ktwo{}
+has also been recently confirmed by \cite{zink20}.}
 
 \section{Evolution of the radius valley around low mass stars} \label{sect:models}
 \subsection{Slope of the radius valley}
